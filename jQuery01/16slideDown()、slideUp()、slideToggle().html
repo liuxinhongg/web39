@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 400px;
+				background-color: hotpink;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--slideDown()、slideUp()、slideToggle()-->
+		<input type="button" id="" value="下滑展开" />
+		<input type="button" id="" value="上滑收回" />
+		<input type="button" id="" value="滑动切换" />
+		<div></div>
+		<script src="js/jquery-1.12.3.js"></script>
+		<script type="text/javascript">
+			$("input:eq(0)").click(function(){
+				$("div").slideDown(800)
+			})
+			$("input:eq(1)").click(function(){
+				$("div").slideUp(800,function(){
+					alert("上滑收回执行完毕")
+				})
+			})
+			$("input:eq(2)").click(function(){
+				$("div").slideToggle(800)
+			})
+		</script>
+	</body>
+</html>

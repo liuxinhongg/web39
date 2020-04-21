@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+		<title>落雪殇城——一叶一追寻</title>
+		<link rel="icon" href="img/雪.jpg" />
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			/*顶部开始*/
+			
+			#top {
+				height: 40px;
+				width: 100%;
+				background-color: #333333;
+			}
+			
+			#top_center {
+				width: 1090px;
+				margin: auto;
+			}
+			
+			#top_center_right {
+				width: 500px;
+				height: 40px;
+				position: relative;
+				left: 600px;
+			}
+			
+			#top_center_righ .a {
+				text-decoration: none;
+			}
+			
+			#top_m {
+				width: 53px;
+				height: 40px;
+				font-size: 12px;
+				line-height: 40px;
+				text-align: center;
+				color: #CCCCCC;
+				float: left;
+			}
+			
+			.split {
+				border-left: 1px so lid #CCCCCC;
+				height: 16px;
+				margin: 10px;
+				float: left;
+			}
+			/*顶部结束*/
+			
+			.item {
+				width: 1180px;
+				height: 700px;
+				margin: auto;
+			}
+			
+			.th1 {
+				width: 1180px;
+				height: 19px;
+				padding: 17px 0px;
+				margin: auto;
+			}
+			
+			.th11 {
+				width: 200px;
+				height: 19px;
+				float: left;
+				font-size: 13px;
+			}
+			
+			.th11:hover {
+				color: red;
+				cursor: pointer;
+			}
+			
+			.th12 {
+				width: 200px;
+				height: 19px;
+				float: left;
+				font-size: 12px;
+				color: #BCBD9B;
+			}
+			
+			.th2 {
+				width: 1180px;
+				height: 640px;
+				margin: auto;
+				position: relative;
+			}
+			
+			.th2_left {
+				width: 498px;
+				height: 640px;
+				float: left;
+				/*border:1px solid red;*/
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			
+			.th21 {
+				width: 498px;
+				height: 498px;
+			}
+			
+			.th223 {
+				list-style: none;
+				width: 20PX;
+				height: 78px;
+				border: 1px solid #E8E8E8;
+				margin-left: 7px;
+				margin-top: 10px;
+				float: left;
+			}
+			
+			.th223 p {
+				text-align: center;
+				line-height: 78px;
+				color: #E8E8E8;
+				font-size: 20px;
+			}
+			
+			.th2233 p {
+				text-align: center;
+				line-height: 78px;
+				color: #E8E8E8;
+				font-size: 20px;
+			}
+			
+			.th222 {
+				list-style: none;
+				width: 78PX;
+				height: 78px;
+				border: 1px solid #E8E8E8;
+				float: left;
+				margin-left: 7px;
+				margin-top: 10px;
+			}
+			
+			.th222:hover {
+				cursor: pointer;
+			}
+			
+			.th223:hover {
+				cursor: pointer;
+				background-color: #B4A078;
+				color: white;
+			}
+			
+			.th2_right {
+				width: 620px;
+				height: 640px;
+				position: absolute;
+				top: 0px;
+				right: -671px;
+				/*border:1px solid red;*/
+				float: left;
+			}
+			
+			.th23 {
+				width: 620px;
+				height: 42px;
+				float: left;
+			}
+			
+			.th24 {
+				width: 620px;
+				height: 52px;
+				float: left;
+				font-size: 15px;
+				color: #8C8C8C;
+				margin-top: 10px;
+			}
+			
+			.th25 {
+				width: 620px;
+				height: 31px;
+				margin-top: 10px;
+				float: left;
+			}
+			
+			.th251 {
+				width: 12px;
+				height: 31px;
+				text-align: center;
+				font-size: 15px;
+				line-height: 31px;
+				font-weight: bold;
+				color: red;
+				float: left;
+			}
+			
+			.th252 {
+				width: 70px;
+				height: 31px;
+				text-align: center;
+				font-size: 30px;
+				line-height: 31px;
+				color: red;
+				float: left;
+			}
+			
+			.th253 {
+				margin-top: 7px;
+				margin-left: 20px;
+				width: 45px;
+				height: 20px;
+				border-radius: 3px;
+				text-align: center;
+				background-color: #F77168;
+				font-size: 15px;
+				line-height: 20px;
+				color: white;
+				float: left;
+			}
+			
+			.th26 {
+				width: 620px;
+				height: 20px;
+				margin: 20px 0px;
+				float: left;
+			}
+			
+			.th27 {
+				width: 620px;
+				height: 150px;
+				margin-top: 10px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			
+			.th270:hover {
+				cursor: pointer;
+				background-color: #B4A078;
+				color: white;
+			}
+			
+			.th271 {
+				width: 190px;
+				height: 50px;
+				margin-top: 10px;
+				margin-right: 10px;
+				line-height: 50px;
+				text-align: center;
+				float: left;
+				border: 1px solid #B4A078;
+			}
+			
+			.th28 {
+				width: 620px;
+				height: 20px;
+				margin: 20px 0px;
+				float: left;
+			}
+			
+			.th29 {
+				width: 620px;
+				height: 50px;
+				margin-top: 10px;
+				margin-right: 10px;
+				line-height: 50px;
+				text-align: center;
+				float: left;
+			}
+			
+			.th291 {
+				width: 48px;
+				height: 50px;
+				;
+				line-height: 50px;
+				text-align: center;
+				font-size: 30px;
+				float: left;
+			}
+			
+			.th292 {
+				width: 70px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				font-size: 20px;
+				float: left;
+			}
+			
+			.th30 {
+				width: 620px;
+				height: 50px;
+				margin: 20px 0px;
+				float: left;
+			}
+			
+			.th301 {
+				width: 190px;
+				height: 50px;
+				border: 1px solid #B4A078;
+				color: #B4A078;
+				margin-right: 10px;
+				line-height: 50px;
+				text-align: center;
+				float: left;
+				cursor: pointer;
+			}
+			
+			.th302 {
+				width: 190px;
+				height: 50px;
+				/*border:1px solid red;*/
+				color: white;
+				background-color: #B4A078;
+				margin-right: 10px;
+				line-height: 50px;
+				text-align: center;
+				float: left;
+				cursor: pointer;
+			}
+			
+			.five {
+				height: 350px;
+				width: 100%;
+				background-color: #414141;
+				position: relative;
+			}
+			
+			.five_center {
+				width: 1090px;
+				margin: auto;
+			}
+			
+			.fiver_1 {
+				list-style: none;
+			}
+			
+			.fiver_1 li {
+				width: 200px;
+				height: 70px;
+				float: left;
+				margin: 30px 30px;
+				/*border: 1px solid white;*/
+				position: relative;
+			}
+			
+			.fiver_1 li:hover {
+				cursor: pointer;
+			}
+			
+			.five_bjt1 {
+				/*border: 1px solid white;*/
+				width: 51px;
+				height: 51px;
+				margin: 10px;
+				background-image: url(../img/bjt.webp);
+				background-repeat: no-repeat;
+				background-position: -1px -135px;
+			}
+			
+			.five_bjt2 {
+				/*	border: 1px solid white;*/
+				width: 51px;
+				height: 51px;
+				margin: 10px;
+				background-image: url(../img/bjt.webp);
+				background-repeat: no-repeat;
+				background-position: -1px -369px;
+			}
+			
+			.five_bjt3 {
+				/*border: 1px solid white;*/
+				width: 51px;
+				height: 51px;
+				margin: 10px;
+				background-image: url(../img/bjt.webp);
+				background-repeat: no-repeat;
+				background-position: -1px 0px;
+			}
+			
+			.five_bjt4 {
+				/*border: 1px solid white;*/
+				width: 51px;
+				height: 51px;
+				margin: 10px;
+				background-image: url(../img/bjt.webp);
+				background-repeat: no-repeat;
+				background-position: -1px -369px;
+			}
+			
+			.fiver_1 h4 {
+				color: white;
+				/*border: 1px solid white;*/
+				width: 150px;
+				height: 50px;
+				margin-top: 10px;
+				text-align: center;
+				line-height: 50px;
+				position: absolute;
+				top: 0px;
+				left: 60px;
+			}
+			
+			.five_end {
+				color: #999999;
+				font-size: 12px;
+				width: 1090px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.five_img {
+				position: absolute;
+				top: 257px;
+				right: 201px;
+			}
+			#two {
+				height: 100px;
+				width: 100%;
+				background-color: #FFFFFF;
+				z-index: 1;
+			}
+			
+			#two_center {
+				height: 108px;
+				width: 1090px;
+				margin: auto;
+				position: relative;
+			}
+			
+			.xbt {
+				width: 274px;
+				height: 95px;
+				position: absolute;
+				left: 35px;
+			}
+			
+			.two_ssuo {
+				width: 532px;
+				height: 60px;
+				/*	border: 1px solid red;*/
+				position: absolute;
+				top: 20px;
+				left: 350px;
+			}
+			
+			.two_ssuo1 {
+				width: 30px;
+				height: 30px;
+				top: 13px;
+				left: 10px;
+				/*	border: 1px solid #CC9756;*/
+				position: absolute;
+				background-image: url(../img/xbt.png);
+				background-repeat: no-repeat;
+				background-position: 3px -384px;
+			}
+			
+			.input1 {
+				width: 400px;
+				height: 40px;
+				margin-left: 41px;
+				margin-bottom: 20px;
+				font-size: 14px;
+				text-indent: 1em;
+				outline: none;
+				border: 1px solid #CC9756;
+				border-bottom-left-radius: 19px;
+				border-top-left-radius: 19px;
+				font-size: 14px;
+				color: #D7D7D7;
+				position: absolute;
+				top: 10px;
+			}
+			
+			.two_ssuo2 {
+				position: absolute;
+				top: 10px;
+				width: 90px;
+				height: 40px;
+				margin-left: 441px;
+				margin-bottom: 20px;
+				background-color: #CC9756;
+				border-bottom-right-radius: 19px;
+				border-top-right-radius: 19px;
+				color: #FFFFFF;
+				font-size: 16px;
+				line-height: 40px;
+				text-align: center;
+				cursor: pointer;
+			}
+			
+			.two_ssuo2:hover {
+				background-color: #FFD499;
+			}
+			
+			.gouwuche {
+				width: 136px;
+				height: 40px;
+				border: 1px solid #CC9756;
+				border-bottom-left-radius: 19px;
+				border-top-left-radius: 19px;
+				border-bottom-right-radius: 19px;
+				border-top-right-radius: 19px;
+				position: absolute;
+				top: 30px;
+				left: 900px;
+				color: #CC9756;
+				font-size: 16px;
+				line-height: 40px;
+				text-align: center;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部开始-->
+		<div id="top">
+			<div id="top_center">
+				<div id="top_center_right">
+					<a href="登录.html" id="top_m">登录/注册</a>
+					<div class="split"></div>
+					<a href="#" id="top_m">我的订单</a>
+					<div class="split"></div>
+					<a href="#" id="top_m">会员</a>
+					<div class="split"></div>
+					<a href="#" id="top_m">甄选家</a>
+					<div class="split"></div>
+					<a href="#" id="top_m">企业采购</a>
+					<div class="split"></div>
+					<a href="#" id="top_m" class="dropdown">客户服务</a>
+					<div class="split"></div>
+					<a href="#" id="top_m">APP</a>
+				</div>
+			</div>
+		</div>
+		<!--顶部结束-->
+		
+		
+		<div id="two">
+			<div id="two_center">
+				<div class="xbt">
+					<a href="主页.html"><img src="img/lxsc.png" width="274" height="100" /></a>
+				</div>
+				<div class="two_ssuo">
+					<div class="two_ssuo1"></div>
+					<input type="text" class="input1" placeholder="9.9超值专区" />
+					<div class="two_ssuo2">搜索</div>
+				</div>
+				<div class="gouwuche">购物车</div>
+			</div>
+		</div>
+		<!--第二层结束-->
+
+		<div class="container">
+			<div class="row boxContent">
+				<!--<div class="col-md-3">
+						<div class="item">
+							<div class="th1">
+								<p class="th11">首页>母婴>亲子> </p>
+								<p class="th12">婴童被枕芯类舒睡养眠</p>
+							</div>
+							<div class="th2">
+								<div class="th2_left">
+									<div class="th21">
+										<img width="496" width="496" src="img/20191209103648_2521 (1).gif">
+									</div>
+									<ul class="th22">
+										<li class="th223">
+											<p>
+												< </p>
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="img/20190626125928_6506.png">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="img/20190308130338_4522.jpg">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="img/20190809183446_1769.jpg">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="img/20190809183459_1772.jpg">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="img/20191209103648_2521 (1).gif">
+										</li>
+										<li class="th223 th2233">
+											<p> > </p>
+										</li>
+									</ul>
+								</div>
+				
+								<div class="th2_right">
+									<h2 class="th23">搜狗AI录音笔（智能录音笔C1）</h2>
+									<p class="th24">购买即可参加送充电宝活动 新老包装随机发货 高清录音 语音转文字 16G+云存储 免费转写 同声传译 录音速记</p>
+									<div class="th25">
+										<p class="th251">¥</p>
+										<p class="th252">398</p>
+										<p class="th253">包邮</p>
+									</div>
+									<div class="th26">颜色</div>
+									<div class="th27">
+										<div class="th271 th270">蓝色</div>
+										<div class="th271 th270">黑色</div>
+										<div class="th271 th270">纯白</div>
+										<div class="th271 th270">明媚黄</div>
+										<div class="th271 th270">热烈红</div>
+									</div>
+									<div class="th28">数量</div>
+									<div class="th29">
+										<p class="th291">-</p>
+										<p class="th292">1</p>
+										<p class="th291">+</p>
+									</div>
+									<div class="th30">
+										<p class="th301">加入购物车</p>
+										<p class="th302">立即购买</p>
+									</div>
+								</div>
+				
+							<div>
+						</div>
+				</div>-->
+			</div>
+		</div>
+		<script type="text/javascript">
+			var str = location.search.substr(1).split("=")[1];
+			console.log(str);
+			$.ajax({
+				type: "get",
+				url: "http://127.0.0.1/w/website/findGoodsDetail",
+				data: {
+					info: str,
+				},
+				async: true,
+				success: function(res) {
+
+					var obj = res.data.detail.tbk_item_info_get_response.results.n_tbk_item;
+					console.log(obj);
+					
+//					var List=dataList.push(JSON.stringify(data));
+//					localStorage.setItem("cartlist",dataList);//表示存储到本地
+//					console.log(localStorage.getItem("cartlist"));//得到存储在本地的数据
+
+					for(var i = 0; i < obj.length; i++) {
+						$(".boxContent").append(
+							`<div class="col-md-12">
+								<div class="item">
+									<div class="th1">
+										<p class="th11">${obj[i].cat_name}</p>
+										<p class="th12">${obj[i].nick}</p>
+									</div>
+									<div class="th2">
+										<div class="th2_left">
+											<div class="th2_left">
+									<div class="th21">
+										<img width="496" width="496" src="${obj[i].pict_url}">
+									</div>
+									<ul class="th22">
+										<li class="th223">
+											<p>
+												< </p>
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="${obj[i].pict_url}">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="${obj[i].pict_url}">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="${obj[i].pict_url}">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="${obj[i].pict_url}">
+										</li>
+										<li class="th222 ">
+											<img width="76" width="76" src="${obj[i].pict_url}">
+										</li>
+										<li class="th223 th2233">
+											<p> > </p>
+										</li>
+									</ul>
+								</div>
+						
+										<div class="th2_right">
+											<h2 class="th23">${obj[i].cat_leaf_name}</h2>
+											<p class="th24">${obj[i].title}</p>
+											<div class="th25">
+												<p class="th251">¥</p>
+												<p class="th252">${obj[i].zk_final_price}</p>
+												<p class="th253">包邮</p>
+											</div>
+											<div class="th26">颜色</div>
+											<div class="th27">
+												<div class="th271 th270">蓝色</div>
+												<div class="th271 th270">黑色</div>
+												<div class="th271 th270">纯白</div>
+												<div class="th271 th270">明媚黄</div>
+												<div class="th271 th270">热烈红</div>
+											</div>
+											<div class="th28">数量</div>
+											<div class="th29">
+												<p class="th291">-</p>
+												<p class="th292">1</p>
+												<p class="th291">+</p>
+											</div>
+											<div class="th30">
+												<p class="th301">加入购物车</p>
+												<p class="th302">立即购买</p>
+											</div>
+										</div>
+						
+									<div>
+								</div>
+						</div>`
+						)
+					}
+
+				}
+			});
+		</script>
+		<!--第六层开始-->
+		<div class="five">
+			<div class="five_center">
+				<ul class="fiver_1">
+					<li>
+						<div class="five_bjt1"></div>
+						<h4>网易自营电商</h4>
+					</li>
+					<li>
+						<div class="five_bjt2"></div>
+						<h4>30天无忧退换货</h4>
+					</li>
+					<li>
+						<div class="five_bjt3"></div>
+						<h4>满99元免邮费</h4>
+					</li>
+					<li>
+						<div class="five_bjt4"></div>
+						<h4>品质保证</h4>
+					</li>
+				</ul>
+			</div>
+			<center>
+				<hr color="#999999" size="0.2" width="1090px">
+				<h6 class="five_end">
+  					关于我们|帮助中心|售后服务|配送与验收|商务合作|企业采购|开放平台|搜索推荐|友情链接|廉正举报
+  				</h6>
+				<h6 class="five_end">
+  					食品经营许可证：JY13301080111719出版物经营许可证：新出发滨字第0132号妙得ICP证号：ICP 证浙B2-20160106浙杭食药监械经营备20171029号营业执照网易公司版权所有 © 1997-2020
+  				</h6>
+				<h6 class="five_end">
+  					无线电发射设备销售备案：42201919712647（浙杭）网械企备字[2019]第00119号（粤）网械平台备字（2019）第00004号单用途商业预付卡备案证：330100AAC0024
+  				</h6>
+			</center>
+			<div class="five_img">
+				<img src="img/1586851448(1).jpg" />
+			</div>
+		</div>
+		<!--第六层结束-->
+	</body>
+
+</html>

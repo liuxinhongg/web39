@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				width: 60px;
+				height: 60px;
+				background-color:orangered;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<script>
+			var oDiv=document.querySelector("div");
+			//圆心
+			var yuanxin={a:200,b:200};
+			var r=150;//半径
+			degree=0;
+			setInterval(function(){
+				degree++;
+				go(degree);
+			},40)
+			function go(degree){
+				oDiv.style.left=yuanxin.a+r*Math.sin(degreeToRad(degree))+"px";
+				oDiv.style.top=yuanxin.b-r*Math.cos(degreeToRad(degree))+"px";
+			}
+			//角度转换为弧度 pi/180,
+			function degreeToRad(degree){
+				return degree*Math.PI/180;
+			}
+			console.log(degreeToRad(60));
+		</script>
+	</body>
+</html>

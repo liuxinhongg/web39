@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.carousel{
+				width: 650px;
+				height: 350px;
+				margin:50px auto;
+				position: relative;
+				overflow: hidden;
+				
+			}
+			.carousel ul{
+				list-style: none;
+			}
+			.carousel ul li{
+				display:none;
+			}
+			.carousel ul li img{
+				width: 650px;
+				height: 350px;
+			}
+			.carousel ul li.current{
+				display:block;
+			}
+			.carousel span{
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 150px;
+				cursor: pointer;
+				background-color: yellow;
+			}
+			.leftBtn{
+				left: 10px;
+			}
+			.rightBtn{
+				right:10px;
+			}
+			.circles{
+				position: absolute;
+				bottom: 10px;
+				width: 200px;
+				height: 20px;
+				left: 50%;
+				margin-left: -50px;
+			}
+			.circles ol{
+				list-style: none;
+			}
+			.circles ol li{
+				width: 20px;
+				height: 20px;
+				background-color: gold;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-right: 10px;
+				float: left;
+			}
+			.circles ol li.current{
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="carousel">
+			<div id="imagesList" class="imagesList">
+				<ul>
+					<li class="current">
+						<a href=""><img src="img/01.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/cat.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/02.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/03.jpg"/></a>
+					</li>
+					<li>
+						<a href=""><img src="img/05.jpg"/></a>
+					</li>
+				</ul>
+			</div>
+			<div class="btns">
+				<span class="leftBtn" id="carousel_leftBtn"></span>
+				<span class="rightBtn" id="carousel_rightBtn"></span>
+			</div>
+			<div id="circles" class="circles">
+				<ol>
+					<li class="current"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ol>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//得到所有的元素，左右按钮 每个小圆点  每个图片里面的li
+			var carousel_leftBtn=document.getElementById("carousel_leftBtn");
+			var carousel_rightBtn=document.getElementById("carousel_rightBtn");
+			var circlesLis=document.getElementById("circles").getElementsByTagName("li");
+			var imagesList=document.getElementById("imagesList").getElementsByTagName("li");
+			//信号量 0 1 2 3 4
+			var img_idx=0;
+			//右按钮监听
+			carousel_rightBtn.onclick=function(){
+				img_idx++;
+				if (img_idx>4) {
+					img_idx=0;
+				}
+				changePic();
+			}
+			//左按钮监听
+			carousel_leftBtn.onclick=function(){
+				img_idx--;
+				if (img_idx<0) {
+					img_idx=4;
+				}
+				changePic();
+			}
+			//小圆点监听，要批量添加
+			for(var i=0;i<circlesLis.length;i++){
+				(function(m){
+					circlesLis[m].onmouseover=function(){
+						img_idx=m;
+						changePic();
+					}
+				})(i)
+				
+			}
+			//业务函数 根据当前信号量的值，来切换图片
+			function changePic(){
+				//去掉所有图片li的current类名
+				for (var i=0;i<imagesList.length;i++) {
+					imagesList[i].className="";
+				}
+				//把当前信号量的图片li加上current类名
+				imagesList[img_idx].className="current";
+				//去掉所有小圆点li的current类名
+				for(var i=0;i<circlesLis.length;i++){
+					circlesLis[i].className="";
+				}
+				//把当前信号量的小圆点li加上current类名
+				circlesLis[img_idx].className="current";
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				padding: 10px 20px 30px;
+				width: 200px;
+				height: 200px;
+				background-color: black;
+				opacity: .2;
+				filter: alpha(opacity=20);
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			/*if(window.getComputedStyle){
+				alert("getComputedStyle")
+			}else{
+				alert("我不认识getComputedStyle，他是个啥东西")
+			}*/
+			var oDiv=document.getElementsByTagName("div")[0];
+			if (window.getComputedStyle) {
+				alert(getComputedStyle(oDiv)["padding-left"])
+			}else{
+				alert(oDiv.currentStyle.paddingTop);
+			}
+			alert(oDiv.currentStyle.opacity);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//如果一个数恰好等于它的因数之和，则称该数为“完美数”。
+			for (var i=1;i<=10000;i++) {
+				var sum=0;
+				for (var k=1;k<i;k++) {
+					if (i%k==0) {
+						sum+=k;
+					}
+				}
+				if (sum==i) {
+					console.log(i);
+				}
+			}
+		</script>
+	</body>
+</html>

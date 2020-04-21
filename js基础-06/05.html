@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str=/abc/g;
+//			var reg=new RegExp('abc','g');
+			var aa="aaabcccbbabcssssddddcccc";
+			console.log(str.exec(aa));
+			var reg=/nihao/;
+			var str1="nihao zhongguo";
+			console.log(reg.test(str1));
+			var shuru=prompt('不能输入空格');
+			alert(/\s+/.test(shuru));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//var obj={ key:value,key:value,key:value}
+			var obj={
+				"name":"张三",
+				"sex":"男",
+				"age":18,
+				"high":185,
+				"hobby":"打篮球"
+			}
+			console.log(obj)
+			console.log(typeof obj);//object
+			//  json==>字符穿 JSON.stringify(obj)
+			var aa=JSON.stringify(obj);
+			console.log(aa);
+			console.log(typeof aa);//string
+			//字符串==>JSON JSON.parse(aa)
+			var bb=JSON.parse(aa)
+			console.log(bb);
+			//json遍历
+			/*for(var i in obj){
+				console.log(i+"的值是"+obj[i]);
+			}*/
+		</script>
+	</body>
+</html>

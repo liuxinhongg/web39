@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*function aa(){
+				var a=1;//定义在一个函数里面的变量，局部变量，只有在函数里面使用
+				console.log('我是函数里面的'+a);
+			}
+			aa();
+			console.log('我是外面的'+a);*/
+			/*var a=11;//定义在全局范围内的一个变量，全局变量，在程序的任何一处都可以使用
+			function bb(){
+				console.log(a);
+			}
+			bb();
+			console.log(a);*/
+			function outer(){
+				var a=1;
+				inner();
+				function inner(){
+					var b=2;
+					console.log(a);//1
+					console.log(b);//2
+				}
+			}
+			outer();
+//			console.log(a);//
+		</script>
+	</body>
+</html>

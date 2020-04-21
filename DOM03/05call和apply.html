@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<script type="text/javascript">
+			var obj={
+				"name":"星期二",
+				"age":18,
+				"sex":"不详",
+				"jiehun":false
+			}
+			var obj1={
+				"name":"张三",
+				"age":18,
+				"sex":"男"
+			}
+			var obj2={
+				"name":"小花",
+				"age":16,
+				"sex":"女"
+			}
+			/*function xianshixinxi(){
+				alert(this.name);
+			}
+			xianshixinxi.call(obj1)*/
+			function xianshixinxi(a,b,c){
+				console.log(this.name);
+				console.log(a+b+c);
+			}
+			xianshixinxi.call(obj,2,3,4);//星期二   9
+			xianshixinxi.apply(obj,[2,3,4]);
+			function showInfo(n){
+				for (var i=1;i<=n;i++) {
+					console.log(this.jiehun)
+				}
+			}
+			showInfo.call(obj,10);
+			showInfo.apply(obj,[10]);
+	    </script>
+	</body>
+</html>

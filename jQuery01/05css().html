@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 60px;
+				height: 60px;
+				background-color: gainsboro;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//alert($("p:first").css("background-color")) ;//rgb
+			//alert($("p:first").css("backgroundColor")) ;//rgb
+			//$("p:odd").css("background-color","red");
+			$("p:lt(4)").css({
+				"width":20,
+				"height":20,
+				"background-color":"yellow"
+			})
+//			$("p:eq(5)").css("width","+=140px");
+			$("p:eq(5)").css({"width":"+=140px","background-color":"green"});
+//			$("p:eq(5)").css("background-color","green");
+		</script>
+	</body>
+</html>

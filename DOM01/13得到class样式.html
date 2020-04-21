@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" style="width: 200px;height: 200px;background-color: red;border: 2px solid black;">是发送到发送到</div>
+		<p id="op">我是段落标签</p>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			console.log(oBox.style.backgroundColor);
+			console.log(oBox.style.borderLeftColor);
+			console.log(oBox.style.fontSize);
+			var oP=document.getElementById("op");
+			oP.style.backgroundColor="red";
+			oP.style.color="white";
+			oP.style.fontSize="40px";
+			oP.style.border="10px solid blue";
+		</script>
+	</body>
+</html>

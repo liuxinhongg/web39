@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*如果整数A 的全部约数（包括1，不包括A 本身）之和等于B，且整数B 的全部约数
+			（包括1，不包括B 本身）之和等于A，则称整数A和B是一对亲密数。
+			求3000 以内的全部亲密数。*/
+			function yueshuhe(a){
+				var sum=0;
+				for (var i=1;i<a;i++) {
+					if (a%i==0) sum+=i;
+				}
+				return sum;
+			}
+			for (var A=1;A<=3000;A++) {
+				var B=yueshuhe(A);//用A来定B
+				if (A==yueshuhe(B)&&A>B) {
+					console.log(A+"和"+B+"是一对亲密数");
+				}
+			}
+		</script>
+	</body>
+</html>

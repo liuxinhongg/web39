@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			waiceng:for (var i=3;i<=100;i+=2) {//只有奇数才有可能是质数
+				for (var j=2;j<=i/2;j++) {
+					if (i%j==0) {
+						continue waiceng;
+					}
+				}
+				console.log(i);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(true&&true);//true
+			console.log(true&&false);//false
+			console.log(false&&true);//false
+			console.log(false&&false);//false
+			console.log(true||true);//true
+			console.log(true||false);//true
+			console.log(false||true);//true
+			console.log(false||false);//false
+			console.log(!!!!!!!!!false);//true
+//			负性的：false，null， 0， NaN， 空字符串("")，undefined
+			console.log(12&&false);//false
+			console.log(12&&123);//123
+			console.log(12&&123);//123
+			console.log(undefined&&123);//undefined
+			console.log(null&&true);//null
+			console.log(0&&123);//0
+			console.log(123||NaN);//123
+			console.log(0||10);//10
+			console.log(NaN||undefined);//undefined
+			
+//			! && ||
+			var a=11||33&&44||55;
+			console.log(a);//11
+			var bb=undefined && ('5'!=5) || NaN && null;
+			console.log(bb)//NaN
+		</script>
+	</body>
+</html>

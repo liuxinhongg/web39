@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*function aa(){
+				console.log("哈哈");
+			}
+			console.log(typeof aa())//undefied
+			console.log(typeof aa);//function*/
+			/*基本类型:保存的是值
+			引用类型:保存的是地址*/
+			/*var a=10;
+			var b=a;
+			b=5;
+			console.log(a);//10
+			console.log(b);//5*/
+			var a=function(){
+				alert("我是函数");
+			}
+			var b=a;
+			b.hh=12;
+			console.log(a.hh);//12
+			b.hh++;
+			b.hh++;
+			b.hh++;
+			console.log(a.hh);//15
+		</script>
+	</body>
+</html>

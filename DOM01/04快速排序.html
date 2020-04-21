@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[22,55,32,67,11,45,61,21];
+			//console.log(arr);
+			function quicksort(start,end){
+				//验证有效性
+				if (start>=end) {
+					return;
+				}
+				//标志
+				var pivot=arr[start];
+				//哨兵
+				var left=start;
+				var right=end;
+				while(left!=right){
+					//让右边的哨兵移动，知道找到了一个数字小于等于标志pivot
+					while(arr[right]>=pivot&&right>left){
+						right--;
+					}
+					while(arr[left]<=pivot&&left<right){
+						left++;
+					}
+					if(left<right){
+						//交换两个数字的位置
+						var temp=arr[right];
+						arr[right]=arr[left]
+						arr[left]=temp;
+					}
+				}
+				/*left和right相同了
+				交换右哨兵的数字和标志*/
+				arr[start]=arr[left];
+				arr[left]=pivot;
+				quicksort(start,left-1);
+				quicksort(right+1,end);
+			}
+			quicksort(0,arr.length-1);
+			console.log(arr);
+		</script>
+	</body>
+</html>

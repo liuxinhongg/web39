@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//第一步  用户输入一个数字
+			var a=parseInt(prompt("请输入一个数字"));
+			//第二步  判断
+			if (a%5==0&&a%6==0) {
+				alert("这个数字同时能被5、6整除");
+			}else if(a%5==0&&a%6!=0){
+				alert("这个数字可以整除5，不能整除6");
+			}else if(a%5!=0&&a%6==0){
+				alert("这个数字可以整除6，不能整除5");
+			}else if(a%5!=0&&a%6!=0){
+				alert("这个数字不能整除5、6");
+			}
+		</script>
+	</body>
+</html>

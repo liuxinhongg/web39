@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box" id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			box.onclick=function(){
+				console.log(this);
+			}
+		</script>
+	</body>
+</html>

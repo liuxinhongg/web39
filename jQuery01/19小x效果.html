@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 350px;
+				height: 300px;
+				border: 1px solid #000;
+				margin-right: 10px;
+				float: left;
+			}
+			.tutu{
+				height: 220px;
+				position: relative;
+			}
+			.tutu img{
+				width: 350px;
+				height: 220px;
+			}
+			.mask{
+				width: 100%;
+				height:80px;
+				background-color: black;
+				opacity: .6;
+				filter: alpha(opacity=60);
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+			}
+			.tutu h3{
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				color: #fff;
+			}
+			.info{
+				display: none;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				width: 100%;
+				height: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="tutu">
+				<img src="img/4.jpg"/>
+				<div class="info">
+					<div class="mask"></div>
+					<h3>一直白色的萌宠狗</h3>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="tutu">
+				<img src="img/timg.jpg"/>
+				<div class="info">
+					<div class="mask"></div>
+					<h3>四只仰望天空的萌宠猫</h3>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="tutu">
+				<img src="img/u0.jpg"/>
+				<div class="info">
+					<div class="mask"></div>
+					<h3>一只傻狗</h3>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".box").mouseenter(function(){
+				$(this).find(".info").fadeIn(500)
+			})
+			$(".box").mouseleave(function(){
+				$(this).find(".info").fadeOut(500)
+			})
+		</script>
+	</body>
+</html>

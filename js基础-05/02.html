@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/*			function outer(){
+				var a=11;
+				function inner(){
+					console.log(a);
+				}
+			}
+			inner();//报错*/
+//			经典闭包案例
+			/*function outer(){
+				var a=11;
+				function inner(){
+					console.log(a);
+				}
+				return inner;
+			}
+			var inn=outer();//inn就是我们的inner函数
+			inn();*/
+			//11   执行inn，全局作用域下没有a的定义  但是函数闭包，能够在定义函数的时候吧作用域一起给记住，所以会输出a的值
+			
+		</script>
+	</body>
+</html>

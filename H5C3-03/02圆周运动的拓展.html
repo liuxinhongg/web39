@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div{
+				width: 60px;
+				height: 60px;
+				background-color:orangered;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script>
+			var oDiv=document.querySelectorAll("div");
+			//封装
+			cricleMove({
+				"obj":oDiv[0],
+				"yuanxin":[200,200],
+				"r":150,
+				"looptime":4000
+			})
+			cricleMove({
+				"obj":oDiv[1],
+				"yuanxin":[200,200],
+				"r":150,
+				"degree":90,
+				"looptime":4000
+			})
+			cricleMove({
+				"obj":oDiv[2],
+				"yuanxin":[200,200],
+				"r":150,
+				"degree":180,
+				"looptime":4000
+			})
+			cricleMove({
+				"obj":oDiv[3],
+				"yuanxin":[200,200],
+				"r":150,
+				"degree":270,
+				"looptime":4000
+			})
+			function cricleMove(argsJSON){
+				//运动的对象
+				var o=argsJSON.obj;
+				//圆心
+				var a=argsJSON.yuanxin[0];
+				var b=argsJSON.yuanxin[1];
+				var r=argsJSON.r;//半径
+				var direction=argsJSON.direction||1;
+				var degree=argsJSON.degree||0;
+				var interval=40;
+				var looptime=argsJSON.looptime;
+				var loopFrame=looptime/interval;
+				var degreeDelta=360/loopFrame;
+				setInterval(function(){
+					degree+=degreeDelta*direction;
+					if(degree>=360){
+						degree=0;
+					}
+					go(degree);
+				},interval);
+				function go(degree){
+					o.style.left=a+r*Math.sin(degreeToRad(degree))+"px";
+					o.style.top=b-r*Math.cos(degreeToRad(degree))+"px";
+				}
+				
+				//角度转换为弧度 pi/180,
+				function degreeToRad(degree){
+					return degree*Math.PI/180;
+				}
+			}
+			
+		</script>
+	</body>
+</html>

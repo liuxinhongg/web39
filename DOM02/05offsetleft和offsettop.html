@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box1{
+				margin:0 auto;
+				width: 500px;
+				height: 500px;
+				padding: 50px;
+				border: 10px solid red;
+			}
+			.box2{
+				width: 380px;
+				height: 180px;
+				padding: 50px;
+				background-color: yellow;
+				position: relative;
+			}
+			.box3{
+				width: 260px;
+				height: 60px;
+				padding: 50px;
+				border: 10px solid green;
+			}
+			p{
+				width: 40px;
+				height: 40px;
+				border: 10px solid purple;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body class="bodybox" >
+		<div class="box1">
+			<div class="box2">
+				<div class="box3">
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var op=document.getElementsByTagName("p")[0];
+			//offsetParent
+			//alert(op.offsetParent.className);
+			//alert(op.offsetLeft);
+			alert(op.offsetTop);
+		</script>
+	</body>
+</html>

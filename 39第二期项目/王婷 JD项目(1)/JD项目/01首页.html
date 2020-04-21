@@ -1,0 +1,4534 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<meta name="renderer" content="webkit" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+		<title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+		<link rel="icon" href="//www.jd.com/favicon.ico"  type="image/x-icon"/>
+		
+		<link href="//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/static/css/first-screen.chunk.css" rel="stylesheet" />
+		<link href="//misc.360buyimg.com/mtd/pc/index_2019/1.0.0/static/css/index.chunk.css" rel="stylesheet" />
+		
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background-color: #eee;
+			}
+			.w_top{
+				width: 100%;
+				height: 30px;
+				background-color: #F1F3F4;
+			}
+			.w_one{
+				width: 990px;
+				height: 30px;
+				margin: auto;
+				cursor: pointer;
+				position: relative;
+			}	
+			.w_one .aa{
+				line-height: 30px;
+				margin-left: 10px;
+				float: left;
+				color: darkgray;
+				text-decoration: none;
+			}
+			.w_one .aa:hover{
+				color: red;
+			}	
+			.w_right {
+				width: 640px;
+				height: 30px;
+				position: absolute;
+				right: 0;
+				cursor: pointer;
+			}
+			.dt a.cj{
+				color: red;
+			}
+			.w_right ul{
+				list-style: none;
+			}	
+			.w_right ul li {
+				line-height: 30px;
+				float: left;
+				text-decoration: none;
+				position: relative;
+    			z-index: 21;
+			}
+			.dt a.zc{
+				color: red;
+			}
+			.myjds{
+				height: 28px;
+				color: darkgray;
+    			line-height: 28px;
+    			text-decoration: none;
+			}
+			.myjds:hover{
+				color: red;
+				text-decoration: none;
+			}
+			.myjd:hover{
+				color: red;
+				text-decoration: none;
+			}
+			.dt{
+			    position: relative;
+			    float: left;
+			}
+			.myjd{
+				height: 28px;
+    			line-height: 28px;
+    			padding-left: 7px;
+    			padding-right: 20px!important;
+    			overflow: hidden;
+    			color: #999;
+				text-decoration: none;
+				z-index: 1;
+			}
+			.spa{
+				position: absolute;
+			    right: 5px;
+			    top: 10px;
+			    width: 12px;
+			    height: 12px;
+			    line-height: 12px;
+			}
+			.spacer {
+				overflow: hidden;
+				width: 1px;
+				height: 10px;
+				margin: 10px 5px;
+				background-color: darkgray;
+			}
+			.dropdown{
+				width: 200px;
+    			line-height: 24px;
+    			display: none;
+			    position: absolute;
+			  	left: 0;
+    			top: 30px; 
+    			border: 1px solid #ccc;
+			    background-color: #fff;
+			}
+			.fore1{
+				padding: 10px 0 10px 15px;
+   			}
+   			.w_two{
+   				color: #999;
+   				display: block;
+   			}
+   			.a_one{
+   				text-decoration: none;
+   			}
+			.style-red{
+				margin-left: 4px;
+			}
+			.dropdown .w_two a{
+				color: #999;
+			}
+			.dropdown .w_two a:hover{
+				color: red;
+				text-decoration: none;
+			}
+			.maxbox{
+				width: 100%;
+				height: 141px;
+				background-color: #fff;
+				border-bottom: 1px solid #ddd;
+			}
+			.box{
+				width: 990px;
+				height: 140px;
+				position: relative;
+			    z-index: 11;
+				/*background-color: yellowgreen;*/ 
+				margin: auto;
+				
+			}
+			.dh{
+				position: relative;
+			    height: 60px;
+			}
+			.logo{
+				width: 190px;
+				height: 120px;
+				background-image: url(img/shouye/logo.png);
+				background-repeat: no-repeat;
+				background-size: 196px 160px;
+				float: left;
+			}
+			.daohang{
+				width: 490px;
+				height: 36px;
+				border: 1px solid red;
+				margin-left: 20px;
+				position: relative;
+				top: 20px;
+				float: left;
+			}
+			.text{
+			    padding: 2px 44px 2px 17px;
+			    width: 430px;
+			    height: 32px;
+			    border: 1px solid transparent;
+			    line-height: 32px;
+			    font-size: 12px;
+			    position: absolute;
+			    top: 0;
+			    outline: none;
+			    left: 0;
+			    color: #C0C0C0;
+			    text-align: start;
+			}
+			.xj{
+				width: 19px;
+				height: 16px;
+				position: absolute;
+				right: 75px;
+				top: 10px;
+				overflow: hidden;
+			}
+			.button{
+				width: 58px;
+				height: 34px;
+				background-color: red;
+				position: absolute;
+				right: 0;
+				cursor: pointer;
+				border: none;
+			}
+			.search{
+				width: 20px;
+				height: 22px;
+				margin: 6px 19px;
+			}
+			.gwc{
+				width: 132px;
+			    height: 36px;
+			    background-color: #fff;
+			    text-align: center;
+			    line-height: 36px;
+			    border: 1px solid #eee;
+			    margin-left: 20px;
+			    float: left;
+			    position:relative;
+			    top: 20px;
+			}
+			.tu{
+				width: 16px;
+				height: 17px;
+				margin-right: 5px;
+			}
+			.gwc .aaa{
+				text-decoration: none;
+				color: red;
+			}
+			.zero{
+				position: absolute;
+			    top: 2px;
+			    left: 25px;
+			    display: inline-block;
+			    padding: 1px 5px;
+			    font-size: 12px;
+			    line-height: 12px;
+			    color: #fff;
+			    background-color: #e1251b;
+			    border-radius: 15px;
+			    min-width: 12px;
+			    text-align: center;
+			}
+			.tm_two{
+				position: absolute;
+			    top: 5px;
+			    right: 0px;
+			    width: 76px;
+			    height: 76px;
+			    background: #fff;
+			    float: left;
+			}
+			.tm_w{
+				margin: 5px auto;
+			    width: 66px;
+			    height: 66px;
+				background: url(img/shouye/tm_ine.png) 50% no-repeat;
+			}
+			.hotwords{
+   				width: 450px;
+   				height: 20px;
+				overflow: hidden;
+			    position: absolute;
+			    top: 65px;
+			    left: 210px;
+			    line-height: 20px;
+			    font-size: 12px;
+			    color: #eee;
+			    cursor: pointer;
+			}
+			.hotwords a{
+				color: #999;
+				margin-left: 7px;
+			}
+			.hotwords a:hover{
+				color: red;
+			    text-decoration: none;
+			}
+			.hotwords .hot_one{
+				color: red;
+				margin-left: 0px;
+			}
+			.navitems{
+				width: 762px; 
+				height: 40px;
+			    position: relative;
+			    left: 200px;
+			    top: 25px;
+			}
+			.group_one{
+				width: 294px;
+				height: 40px;
+				text-align: left;
+			    line-height: 40px;
+				float: left;
+				position: absolute;
+				left: -5px;
+				/*background-color: yellow;*/
+			}
+			.navitems ul li{
+				list-style: none;
+				float: left;
+			}
+			.navitems a{
+				color: #999;
+			    height: 40px;
+			    line-height: 40px;
+			    font-size: 15px;
+			    margin-left: 20px;
+			}
+			a{
+				text-decoration: none;
+			}
+			.d_one a{
+				font-weight: bold;
+    			color: #e1251b;
+			}
+			.grid_a1{
+				margin-left: 0;
+			}
+			.d_two a{
+				font-weight: bold;
+    			color: #e1251b;
+			}
+			.group_two{
+				width: 302px;
+				height: 40px;
+				float: left;
+				margin-left: 100px;
+				
+			}
+			.navitems ul li a:hover{
+				color: red;
+				text-decoration: none;
+			}
+			.fs{
+				width: 100%;
+				height: 480px;
+				position: relative;
+				margin-bottom: 30px;
+			}
+			.middle{
+				width: 990px;
+				height: 480px;
+				margin: 0 auto;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+			.fs_col1{
+				width: 190px;
+				float: left;
+			    height: 480px;
+			    margin-right: 10px;
+			}
+			.cate{
+				width: 190px;
+				height: 470px;
+				position: relative;
+   				/*z-index: 3;*/
+			}
+			.cate_menu {
+			    overflow: hidden;
+			    padding: 10px 0;
+			    height: 470px;
+			    background-color: #fefefe;
+			    color: #636363;
+			    margin-top: 10px;
+			}
+			.cate_menu_item{
+				width: 190px;
+			    height: 25px;
+			    line-height: 25px;
+			}
+			.cate_menu_item {
+			    overflow: hidden;
+			    padding-left: 18px;
+			    font-size: 0;
+			    transition: background-color .2s ease;
+			}
+			.cate_menu_lk {
+			    font-size: 14px;
+			    color: #333;
+			    transition: color .2s ease;
+			    }
+			.carousel{
+				position: relative;
+				overflow: hidden;
+				width: 590px;
+				height: 480px;
+				margin-left:0px ;
+				float: left;
+				
+			}
+			.imagesList{
+				position: relative;
+			    height: 470px;
+			    margin-top: 10px;
+			    overflow: hidden;
+			}
+			.carousel ul{
+				list-style: none;
+			}
+			.carousel ul li{
+				display:none;
+			}
+			.carousel ul li img{
+				width: 590px;
+				height: 470px;
+			}
+			.carousel ul li.current{
+				display:block;
+			}
+			.carousel span{
+				width: 26px;
+				height: 36px;
+				position: absolute;
+				top: 217px;
+				cursor: pointer;
+				border-radius: 25%;
+				background-color: black;
+				opacity: 0.4;
+			}
+			.leftBtn{
+				left: 0px;
+			}
+			.left{
+				width: 20px;
+				height: 20px;
+				margin: 8px 3px;
+			}
+			.rightBtn{
+				right: 0px;
+			}
+			.right{
+				width: 20px;
+				height: 20px;
+				margin: 8px 3px;
+			}
+			.circles{
+				position: absolute;
+				bottom: 10px;
+				width: 150px;
+				height: 20px;
+				left: 50%;
+				margin-left: -50px;
+			}
+			.circles ol{
+				list-style: none;
+			}
+			.circles ol li{
+				width: 10px;
+				height: 10px;
+				background-color: white;
+				opacity: 0.4;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-right: 10px;
+				float: left;
+			}
+			.circles ol li.current{
+				background-color: white;
+				opacity: 0.8;
+			}
+			.banner_right{
+				width: 190px;
+				height: 470px;
+				background-color: #fff;
+				float: right;
+				position: relative;
+				top: 10px;
+				right: 0;
+			}
+			.rig_one{
+				width: 190px;
+				height: 102px;
+				/*border-bottom: 1px solid #EEEEEE;*/
+				/*margin-top: 10px;*/
+				background-color: white;
+			}
+			.tup_o_one{
+				position: absolute;
+			    left: 20px;
+			    top: 13px;
+			    width: 44px;
+			    height: 44px;
+			}
+			.tup_o{
+				width: 40px;
+				height: 40px;
+			}
+			.tx{
+				background-image: url(img/shouye/01.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				display: block;
+			    border: 2px solid #fff;
+			    border-radius: 50%;
+			    overflow: hidden;
+			    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,.05);
+			    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+			}
+			a{
+				color: #666;
+    			text-decoration: none;
+			}
+			.tp_one{
+				width: 106px;
+				height: 38px;
+				position: absolute;
+			    top: 3px;
+			    left: 54px;
+			    /*right: 10px;*/
+			}
+			.dlu{
+				color: #333;
+			}
+			.zce{
+				color: #333;
+			}
+			.tp_two{
+				height: 25px;
+				width: 190px;
+			    font-size: 0;
+			    text-align: center;
+			    position: relative;
+			    top: 10px;
+			    left: -20px;
+			}
+			.fuli{
+			    display: inline-block;
+			    margin: 0 5px;
+			    width: 70px;
+			    height: 25px;
+			    line-height: 25px;
+			    font-size: 12px;
+			    text-align: center;
+			    color: #fff;
+			    border-radius: 13px;
+			    background: #e1251b;
+			    -webkit-transition: background .3s ease,color .3s ease;
+			    transition: background .3s ease,color .3s ease;
+			    /*float: left;*/
+			    
+			}
+			.plus{
+			    background: #363634;
+    			color: #e5d790;
+    			/*float: left;*/
+			}
+			.rig_two{
+				width: 190px;
+				height: 130px;
+				border-bottom: 1px solid #eee;
+   				background: #fff;
+			}
+			.news{
+				width: 190px;
+				height: 30px;
+			    position: relative;
+			    line-height: 30px;
+			}
+			.new_jd{
+			    font-size: 14px;
+			    color: #333;
+			    position: absolute;
+			    top: 0px;
+			    left: 15px;
+			    font-weight: bold;
+			}
+			.new_gd{
+				position: absolute;
+			    right: 15px;
+			    top: 5px;
+			    font-size: 12px;
+			    color: #999;
+			}
+			.new_rt{
+				width: 12px;
+				height: 13px;
+			}
+			.newslist{
+				width: 160px;
+				position: relative;
+			    margin: 5px 15px;
+			    height: 88px;
+			}
+			.newitem{
+				max-width: 160px;
+			    max-width: 160px;
+			    height: 16px;
+			    line-height: 16px;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    color: #999;
+			    margin-bottom: 6px;
+			}
+			li{
+				list-style: none;
+			}
+			.hot{
+			    /*display: inline-block;*/
+			    position: relative;
+			    font-size: 12px;
+			    height: 16px;
+			    width: 35px;
+			    line-height: 16px;
+			    text-align: center;
+			    vertical-align: 0;
+			    color: #e1251b;
+			    background-color: rgba(225,37,27,.08);
+			    margin-right: 6px;
+			}
+			.rig_three{
+				width: 190px;
+				height: 238px;
+			}
+			.tup_o_three{
+				padding: 0px 5px;
+   				background: #fff;
+			}
+			.lklist{
+				width: 189px;
+    			height: 225px;
+			}
+			.lkitem{
+				position: relative;
+			    float: left;
+			    width: 63px;
+			    height: 55px;
+			    background: #fff;
+			    text-align: center;
+			}
+			.ico_huafei{
+				position: relative;
+			    width: 28px;
+			    height: 28px;
+			    margin: 0 auto;
+			}
+			.ico_img_huafei{
+				width: 28px;
+   				 height: 28px;
+			}
+			.ico_txt{
+				height: 25px;
+			    line-height: 25px;
+			    border-bottom: 2px solid #fff;
+			    color: #333;
+			    -webkit-transition: color .15s ease;
+			    transition: color .15s ease;
+			}
+			
+			.app{
+				position: relative;
+	    		width: 100%;
+			}
+			a{
+				color: #666;
+				text-decoration: none;
+			}
+			.kill{
+				outline: none;
+				position: relative;
+			}
+			.a_kill{
+				width: 100%;
+				height: 260px;
+   				margin-bottom: 20px;
+			}
+			.aa_kill{
+				width: 990px;
+				background: #fff;
+				margin-left: auto;
+   				margin-right: auto;
+   				height: 100%;
+    			overflow: hidden;
+    			cursor: pointer;
+			}
+			.countdown{
+				position: relative;
+			    width: 190px;
+			    height: 100%;
+			    color: #fff;
+			    /*background-color: #e83632;*/
+			    background-image: url(img/sy/bj.png);
+			    background-size: contain;
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			    float: left;
+			}
+			.count_title{
+				width: 100%;
+			    text-align: center;
+			    font-size: 30px;
+			    font-weight: 700;
+			    margin-top: 31px;
+			    color: #fff;
+			}
+			.count_desc{
+			    margin-top: 90px;
+			    font-size: 14px;
+			    text-align: center;
+			    color: #fff;
+			}
+			.countdown-desc strong {
+			    font-size: 18px;
+			    padding-right: 2px;
+			    text-align: middle;
+			    display: block;
+			    margin-top: -1px;
+			}
+			.timer{
+				margin-left: auto;
+			    margin-right: auto;
+			    width: 130px;
+			    height: 30px;
+			    margin-top: 10px;
+			    display: block;
+			    color: #333;
+    			font-weight: bold;
+			}
+			.timer_unit{
+				position: relative;
+			    float: left;
+			    width: 30px;
+			    height: 30px;
+			    text-align: center;
+			    background-color: #2f3430;
+			    margin-right: 20px;
+			    color: white;
+			    font-size: 20px;
+			}
+			.timer_unit:after {
+			    content: ":";
+			    display: block;
+			    position: absolute;
+			    right: -20px;
+			    font-weight: bolder;
+			    font-size: 18px;
+			    width: 20px;
+			    height: 100%;
+			    top: 0;
+			}
+			.timer_second{
+				margin-right: 0;
+			}
+			.timer_second:after{
+				display: none;
+			}
+			.kill_list{
+				width: 800px;
+				height: 100%;
+				position: relative;
+			    float: left;
+			    overflow: hidden;
+			}
+			.itm{
+				width: 200px;
+				height: 100%;
+				/*background-color: red;*/
+				float: left;
+				margin-left: 0px;
+				border-radius: 5px;
+				box-shadow: 0px 0px 1px #ccc;
+			}
+			.itm img{
+				width: 140px;
+				height: 140px;
+				margin-top: 20px;
+				margin-left: 30px;
+			}
+			.itm .desc{
+				width: 160px;
+				height: 20px;
+				line-height: 20px;
+				color: #333;
+			    margin: auto;
+			    margin-top: 20px;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			.itm .ab{
+				font-size: 15px;
+				width: 160px;
+				height: 24px;
+				background-color: red;
+				color: white;
+				text-align: center;
+				line-height: 24px;
+				margin: 15px auto;
+			}
+			
+			.app_a{
+				position: relative;
+	    		width: 100%;
+	    		margin-top: 20px;
+			}
+			.count_title_one{
+				width: 100%;
+			    text-align: center;
+			    font-size: 30px;
+			    font-weight: 700;
+			    margin-top: 31px;
+			    color: #fff;
+			}
+			.count_title_two{
+				width: 100%;
+			    text-align: center;
+			    font-size: 24px;
+			    font-weight: 500;
+			    margin-top: 20px;
+			    color: #fff;
+			}
+			.a_countdown{
+				position: relative;
+			    float: left;
+			    width: 190px;
+			    height: 100%;
+			    color: #fff;
+			    /*background-color: #e83632;*/
+			    background-image: url(img/sy/bj2.png);
+			    background-size: contain;
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			    float: left;
+			}
+			.a_countdown:hover{
+				text-decoration: none;
+			}
+			.countdown:hover{
+				text-decoration: none;
+			}
+			.itm:hover{
+				background-color: red;
+			}
+			.itm:hover .desc{
+				color: white;
+			}
+			
+			.container{
+				width: 990px;
+				margin: auto;
+			}
+			.item{
+				position: relative;
+				width: 90%;
+				height: 260px;
+				border-radius: 5px;
+				box-shadow: 0px 0px 5px #ccc;
+				margin: 10px;
+			}
+			.item img{
+				width: 100%;
+				height: 220px;
+			}
+			.item span{
+				line-height: 45px;
+				display: block;
+				font-size: 18px;
+				color: red;
+				font-weight: bold;
+				padding: 0 4px;
+			}
+			.mask_one{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+				display: none;
+				text-align: center;
+				
+			}
+			.item:hover .mask_one{
+				display: block;
+			}
+			.mask_one a{
+				color: yellow;
+				font-style: italic;
+				line-height: 200px;
+				text-decoration: none;
+				font-size: 32px;
+				cursor: pointer;
+			}
+			
+			.b_countdown{
+				position: relative;
+			    float: left;
+			    width: 190px;
+			    height: 100%;
+			    color: #fff;
+			    background-image: url(img/A/bj01.png);
+			    background-size: contain;
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			}
+			.count_t{
+				width: 160px;
+				height: 90px;
+			    margin: 15px auto;
+			    background-image: url(img/A/bj02.png);
+			    background-size: contain;
+			    background-position: 50%;
+			    background-repeat: no-repeat;
+			}
+			.count_title_three{
+				width: 100%;
+			    text-align: center;
+			    line-height: 130px;
+			    font-size: 18px;
+			    color: #ddd;
+			}
+			.b_countdown:hover .count_title_three{
+				color: red;
+			}
+			.b_countdown:hover{
+				text-decoration: none;
+			}
+			.list_one{
+				/*border: 10px solid #ccc;*/
+				width: 800px;
+				height: 100%;
+				position: relative;
+			    float: left;
+			    overflow: hidden;
+			}
+			.itm_one{
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 5000px;
+				height: 100%;
+				float: left;
+				cursor: pointer;
+			}
+			.itm_one img{
+				width: 150px;
+				height: 150px;
+				margin-top: 30px;
+				margin-left: 25px;
+			}
+			.itm_one ul{
+				list-style: none;
+			}
+			.itm_one ul li{
+				float: left;
+				margin-right: 25px;
+			}
+			.tshi{
+				margin-left: 35px;
+				margin-top: 20px;
+				font-weight: bold;
+			}
+			.tshi:hover{
+				color: red;
+			}
+			
+			.j_chinnal{
+				width: 990px;
+				margin: auto;
+			}  
+			.chinnal_one{
+				width: 100%;
+				height: 845px;
+				margin-bottom: 20px;
+    			overflow: hidden;
+			} 
+			.floorhd{
+				height: 65px;
+			}   
+			.floor_inner{
+				width: 990px;
+				margin: 0 auto;
+			}
+			.floor_tit{
+				position: relative;
+			    width: 210px;
+			    height: 45px;
+			    font-size: 28px;
+			    font-weight: 700;
+			    text-align: center;
+			    line-height: 45px;
+			    padding: 0 30px;
+			    margin: 0 auto 20px;
+			    overflow: hidden;
+			    color: #333;
+			}
+			.floor_tit::before{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: 0 0;
+			    width: 25px;
+			    height: 20px;
+			    left: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}
+			.floor_tit::after{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: -25px 0;
+			    width: 25px;
+			    height: 20px;
+			    right: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}
+			.chinnal_block{
+				position: relative;
+			}  
+			.channels_block_1 .channels_block_wrapper {
+			    width: 500px;
+			    height: 790px;
+			    padding-left: 500px; 
+			}
+			.gc_a{
+				width: 240px;
+				height: 306px;
+    			background: #fff;
+    			position: absolute;
+    			top: 0;
+    			left: 0;
+    			display: inline-block;
+    			margin-right: 10px;
+    			margin-bottom: 10px;
+			}   
+			.gc_item{
+				width: 240px;
+    			height: 306px;
+    			position: relative;
+    			display: inline-block;
+			}
+			.gc_img{
+				background: #fff;
+				width: 100%;
+    			height: 100%;
+    			transition: background .2s linear,opacity .2s linear!important;
+    			position: relative;
+    			overflow: hidden;
+			}
+			.chinnal_block .gc_img>img{
+				width: auto;
+			    height: auto;
+			    max-width: 100%;
+			    max-height: 100%;
+			    margin: 0 auto;
+			}
+			.gc_a img{
+				display: block;
+			}
+			.gc_img_a{
+				width: 240px;
+				height: 306px;
+				opacity: 1;
+				transition: opacity .2s linear;
+				border: 0;
+    			vertical-align: middle;
+			}
+			.chinnal_block .gc_a .gc_b .gc_item:after{
+				position: absolute;
+			    top: 0;
+			    left: 0;
+			    right: 0;
+			    bottom: 0;
+			    content: "";
+			    background: rgba(255,255,255,.2);
+			    opacity: 0;
+			    transition: opacity .2s ease;
+			}
+			.gc_b{
+				width: 240px;
+				height: 306px;
+				left: 250px;
+    			background: #fff;
+    			position: absolute;
+    			top: 0;
+    			display: inline-block;
+    			margin-right: 10px;
+    			margin-bottom: 10px;
+			}
+			.gc_c{
+				top: 306px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-right: 10px;
+    			margin-bottom: 10px;
+			}   
+			.gc_title{
+				height: 25px;
+			    padding-top: 20px;
+			    padding-bottom: 8px;
+			    line-height: 25px;
+			    display: block;    
+			    margin-left: 30px;
+    			margin-right: 10px;
+    			white-space: nowrap;
+			    text-overflow: ellipsis;
+			}
+			.gc_title_a{
+				font-size: 18px;
+				font-weight: 700;
+    			color: #333;
+			}
+			.gc_title_b{
+				font-size: 12px;
+				color: #999;
+    			margin-left: 5px;
+    			line-height: 25px;
+			}
+			.gc_imga{
+				width: 240px;
+				height: 75px;
+				font-size: 0;
+			    line-height: 0;
+			    padding-left: 30px;
+			}
+			.gc_imga .gc_item{
+				margin-right: 30px;
+				position: relative;
+    			display: inline-block;
+			}
+			.gc_imga .gc_img{
+				width: 75px;
+    			height: 75px;
+    			display: inline-block;
+    			position: relative;
+    			overflow: hidden;
+    			float: left;
+			}
+			.gc_itema{
+				width: 75px;
+    			height: 75px;
+    			float: left;
+    			/*position: absolute;
+    			top: 60px;*/
+    			margin: 30px 20px;
+			}
+			.gc_img_b{
+				width: 75px;
+    			height: 75px;
+			}
+			.gc_d{
+				top: 306px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-left: 250px;
+    			margin-bottom: 10px;
+			} 
+			.gc_e{
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 500px;
+    			display: inline-block;
+    			top: 464px;
+    			margin-top: 10px;
+    			margin-right: 10px;
+    			margin-bottom: 10px;
+			}
+			.gc_f{
+				top: 464px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-left: 750px;
+    			margin-bottom: 10px;
+			}
+			.gc_h{
+				top: 464px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-right: 10px;
+    			margin-bottom: 10px;
+			}
+			.gc_i{
+				top: 464px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-left: 250px;
+    			margin-bottom: 10px;
+			}
+			.gc_j{
+				top: 306px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-left: 500px;
+    			margin-bottom: 10px;
+			}
+			.gc_k{
+				top: 306px;
+				width: 240px;
+    			height: 148px;
+    			background: #fff;
+    			position: absolute;
+    			left: 0;
+    			display: inline-block;
+    			margin-top: 10px;
+    			margin-left: 750px;
+    			margin-bottom: 10px;
+			}
+			.gc_l{
+				width: 240px;
+    			height: 148px;
+			    left: 500px;
+			    background: #fff;
+			    position: absolute;
+			    top: 0px;
+			    display: inline-block;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_m{
+				width: 240px;
+    			height: 148px;
+			    left: 750px;
+			    background: #fff;
+			    position: absolute;
+			    top: 0px;
+			    display: inline-block;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_n{
+				width: 240px;
+    			height: 148px;
+			    left: 500px;
+			    background: #fff;
+			    position: absolute;
+			    top: 148px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_o{
+				width: 240px;
+    			height: 148px;
+			    left: 750px;
+			    background: #fff;
+			    position: absolute;
+			    top: 148px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_p{
+				width: 240px;
+    			height: 148px;
+			    left: 0px;
+			    background: #fff;
+			    position: absolute;
+			    top: 622px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_q{
+				width: 240px;
+    			height: 148px;
+			    left: 250px;
+			    background: #fff;
+			    position: absolute;
+			    top: 622px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_r{
+				width: 240px;
+    			height: 148px;
+			    left: 500px;
+			    background: #fff;
+			    position: absolute;
+			    top: 622px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc_s{
+				width: 240px;
+    			height: 148px;
+			    left: 750px;
+			    background: #fff;
+			    position: absolute;
+			    top: 622px;
+			    display: inline-block;
+			    margin-top: 10px;
+			    margin-right: 10px;
+			    margin-bottom: 10px;
+			}
+			.gc:hover{
+				background: pink;
+			}
+			
+			.J_chinnal{
+				width: 990px;
+				margin: auto;
+			}  
+			.chinnal_two{
+				width: 100%;
+				margin-bottom: 20px;
+    			overflow: hidden;
+			} 
+			.floorhd{
+				height: 65px;
+			}   
+			.floor_inner{
+				width: 990px;
+				margin: 0 auto;
+			}
+			.floor_tit{
+				position: relative;
+			    width: 210px;
+			    height: 45px;
+			    font-size: 28px;
+			    font-weight: 700;
+			    text-align: center;
+			    line-height: 45px;
+			    padding: 0 30px;
+			    margin: 0 auto 20px;
+			    overflow: hidden;
+			    color: #333;
+			}
+			.floor_tit::before{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: 0 0;
+			    width: 25px;
+			    height: 20px;
+			    left: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}
+			.floor_tit::after{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: -25px 0;
+			    width: 25px;
+			    height: 20px;
+			    right: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}  
+			.floor{
+				margin: 0 auto;
+				width: 990px;
+			}
+			.floorhd_top{
+				background-color: #fff;
+				margin-bottom: 10px;
+			}
+			.feed_tab{
+				margin: 0 auto 10px;
+    			width: 900px;    
+    			height: 60px;
+			}
+			.feed_item{
+				width: 150px;
+				position: relative;
+			    float: left;
+			    height: 60px;
+			    text-align: center;
+			    cursor: pointer;
+			}
+			li{
+				list-style: none;
+			}
+			.feed_title{
+				color: #333;
+			    margin-top: 7px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			    height: 27px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			}
+			.title_text{
+				background: #e1251b;
+			    color: #fff;
+			    width: 70px;
+			    height: 27px;
+			    display: inline-block;
+			    border-radius: 50px;
+			    padding: 0 5px;
+			}
+			.feed_desc{
+				color: #e1251b;
+				font-size: 14px;
+			}
+			.feed_gap{
+				position: absolute;
+			    right: 0;
+			    top: 0;
+			    height: 40px;
+			    margin: 10px 0;
+			    width: 1px;
+			}
+			.title_textone{
+				color: #333;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			}
+			.feed_descone{
+				color: #999;
+    			font-size: 14px;
+			}
+			.down_list{
+				margin: 0 -5px;
+			}
+			.list_item{
+				width: 190px;
+			    height: 266px;
+			    margin: 0 5px 8px;
+			    background: #fff;
+			    position: relative;
+    			float: left;
+			}
+			.down_dot{
+				position: absolute;
+			    bottom: 0;
+			    right: 20px;
+			    display: inline-block;
+			    width: 1px;
+			    height: 1px;
+			    background-color: #b1b1b1;
+			}
+			.down_lk{
+				display: inline-block;
+			    width: 100%;
+			    height: 100%;
+			}
+			a{
+				color: #666;
+    			text-decoration: none;
+			}
+			.down_img{
+				width: 120px;
+			    height: 120px;
+			    margin: 30px auto;
+			    display: block;
+			    transition: background .2s linear,opacity .2s linear!important;
+    			background: transparent;
+    			position: relative;
+    			overflow: hidden;
+			}
+			.lazing_img{
+				opacity: 1;
+				transition: opacity .2s linear;
+			}
+			.down_img>img{
+				display: block;
+			    width: auto;
+			    height: auto;
+			    max-width: 100%;
+			    max-height: 100%;
+			    margin: 0 auto;
+			}
+			img{
+				border: 0;
+    			vertical-align: middle;
+			}
+			.down_info{
+				line-height: 22px;   
+				padding: 0 10px;    
+				clear: both;
+				height: 65px;
+			}
+			.info_name{
+				font-size: 12px;
+			    line-height: 20px;
+			    height: 40px;
+			    text-align: left;
+    			color: #666;
+    			transition: color .2s ease;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			}
+			.info_self{
+				background-color: #e1251b;
+			    border-radius: 2px;
+			    color: #fff;
+			    padding: 0 5px;
+			    margin-right: 4px;
+			    line-height: 16px;
+			    height: 16px;
+			    font-size: 12px;
+			    display: inline-block;
+			}
+			i {
+    			font-style: normal;
+			}
+			.info_price{
+				margin-top: 10px;
+			}
+			.mod_price{
+				width: 62px;
+				float: left;
+				text-align: left;
+				display: inline-block;
+			    font-size: 16px;
+			    line-height: 18px;
+			    height: 18px;
+			    color: #e1251b;
+			}
+			.mod_price i {
+			    vertical-align: middle;
+			    font-size: 12px;
+			    font-weight: 700;
+			    margin-right: 0px;
+			}
+			.price_text{
+				font-size: 16px;
+				font-weight: 700;
+    			font-family: arial,sans-serif;
+			}
+			.info_plus{
+				width: 102px;
+    			margin-top: 1px;
+    			float: right;
+			    margin-right: 1px;
+			    text-align: right;
+			}
+			.info_discount{
+				font-size: 12px;
+			    color: #e1251b;
+			    height: 14px;
+			    padding: 0 6px;
+			    border: 1px solid #e1251b;
+			    line-height: 14px;
+			    border-radius: 2px;
+			    text-align: center;
+			    display: inline-block;
+			    margin-left: 10px;
+			    vertical-align: 1px;
+			}
+			.list_item:hover .info_delete {
+			    display: block;
+			}
+			.info_delete{
+				background-image: url(img/info/下载.png);
+			}
+			.info_delete{
+				position: absolute;
+			    top: 10px;
+			    right: 10px;
+			    width: 16px;
+			    height: 16px;
+			    opacity: 0;
+			    background: url(img/info/下载.png) no-repeat;
+			    background-size: 16px;
+			    background-position: 50%;
+			    cursor: pointer;
+			}
+			.list_item:hover .info_enable{
+			    display: block;
+			}
+			.list_item:hover{
+				background: pink;
+			}
+			.info_hd{
+			    height: 54px;
+			    position: absolute;
+			    bottom: 8px;
+			    left: 0;
+			    width: 100%;
+			    text-align: center;
+			    opacity: 0;
+    			background-color: #fff;
+    			background: linear-gradient(180deg,rgba(255,255,255,.8) 0,white 35%,white);
+			}
+			.info_hd .info_enable{
+    			width: 99px;
+    			margin-top: 14px;
+    			height: 28px;
+			    display: inline-block;
+			    font-size: 12px;
+			    border: 1px solid #353131;
+			    border-radius: 15px;
+			    line-height: 28px;
+			    text-align: center;
+			    cursor: pointer;
+			}
+			.info_enable{
+				background-color: #333;
+    			color: #fff!important;
+			}
+			.info_hd .info_enable:first-child {
+			    margin-left: 0;
+			}
+			.info_enable .info_icon{
+				margin-top: -1px;
+				background-image: url(img/info/eye.png);
+				width: 16px;
+			    height: 16px;
+			    line-height: 16px;
+			    background-size: 16px 16px;
+			    margin-right: 4px;
+			}
+			.info_hd .info_icon{
+				transition: all .4s ease;
+			    vertical-align: middle;
+			    display: inline-block;
+			    background-repeat: no-repeat;
+			}
+			
+			.dibu{
+				/*width: 100%;*/
+				/*height: 600px;*/
+			}
+			.service1{
+				/*width: 100%;
+				height: 42px;*/
+				padding: 30px 0;
+   				border-bottom: 1px solid #dedede;
+			}
+			.service_a{
+				width: 990px;
+				/*height: 42px;*/
+				margin: auto;
+			}
+			.mod{
+				height: 42px;
+			}
+			.service_a ul li{
+				list-style: none;
+			}
+			.mod_a{
+				width: 247px;
+				height: 42px;
+				float: left;
+			}
+			.base{
+				width: 180px;
+				margin: 0 auto;
+				position: relative;
+				padding-left: 45px;
+			}
+			.duo{
+				width: 36px;
+				height: 42px;
+				background-repeat: no-repeat;
+    			background-size: 113px 86.5px;
+    			background-image: url(img/dibu/01.png);
+    			background-position: 0 0;
+    			overflow: hidden;
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    text-indent: -999px;
+			}
+			.duo_a{
+			    width: 100%;
+			    height: 42px;
+			    line-height: 42px;
+			    font-size: 18px;
+			    font-weight: 700;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    color: #444;
+			}
+			.kuai{
+				background-position: -38.5px 0;
+				background-repeat: no-repeat;
+    			background-size: 113px 86.5px;
+   				background-image: url(img/dibu/01.png);
+			}
+			.hao{
+				background-position: -77px 0;
+				background-repeat: no-repeat;
+    			background-size: 113px 86.5px;
+    			background-image: url(img/dibu/01.png);
+			}
+			.sheng{
+				background-position: 0 -44.5px;
+				background-repeat: no-repeat;
+    			background-size: 113px 86.5px;
+    			background-image: url(img/dibu/01.png);
+			}
+			.base_a{
+				overflow: hidden;
+			    position: absolute;
+			    left: 0;
+			    top: -10px;
+			    width: 36px;
+			    height: 42px;
+			    text-indent: -999px;
+			}
+			
+			.mod_help{
+				padding: 20px 0;
+			}
+			.help_inner{
+				width: 990px;
+				margin: 0 auto;
+			}
+			.help_list{
+				overflow: hidden;
+    			height: 160px;
+			}
+			.help_nav{
+				width: 158px;
+				line-height: 21px;
+				float: left;
+			}
+			.nav_a{
+				margin-bottom: 5px;
+    			font-size: 14px;
+    			color: #5E5E5E;
+			}
+			a{
+				font-size: 12px;
+			    color: #666;
+			    text-decoration: none;
+			}
+			.nav_ul{
+				width: 158px;
+			}
+			.help_nav ul li{
+				list-style: none;
+			}
+			.help_cover{
+				background-image: none;
+				background-repeat: no-repeat;
+			    background-position: 0 0;
+			    float: right;
+			    width: 200px;
+			    height: 150px;
+			}
+			.cover_a{
+				margin-bottom: 15px;
+			    font-size: 14px;
+			    text-align: center;
+			    color: #5E5E5E;
+			}
+			.cover_ico{
+				padding: 0 10px;
+			}
+			.cover_info{
+				font-size: 12px;
+				color: #666;
+			}
+			.cover_more{
+				text-align: right;
+			}
+			.cover_img{
+				width: 12px;
+				height: 13px;
+			}
+			
+			.mod_two{
+				width: 990px;
+				margin: 0 auto;
+				padding: 15px 0;
+			    border-top: 1px solid #e1e1e1;
+			    text-align: center;
+			}
+			.mode_split{
+				margin: 0 1px;
+				color: #ccc;
+			}
+			.mod_three{
+				padding: 10px 0;
+			    line-height: 22px;
+			    color: #999;
+			}
+			.mod_three a{
+				color: #999;
+			}
+			.mode_split_a{
+				margin: 0 10px;
+				color: #ccc;
+			}
+			.sp{
+				font-size: 14px;
+			}
+			.down_auth{
+				margin: 25px 0;
+			}
+			.auth_1{
+				background-position: -205px -111px;
+				background-repeat: no-repeat;
+				background-image: url(img/dibu/02.png);
+			}
+			.auth{
+				overflow: hidden;
+			    display: inline-block;
+			    margin: 0 3px;
+			    width: 103px;
+			    height: 32px;
+			    line-height: 1000px;
+			}
+			.auth_2{
+				background-position: -205px -74px;
+				background-repeat: no-repeat;
+				background-image: url(img/dibu/02.png);
+			}
+			.auth_3{
+				background-position: -205px -37px;
+				background-repeat: no-repeat;
+				background-image: url(img/dibu/02.png);
+			}
+			.auth_4{
+				background-position: -205px 0;
+				background-repeat: no-repeat;
+				background-image: url(img/dibu/02.png);
+			}
+			.auth_5{
+				background-position: 0 -155px;
+				background-repeat: no-repeat;
+				background-image: url(img/dibu/02.png);
+			}
+			
+			.back{
+				width: 58px;
+				height: 60px;
+				background-color: white;
+				position: fixed;
+				right: 10px;
+				bottom: 30px;
+				text-align: center;
+				line-height: 60px;
+				box-shadow: 0px 0px 5px #000;
+				display: none;
+				cursor: pointer;
+				border-radius: 5px
+			} 
+			a:hover{
+				text-decoration: none;
+			}  
+			.back:hover{
+				background-color: red;
+			}
+			.back:hover .elevator_totop_txt{
+				color: white;
+			}
+   			.elevator_totop_txt {
+   				line-height: 60px;
+			    display: block;
+			    font-size: 14px;
+			    color: #666;
+			} 
+		</style>
+	</head>
+	<body>
+		<!--第一部分-->
+		<div class="w_top">
+				<div class="w_one">
+					<a href="#" class="aa">陕西</a>
+					<div class="w_right">
+						<ul>
+							<li>
+								<div class="dt">
+									<a href="登录.html" class="myjds">你好,请登录</a>
+									<a href="个人注册.html" class="myjds zc">免费注册</a>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjds">我的订单</a>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjd">我的京东</a>
+									<img src="img/shouye/down.png" class="spa"/>
+								</div>
+								<div class="dropdown">
+									<div class="fore1">
+											<div class="w_two">
+												<a href="#" class="a_one">待处理订单
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">消息
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">返修退换货
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的回答
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">降价商品
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的关注
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的京豆
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的优惠卷
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的白条
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">我的理财
+												<span class="style_red"></span>
+												</a>
+											</div>
+									</div>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjds">京东会员</a>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjd cj">企业采购</a>
+									<img src="img/shouye/down.png" class="spa"/>
+								</div>
+								<div class="dropdown">
+									<div class="fore1">
+											<div class="w_two">
+												<a href="#" class="a_one">企业购
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">商用场景管
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">工业品
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">礼品卡
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">丰客多商城
+												<span class="style_red"></span>
+												</a>
+											</div>
+									</div>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjd">客户服务</a>
+									<img src="img/shouye/down.png" class="spa"/>
+								</div>
+								<div class="dropdown">
+									<div class="fore1">
+											<div class="w_two">
+												<a href="#" class="a_one">客户
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">帮助中心
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">售后服务
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">在线客服
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">意见建议
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">帮助中心
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">电话客服
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">全球售客服
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">商户
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">合作招商
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">成长中心
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">商家帮助
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">工作平台
+												<span class="style_red"></span>
+												</a>
+											</div>
+									</div>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjd">网络导航</a>
+									<img src="img/shouye/down.png" class="spa"/>
+								</div>
+								<div class="dropdown">
+									<div class="fore1">
+											<div class="w_two">
+												<a href="#" class="a_one">特色主题
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">新品首发
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">京东金融科技
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">行业频道
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">意见建议
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">京东服饰
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">智能数码
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">理财
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">生活服务
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">旅行
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">更多精选
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">乡村招募
+												<span class="style_red"></span>
+												</a>
+											</div>
+											<div class="w_two">
+												<a href="#" class="a_one">工作平台
+												<span class="style_red"></span>
+												</a>
+											</div>
+									</div>
+								</div>
+							</li>
+							<li class="spacer"></li>
+							<li>
+								<div class="dt">
+									<a href="#" class="myjds">手机京东</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<script type="text/javascript">
+			$("li").mouseenter(function(){
+				$(this).children(".dropdown").slideDown()
+			})
+			$("li").mouseleave(function(){
+				$(this).children(".dropdown").slideUp()
+			})
+		</script>
+				
+		<!--导航部分-->
+		<div class="maxbox">	
+			<div class="box">
+				<div class="dh">
+					<p class="logo"></p>
+					<div class="daohang">
+						<input type="text" name="key" id="key" class="text" value="花王拉拉裤" />
+						<a href="#"><img src="img/shouye/相机.png" class="xj"/></a>
+						<p class="button"><img src="img/shouye/search.png" class="search"/></p>
+					</div>
+					<div class="gwc">
+						<i class="tu"><img src="img/shouye/cart_empty.png" class="tu"/></i>
+						<i class="zero">0</i>
+						<a href="我的购物车.html" class="aaa">我的购物车</a>
+					</div>
+					<div class="tm_two">
+						<div class="tm_w"></div>
+					</div>
+				</div>
+				<div class="hotwords">
+					<a href="#" class="hot_one">服饰超级秒</a>
+					<a href="#">盘栽</a>
+					<a href="#">家电秒杀</a>
+					<a href="#">尖货手机</a>
+					<a href="#">宝贝趴</a>
+					<a href="#">家装节</a>
+					<a href="#">运动秒杀</a>
+					<a href="#">家装建材</a>
+				</div>
+				<div class="navitems">
+					<div class="word_one">
+						<ul class="group_one">
+							<li class="d_one">
+								<a href="#" class="grid_a1">秒杀</a>
+							</li>
+							<li class="d_two">
+								<a href="#" class="grid_a1">优惠卷</a>
+							</li>
+							<li class="d_three">
+								<a href="#" class="grid_a1">PLUS会员</a>
+							</li>
+							<li class="d_four">
+								<a href="#" class="grid_a1">品牌闪购</a>
+							</li>
+						</ul>	
+					</div>
+					<div class="word_two">
+						<ul class="group_two">
+							<li class="d_five">
+								<a href="#" class="grid_a1">拍卖</a>
+							</li>
+							<li class="d_six">
+								<a href="#" class="grid_a1">京东家电</a>
+							</li>
+							<li class="d_seven">
+								<a href="#" class="grid_a1">京东超市</a>
+							</li>
+							<li class="d_eight">
+								<a href="#" class="grid_a1">京东生鲜</a>
+							</li>
+						</ul>
+					</div>
+					<div class="word_three">
+						<ul class="group_three">
+							<li class="d_nine">
+								<a href="#" class="grid_a1">京东国际</a>
+							</li>
+							<li class="d_ten">
+								<a href="#" class="grid_a1">京东金融</a>
+							</li>
+						</ul>
+					</div>	
+				</div>
+			</div>
+		</div>	
+		<!--banner部分-->
+		<div class="fs">
+			<div class="middle">
+				<div class="fs_col1">
+						<div id='J_cate' class="cate J_cate" role="navigation" aria-label="左侧导航">
+							<ul class="JS_navCtn cate_menu">
+								<li class="cate_menu_item" data-index="1" clstag="h|keycount|head|category_01a">
+									<a target="_blank" class="cate_menu_lk" href="//jiadian.jd.com">家用电器</a>
+								</li>
+								<li class="cate_menu_item" data-index="2" clstag="h|keycount|head|category_02a">
+									<a target="_blank" class="cate_menu_lk" href="//shouji.jd.com&#47;">手机</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//wt.jd.com">运营商</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//shuma.jd.com&#47;">数码</a>
+								</li>
+								<li class="cate_menu_item" data-index="3" clstag="h|keycount|head|category_03a">
+									<a target="_blank" class="cate_menu_lk" href="//diannao.jd.com&#47;">电脑</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//bg.jd.com">办公</a>
+								</li>
+								<li class="cate_menu_item" data-index="4" clstag="h|keycount|head|category_04a">
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;home.html">家居</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;furniture.html">家具</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//jzjc.jd.com&#47;">家装</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;kitchenware.html">厨具</a>
+								</li>
+								<li class="cate_menu_item" data-index="5" clstag="h|keycount|head|category_05a">
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;1315-1342.html">男装</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;1315-1343.html">女装</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//phat.jd.com&#47;10-156.html">童装</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;1315-1345.html">内衣</a>
+								</li>
+								<li class="cate_menu_item" data-index="6" clstag="h|keycount|head|category_06a">
+									<a target="_blank" class="cate_menu_lk" href="//beauty.jd.com&#47;">美妆</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;beauty.html">个护清洁</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;pet.html">宠物</a>
+								</li>
+								<li class="cate_menu_item" data-index="7" clstag="h|keycount|head|category_07a">
+									<a target="_blank" class="cate_menu_lk" href="//phat.jd.com&#47;10-184.html">女鞋</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//phat.jd.com&#47;10-183.html">箱包</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;watch.html">钟表</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;jewellery.html">珠宝</a>
+								</li>
+								<li class="cate_menu_item" data-index="8" clstag="h|keycount|head|category_08a">
+									<a target="_blank" class="cate_menu_lk" href="//phat.jd.com&#47;10-185.html">男鞋</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//phat.jd.com&#47;10-109.html">运动</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;outdoor.html">户外</a>
+								</li>
+								<li class="cate_menu_item" data-index="9" clstag="h|keycount|head|category_09a">
+									<a target="_blank" class="cate_menu_lk" href="//xinfang.jd.com&#47;">房产</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//car.jd.com&#47;">汽车</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//che.jd.com&#47;">汽车用品</a>
+								</li>
+								<li class="cate_menu_item" data-index="10" clstag="h|keycount|head|category_10a">
+									<a target="_blank" class="cate_menu_lk" href="//baby.jd.com">母婴</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//toy.jd.com&#47;">玩具乐器</a>
+								</li>
+								<li class="cate_menu_item" data-index="11" clstag="h|keycount|head|category_11a">
+									<a target="_blank" class="cate_menu_lk" href="//food.jd.com&#47;">食品</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//jiu.jd.com">酒类</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//fresh.jd.com">生鲜</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//china.jd.com">特产</a>
+								</li>
+								<li class="cate_menu_item" data-index="12" clstag="h|keycount|head|category_12a">
+									<a target="_blank" class="cate_menu_lk" href="//art.jd.com">艺术</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;1672-2599.html">礼品鲜花</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//nong.jd.com">农资绿植</a>
+								</li>
+								<li class="cate_menu_item" data-index="13" clstag="h|keycount|head|category_13a">
+									<a target="_blank" class="cate_menu_lk" href="//health.jd.com">医药保健</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//channel.jd.com&#47;9192-9196.html">计生情趣</a>
+								</li>
+								<li class="cate_menu_item" data-index="14" clstag="h|keycount|head|category_14a">
+									<a target="_blank" class="cate_menu_lk" href="//book.jd.com&#47;">图书</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//mvd.jd.com&#47;">文娱</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//education.jd.com">教育</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//e.jd.com&#47;ebook.html">电子书</a>
+								</li>
+								<li class="cate_menu_item" data-index="15" clstag="h|keycount|head|category_15a">
+									<a target="_blank" class="cate_menu_lk" href="//jipiao.jd.com&#47;">机票</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//hotel.jd.com&#47;">酒店</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//trip.jd.com&#47;">旅游</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//ish.jd.com&#47;">生活</a>
+								</li>
+								<li class="cate_menu_item" data-index="16" clstag="h|keycount|head|category_16a">
+									<a target="_blank" class="cate_menu_lk" href="//licai.jd.com&#47;">理财</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//z.jd.com&#47;">众筹</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//baitiao.jd.com">白条</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//bao.jd.com&#47;">保险</a>
+								</li>
+								<li class="cate_menu_item" data-index="17" clstag="h|keycount|head|category_17a">
+									<a target="_blank" class="cate_menu_lk" href="//anzhuang.jd.com">安装</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//jdwx.jd.com">维修</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//cleanclean.jd.com">清洗</a>
+									<span class="cate_menu_line">/</span>
+									<a target="_blank" class="cate_menu_lk" href="//2.jd.com&#47;">二手</a>
+								</li>
+								<li class="cate_menu_item" data-index="18" clstag="h|keycount|head|category_18a">
+									<a target="_blank" class="cate_menu_lk" href="//imall.jd.com&#47;">工业品</a>
+								</li>
+							</ul>
+							<!--<div id="J_popCtn" class="JS_popCtn cate_pop mod_loading" style="display: none;"></div>-->
+					</div>
+				</div>
+			
+			<div class="carousel">
+					<div id="imagesList" class="imagesList">
+						<ul>
+							<li class="current">
+								<a href=""><img src="img/shouye/banner01.webp"/></a>
+							</li>
+							<li class="images">
+								<a href=""><img src="img/shouye/banner02.jpg"/></a>
+							</li>
+							<li class="images">
+								<a href=""><img src="img/shouye/banner03.jpg"/></a>
+							</li>
+							<li class="images">
+								<a href=""><img src="img/shouye/banner04.webp"/></a>
+							</li>
+							<li class="images">
+								<a href=""><img src="img/shouye/banner05.webp"/></a>
+							</li>
+							<li class="images">
+								<a href=""><img src="img/shouye/banner06.webp"/></a>
+							</li>
+						</ul>
+					</div>
+					<div class="btns">
+						<span class="leftBtn" id="carousel_leftBtn"><img src="img/shouye/arrow_left.png" class="left"/></span>
+						<span class="rightBtn" id="carousel_rightBtn"><img src="img/shouye/arrow_right.png" class="right"/></span>
+					</div>
+					<div id="circles" class="circles">
+						<ol>
+							<li class="current"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
+					</div>
+				</div>
+				<div class="banner_right">
+					<div class="rig_one">
+						<div class="tup_o_one">
+							<div class="tx">
+								<a href="" >
+									<img src="img/shouye/01.png" class="tup_o"/>
+								</a>
+							</div>
+							<div class="tp_one">
+								<a href="" class="hygjd">Hi~欢迎逛京东!</a>
+								<p>
+									<a href="登录.html" class="dlu">登录</a>
+									&nbsp;|&nbsp;
+									<a href="登录.html" class="zce">注册</a>
+								</p>
+							</div>
+							<div class="tp_two">
+								<a href="" class="fuli">新人福利</a>
+								<a href="" class="fuli plus">Plus会员</a>
+							</div>
+						</div>
+					</div>
+					<div class="rig_two">
+						<div id="tup_o_two">
+							<div class="news">
+								<h5 class="new_jd">京东快报</h5>
+								<a href="" class="new_gd">更多
+									<img src="img/shouye/next.png" class="new_rt"/>
+								</a>
+							</div>
+							<ul class="newslist">
+								<li class="newitem">
+									<a href="" class="tj">
+										<span class="hot">HOT</span>
+										"钓鱼技术学习，拖钓入门要知道的技巧" 
+									</a>
+								</li>
+								<li class="newitem">
+									<a href="" class="tj">
+										<span class="hot">HOT</span>
+										"荣泰多功能家用按摩椅 给父母一个好的礼物" 
+									</a>
+								</li>
+								<li class="newitem">
+									<a href="" class="tj">
+										<span class="hot">HOT</span>
+										"纸尿裤多久更换一次才合适?" 
+									</a>
+								</li>
+								<li class="newitem">
+									<a href="" class="tj">
+										<span class="hot">HOT</span>
+										"实时录音转文字，科大讯飞智能录音笔SR501评测" 
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="rig_three">
+						<div class="tup_o_three">
+							<ul class="lklist">
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/话费05.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">话费</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/礼品卡03.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">礼品卡</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/白条10.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">白条</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/电影票04.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">电影票</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/理财11.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">理财</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/火车票02.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">火车票</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/游戏07.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">游戏</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/机票12.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">机票</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/加油卡01.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">加油卡</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/众筹09.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">众筹</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/企业购08.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">企业购</span>
+									</a>
+								</li>
+								<li class="lkitem">
+									<a href="" class="lk_one">
+										<p class="ico_huafei">
+											<img src="img/shouye/酒店06.png" class="ico_img_huafei"/>
+										</p>
+										<span class="ico_txt">酒店</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--第二部分-->
+		
+		<div class="app">
+			<div class="a_app">
+				<div class="kill">
+					<div class="a_kill">
+						<div class="aa_kill">
+							<a href="" class="countdown">
+								<div class="count_title">京东秒杀</div>
+									<div>
+										<div class="count_desc">
+											<strong>18:00</strong>
+											"点场 倒计时"
+										</div>
+										<span class="timer">
+											<span class="timer_unit timer_hour">
+												01
+											</span>
+											<span class="timer_unit timer_minute">
+												33
+											</span>
+											<span class="timer_unit timer_second">
+												19
+											</span>
+										</span>
+									</div>
+							</a>
+							<div class="kill_list">
+								<div class="itm">
+									<img src="img/sy/01.webp"/>
+									<div class="mask">
+										<p class="desc">
+											亿利洗车机家用高压清洗机洗车泵洗车神
+											器4630A 1200w标配(便携家用高压水枪)
+										</p>
+										<h3 class="ab">price：111￥</h3>
+									</div>			
+								</div>							
+								<div class="itm">
+									<img src="img/sy/02.webp"/>
+									<div class="mask">
+										<p class="desc">
+											美度MIDO黄金项链指挥官系列 布达佩斯
+											系列 防水男士腕表
+										</p>
+										<h3 class="ab">price：7172￥</h3>
+									</div>
+								</div>		
+								<div class="itm">
+									<img src="img/sy/03.webp"/>
+									<div class="mask">
+										<p class="desc">
+											美度MIDO瑞士手表指挥官系列 布达佩斯
+											系列 防水男士腕表
+										</p>
+										<h3 class="ab">price：211￥</h3>
+									</div>
+								</div>
+								<div class="itm">
+									<img src="img/sy/04.webp"/>
+									<div class="mask">
+										<p class="desc">
+											李晨男士短袖，半袖夏季防汗吸汗
+											器4630A 1200w标配(便携家用高压水枪)
+										</p>
+										<h3 class="ab">price：189￥</h3>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="app_a">
+			<div class="a_app">
+				<div class="kill">
+					<div class="a_kill">
+						<div class="aa_kill">
+							<a href="" class="a_countdown">
+								<div class="count_title_one">新品首发</div>
+								<div class="count_title_two">快速抢购</div>
+							</a>
+							<div class="kill_list">
+								<div class="itm">
+									<img src="img/sy/05.webp"/>
+									<div class="mask">
+										<p class="desc">
+											亿利插板家用高压
+											器4630A 1200w标配(便携家用高压水枪)
+										</p>
+										<h3 class="ab">price：11￥</h3>
+									</div>			
+								</div>							
+								<div class="itm">
+									<img src="img/sy/06.webp"/>
+									<div class="mask">
+										<p class="desc">
+											MIDO运动鞋系列 防止脚臭
+											系列 防水男士腕表
+										</p>
+										<h3 class="ab">price：717￥</h3>
+									</div>
+								</div>		
+								<div class="itm">
+									<img src="img/sy/07.webp"/>
+									<div class="mask">
+										<p class="desc">
+											美度MIDO瑞士手表指挥官系列 布达佩斯
+											系列 防水男士腕表
+										</p>
+										<h3 class="ab">price：99￥</h3>
+									</div>
+								</div>
+								<div class="itm">
+									<img src="img/sy/08.webp"/>
+									<div class="mask">
+										<p class="desc">
+											女士男士短袖一次性口罩，防晒
+											器4630A 1200w标配(便携家用高压水枪)
+										</p>
+										<h3 class="ab">price：55￥</h3>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--第三部分-->
+		<div class="app_a">
+			<div class="a_app">
+				<div class="kill">
+					<div class="a_kill">
+						<div class="aa_kill">
+							<a href="" class="b_countdown">
+								<div class="count_t">
+									<div class="count_title_three">探索新生活</div>
+								</div>
+							</a>
+							<div class="list_one" id="list_one">
+								<div class="itm_one" id="itm_one">
+									<ul>
+										<li><a href=""><img src="img/A/01.webp"/></a>
+												<div class="tshi">小米 大风量 吹风机</div>
+										</li>
+										<li><a href=""> <img src="img/A/02.webp"/></a>
+											<div class="tshi">netLINK千兆单模光收发器</div>
+										</li>
+										<li><a href=""> <img src="img/A/03.webp"/></a>
+											<div class="tshi">阿凡尼 绿幽灵手链</div>
+										</li>
+										<li><a href=""> <img src="img/A/04.webp"/></a>
+											<div class="tshi">罗品贡技机械键盘</div>
+										</li>
+										
+										<li><a href=""> <img src="img/A/05.webp"/></a>
+											<div class="tshi">虎牌 静音烧水壶</div>
+										</li>
+										<li><a href=""> <img src="img/A/06.webp"/></a>
+											<div class="tshi">向日葵 远程控制 网络配件</div>
+										</li>
+										<li><a href=""> <img src="img/A/07.webp"/></a>
+											<div class="tshi">金利来 商务色织 领带</div>
+										</li>
+										<li><a href=""> <img src="img/A/08.webp"/></a>
+											<div class="tshi">玫瑰水晶玫瑰摆件</div>
+										</li>
+									</ul>		
+								</div>	
+							</div>
+							<script type="text/javascript">
+								var list_one=document.getElementById("list_one");
+								var itm_one=document.getElementById("itm_one");
+								var listul=document.getElementsByTagName("ul")[0];
+								var lislength=listul.getElementsByTagName("li").length;
+//								listul.innerHTML+=listul.innerHTML;
+								var nowleft=0;
+								var timer;
+								move();
+								list_one.onmouseover=function(){
+									clearInterval(timer)
+								}
+								list_one.onmouseout=function(){
+									move()
+								}
+								function move(){
+									clearInterval(timer);
+									timer=setInterval(function(){
+										nowleft-=3;
+										if (nowleft<-50*lislength) {
+											nowleft=0;
+										}
+										itm_one.style.left=nowleft+"px";
+									},100)
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--第四部分-->
+		<div class="container">
+			<div class="row boxContent">
+				<!--<div class="col-md-3">
+					<div class="item">
+						<img src="img/c1.jpg"/>
+						<span>title</span>
+						<div class="mask_one">
+							<h3 onclick="jump(a)">price：111￥</h3>
+							<p class="desc">
+								数据库的符号看电视剧凤凰科技的首付款
+								数据库的符号看电视剧凤凰科技的首付款
+								数据库的符号看电视剧凤凰科技的首付款
+							</p>
+						</div>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1/w/website/findGoodsTypeList",
+				async:true,
+				success:function(response){
+					console.log(response)
+					var obj=response.data;
+					console.log(obj);
+					for (var i=0;i<obj.length;i++) {
+						var imgchange=obj[i].icon.replace(obj[i].icon.substr(0,5),"http:");
+						$(".boxContent").append(
+							`<div class="col-md-3">
+								<div class="item">
+									<img src="${imgchange}"/>
+									<span>${obj[i].createDate}</span>
+									<div class="mask_one">
+										<a href="sort.html?name=${obj[i].name}">${obj[i].name}</a>
+//										<h3 onclick="jump(a)">${obj[i].name}</h3>
+									</div>
+								</div>
+							</div>`
+						)
+					}
+				}
+			});
+			})
+		</script>
+		
+		<script type="text/javascript">
+			var carousel_leftBtn=document.getElementById("carousel_leftBtn");
+			var carousel_rightBtn=document.getElementById("carousel_rightBtn");
+			var circlesLis=document.getElementById("circles").getElementsByTagName("li");
+			var imagesList=document.getElementById("imagesList").getElementsByTagName("li");
+			var img_idx=0;
+			carousel_rightBtn.onclick=function(){
+				img_idx++;
+				if (img_idx>5) {
+					img_idx=0;
+				}
+				changePic();
+			}
+			carousel_leftBtn.onclick=function(){
+				img_idx--;
+				if (img_idx<0) {
+					img_idx=5;
+				}
+				changePic();
+			}
+			for(var i=0;i<circlesLis.length;i++){
+				(function(m){
+					circlesLis[m].onmouseover=function(){
+						img_idx=m;
+						changePic();
+					}
+				})(i)
+				
+			}
+			function changePic(){
+				for (var i=0;i<imagesList.length;i++) {
+					imagesList[i].className="";
+				}
+				imagesList[img_idx].className="current";
+				for(var i = 0; i < circlesLis.length; i++) {
+					circlesLis[i].className ="";
+				}
+				circlesLis[img_idx].className="current";
+			}
+			
+			
+		</script>
+		<!--第五部分-->	  
+		<div class="j_chinnal">
+			<div class="chinnal_one">
+				<div class="floorhd">
+					<div class="floor_inner">
+						<h3 class="floor_tit">频道广场</h3>
+					</div>
+				</div>
+				<div class="chinnal_block">
+					<div class="chinnal_wrapple">
+						<div class="gc_a">
+							<a href="" class="gc_item">
+								<div id="gc_img">
+									<img src="img/aa/01.webp" class="gc_img_a"/>
+								</div>
+							</a>
+						</div>
+						<div class="gc_b">
+							<a href="" class="gc_item">
+								<div id="gc_img">
+									<img src="img/aa/02.webp" class="gc_img_a"/>
+								</div>
+							</a>
+						</div>
+						<div class="gc gc_l">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东直播</span>
+								<span class="gc_title_b">京东直播 边看边买</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/a.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/b.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_m">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">运动城</span>
+								<span class="gc_title_b">生命在于运动</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/c.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/d.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_n">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">厨卫电器</span>
+								<span class="gc_title_b">百变厨房大焕新</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/e.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/f.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_o">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">生鲜馆</span>
+								<span class="gc_title_b">尝遍天下鲜</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/g.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/h.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_c">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">企业购</span>
+								<span class="gc_title_b">一站式企业平购平台</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/05.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/06.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_d">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东金融</span>
+								<span class="gc_title_b">会理财 懂生活</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/15.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/16.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_j">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东手机</span>
+								<span class="gc_title_b">一个极客的诞生</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/19.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/20.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_k">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">智能数码</span>
+								<span class="gc_title_b">尽享玩物</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/17.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/18.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="chinnal_block">
+					<div class="chinnal_wrapple">
+						<div class="gc gc_e">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东国际</span>
+								<span class="gc_title_b">一站尽享进口好物</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/07.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/08.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_f">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东时尚</span>
+								<span class="gc_title_b">服饰美妆好物</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/09.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/10.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_h">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">汽车生活</span>
+								<span class="gc_title_b">放心养车 爱车无忧</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/11.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/12.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_i">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">Joy寻宝</span>
+								<span class="gc_title_b">懂你的Joy</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/13.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/14.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="chinnal_block">
+					<div class="chinnal_wrapple">
+						<div class="gc gc_p">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">京东超市</span>
+								<span class="gc_title_b">一站式囤生活好物</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/i.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/j.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_q">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">食品饮料</span>
+								<span class="gc_title_b">吃货嘉年华</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/k.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/l.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_r">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">个护清洁馆</span>
+								<span class="gc_title_b">欢喜四季 洁净生活</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/m.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/n.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="gc gc_s">
+							<a href="" class="gc_title">
+								<span class="gc_title_a">家用电器</span>
+								<span class="gc_title_b">买电器 上京东</span>
+							</a>
+							<div id="gc_imga">
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/o.webp" class="gc_img_b"/>
+									</div>
+								</a>
+								<a href="" class="gc_itema">
+									<div id="gc_img">
+										<img src="img/aa/p.webp" class="gc_img_b"/>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+		
+		<!--第六部分-->	
+		<div class="J_chinnal">
+			<div class="chinnal_two">
+				<div class="floorhd">
+					<div class="floor_inner">
+						<h3 class="floor_tit">为你推荐</h3>
+					</div>
+				</div>
+				<div class="floor floorhd_top">
+					<ul class="feed_tab">
+						<li class="feed_item feed_active">
+							<div class="feed_title">
+								<span class="title_text">精选</span>
+							</div>
+							<div class="feed_desc">猜你喜欢</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">智能先锋/span>
+							</div>
+							<div class="feed_descone">大电器城</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">居家优品</span>
+							</div>
+							<div class="feed_descone">品质生活</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">超市百货</span>
+							</div>
+							<div class="feed_descone">百货生鲜</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">时尚达人</span>
+							</div>
+							<div class="feed_descone">美妆穿搭</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">进口好物</span>
+							</div>
+							<div class="feed_descone">京东国际</div>
+						</li>
+					</ul>
+				</div>
+				<div class="floor floorhd_down">
+					<div>
+						<ul class="down_list">
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/01.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/02.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">234.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/03.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/04.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">327.4</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/05.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">49.60</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/06.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">98.50</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/07.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/08.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">543.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/09.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">121.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/10.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">65.95</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/11.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">213.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/12.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.45</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/13.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">53.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/14.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">75.20</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/15.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/16.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">34.70</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/17.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">90.7</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/18.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">876.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/19.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">56.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/20.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">43.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/21.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">98.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/22.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.50</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/23.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">59.70</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/24.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">342.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/25.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.9</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/26.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">450.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/27.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">56.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/28.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">66.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/29.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">540.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/30.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">179.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!--底部-->
+		<div class="dibu">
+				<div class="service1">
+					<div class="service_a">
+						<ul class="mod">
+							<li class="mod_a">
+								<div class="base">
+									<h5 class="base_a duo">多</h5>
+									<p class="duo_a">品类齐全，轻松购物</p>
+								</div>
+							</li>
+							<li class="mod_a">
+								<div class="base">
+									<h5 class="base_a kuai">快</h5>
+									<p class="duo_a">多仓直发，极速配送</p>
+								</div>
+							</li>
+							<li class="mod_a">
+								<div class="base">
+									<h5 class="base_a hao">好</h5>
+									<p class="duo_a">正品行货，精致服务</p>
+								</div>
+							</li>
+							<li class="mod_a">
+								<div class="base">
+									<h5 class="base_a sheng">省</h5>
+									<p class="duo_a">天天低价，畅选无忧</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="mod_help">
+					<div class="help_inner">
+						<div class="help_list">
+							<div class="help_nav">
+								<h5 class="nav_a">购物指南</h5>
+								<ul nav_ul>
+									<li>
+										<a href="">购物流程</a>
+									</li>
+									<li>
+										<a href="">会员介绍</a>
+									</li>
+									<li>
+										<a href="">生活旅行</a>
+									</li>
+									<li>
+										<a href="">常见问题</a>
+									</li>
+									<li>
+										<a href="">大家电</a>
+									</li>
+									<li>
+										<a href="">联系客服</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_nav">
+								<h5 class="nav_a">配送方式</h5>
+								<ul nav_ul>
+									<li>
+										<a href="">上门自提</a>
+									</li>
+									<li>
+										<a href="">211限时达</a>
+									</li>
+									<li>
+										<a href="">配送服务查询</a>
+									</li>
+									<li>
+										<a href="">配送费收取标准</a>
+									</li>
+									<li>
+										<a href="">海外配送</a>
+									</li>
+									<li>
+										<a href="">联系客服</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_nav">
+								<h5 class="nav_a">支付方式</h5>
+								<ul nav_ul>
+									<li>
+										<a href="">货到付款</a>
+									</li>
+									<li>
+										<a href="">在线支付</a>
+									</li>
+									<li>
+										<a href="">分期付款</a>
+									</li>
+									<li>
+										<a href="">公司转账</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_nav">
+								<h5 class="nav_a">售后服务</h5>
+								<ul nav_ul>
+									<li>
+										<a href="">售后政策</a>
+									</li>
+									<li>
+										<a href="">退款说明</a>
+									</li>
+									<li>
+										<a href="">返修/退换货</a>
+									</li>
+									<li>
+										<a href="">取消订单</a>
+									</li>
+									<li>
+										<a href="">价格保护</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_nav">
+								<h5 class="nav_a">特色服务</h5>
+								<ul nav_ul>
+									<li>
+										<a href="">夺宝岛</a>
+									</li>
+									<li>
+										<a href="">DIY装机</a>
+									</li>
+									<li>
+										<a href="">延保服务</a>
+									</li>
+									<li>
+										<a href="">京东E卡</a>
+									</li>
+									<li>
+										<a href="">京东通信</a>
+									</li>
+									<li>
+										<a href="">京鱼座智能</a>
+									</li>
+								</ul>
+							</div>
+							<div class="help_cover">
+								<h5 class="cover_a">京东自营覆盖区县</h5>
+								<div class="cover_ico">
+									<p class="cover_info">京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+									<p class="cover_more">
+										<a href="">了解详情
+										<img src="img/shouye/next.png" class="cover_img"/></a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="mod_one">
+					<div class="mod_two">
+						<p class="mod_link">
+							<a href="">关于我们</a>
+							<span class="mode_split">|</span>
+							<a href="">联系我们</a>
+							<span class="mode_split">|</span>
+							<a href="">联系客服</a>
+							<span class="mode_split">|</span>
+							<a href="">合作招商</a>
+							<span class="mode_split">|</span>
+							<a href="">商家帮助</a>
+							<span class="mode_split">|</span>
+							<a href="">营销中心</a>
+							<span class="mode_split">|</span>
+							<a href="">手机京东</a>
+							<span class="mode_split">|</span>
+							<a href="">友情链接</a>
+							<span class="mode_split">|</span>
+							<a href="">销售联盟</a>
+							<span class="mode_split">|</span>
+							<a href="">京东社区</a>
+							<span class="mode_split">|</span>
+							<a href="">风险监测</a>
+							<span class="mode_split">|</span>
+							<a href="">隐私政策</a>
+							<span class="mode_split">|</span>
+							<a href="">东京公益</a>
+							<span class="mode_split">|</span>
+							<a href="">English site</a>
+							<span class="mode_split">|</span>
+							<a href="">Media & IR</a>
+						</p>
+						<div class="mod_three">
+							<div class="mod_four">
+								<p>
+									<a href="">京公网安备 11000002000088号</a>
+									<span class="mode_split_a">|</span>
+									<a href="">京ICP证070359号</a>
+									<span class="mode_split_a">|</span>
+									<a href="">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+									<span class="mode_split_a">|</span>
+									<a href="">新出发京零 字第大120007号</a>
+								</p>
+								<p>
+									<a href="">互联网出版许可证编号新出网证(京)字150号</a>
+									<span class="mode_split_a">|</span>
+									<a href="">出版物经营许可证</a>
+									<span class="mode_split_a">|</span>
+									<a href="">网络文化经营许可证京网文[2014]2148-348号</a>
+									<span class="mode_split_a">|</span>
+									<a href="">违法和不良信息举报电话：4006561155</a>
+								</p>
+								<p>
+									<a href="">
+										Copyright © 2004 - 2020  京东JD.com 版权所有
+									</a>
+									<span class="mode_split_a">|</span>
+									<a href="">消费者维权热线：4006067733经营证照</a>
+									<span class="mode_split_a">|</span>
+									<a href="">(京)网械平台备字(2018)第00003号</a>
+									<span class="mode_split_a">|</span>
+									<a href="">营业执照</a>
+								</p>
+							</div>
+							<div class="right_inter">
+								<p>
+									<a href="" class="inter_lk">Global Site</a>
+									<span class="mode_split_a">|</span>
+									<a href="" class="inter_lk">Сайт России</a>
+									<span class="mode_split_a">|</span>
+									<a href="" class="inter_lk">Situs Indonesia</a>
+									<span class="mode_split_a">|</span>
+									<a href="" class="inter_lk">Sitio de España</a>
+									<span class="mode_split_a">|</span>
+									<a href="" class="inter_lk">เว็บไซต์ประเทศไทย</a>
+								</p>
+							</div>
+							<div class="right_down">
+								<p>
+									<span class="sp">京东旗下网站：</span>
+									<a href="">京东钱包</a>
+									<span class="mode_split_a">|</span>
+									<a href="">京东智联云</a>
+								</p>
+							</div>
+						</div>
+						<p class="down_auth">
+							<a href="" class="auth auth_1">可信网站信用评估</a>
+							<a href="" class="auth auth_2">网络警察提醒您</a>
+							<a href="" class="auth auth_3">诚信网站</a>
+							<a href="" class="auth auth_4">中国互联网举报中心</a>
+							<a href="" class="auth auth_5">网络举报App下载</a>
+						</p>
+					</div>
+				</div>
+				
+			</div>
+	
+		<!--回顶部-->
+		<div class="back" id="btn">
+			<a href="">
+				<span class="elevator_totop_txt">顶部</span>
+			</a>
+		</div>
+		<script type="text/javascript">
+			var btn=document.getElementById("btn");
+			window.onscroll=function(){
+				var jd=document.body.scrollTop||document.documentElement.scrollTop;
+				if (jd>500) {
+					btn.style.display="block";
+				}else{
+					btn.style.display="none";
+				}
+			}
+			btn.onclick=function(){
+				var dh=document.body.scrollTop||document.documentElement.scrollTop;
+			}
+		</script>
+		
+	</body>
+</html>

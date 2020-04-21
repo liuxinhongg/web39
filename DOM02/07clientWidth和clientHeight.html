@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				margin: 30px auto;
+				padding: 50px;
+				border: 10px solid red;
+			}
+			.boxtwo{
+				padding: 10px 20px 30px 40px;
+				border: 50px solid red;
+				margin: 50px;
+				font-size: 14px;
+				line-height: 200%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--clientWidth:width+左右padding-->
+		<div class="box"></div>
+		<div class="boxtwo">
+			哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+		</div>
+		<script type="text/javascript">
+			var oneDiv=document.getElementsByTagName("div")[0];
+			var twoDiv=document.getElementsByTagName("div")[1];
+//			alert(oneDiv.clientWidth);//300
+			//alert(twoDiv.clientWidth);//1166
+			alert(twoDiv.clientHeight);//96
+		</script>
+	</body>
+</html>

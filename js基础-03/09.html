@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*for (var x=1,y=2;x+y<20;x++) {
+				y++;
+				console.log(x);
+			}*/
+//			循环的嵌套
+			/*for (var i=1;i<10;i++) {
+				for (var j=1;j<=i;j++) {
+					console.log(i+"乘"+j+"等于"+i*j);
+				}
+			}*/
+//			48的约数
+			/*for (var i=1;i<49;i++) {
+				if(48%i==0){
+					console.log(i);
+				}
+			}*/
+//			水仙花数 是指一个三位数其各位数字的立方和等于该数本身
+			for (var i=100;i<1000;i++) {
+				var gewei=parseInt(i%10);
+				var shiwei=parseInt(i/10)%10;
+				var baiwei=parseInt(i/100);
+//				条件
+				if(Math.pow(gewei,3)+Math.pow(shiwei,3)+Math.pow(baiwei,3)==i){
+					console.log(i);
+				}
+			}
+		</script>
+	</body>
+</html>

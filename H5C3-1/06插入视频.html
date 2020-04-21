@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<!--<video src="img/小鱼.mp4" autoplay controls width="400" height="300"></video>-->
+	<!--<video controls autoplay loop width="400">
+		<source src="img/小鱼.mp4"></source>
+	</video>-->
+	<!--poster:指定视频下载时显示的图像，用播放户点击按钮前显示的图像-->
+	<input type="button" value="播放" id="auto"/>
+	<input type="button" value="放大" onclick="big()"/>
+	<input type="button" value="缩小" onclick="small()"/>
+	<input type="button" value="正常" onclick="normal()"/>
+	 <video src="img/小鱼.mp4" controls width="300" poster="img/cat.jpg" id="video1"></video>
+	 
+	 <script>
+	 	var video1=document.getElementById("video1");
+	 	var auto=document.getElementById("auto");
+	 	auto.onclick= function(){
+	 		if (this.value=="播放") {
+					this.value="暂停";
+					video1.play();
+				}else{
+					this.value="播放";
+					video1.pause();
+				}
+	 	}
+	 	function big(){
+	 		video1.width="600"
+	 	}
+	 	function small(){
+	 		video1.width="100"
+	 	}
+	 	function normal(){
+	 		video1.width="300"
+	 	}
+	 </script>
+	</body>
+</html>

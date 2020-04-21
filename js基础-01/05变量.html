@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a;//定义一个变量
+            //赋值
+			a=110;
+			//	输出变量a
+			console.log(a);
+//			console.log(b);//报错，因为b没有进行定义
+			//合法的命名
+			var a
+			var $
+			var A
+			var b123
+			var ______;
+			var _123;
+			var $_01as;
+			var _;
+			var aa_123_$;
+			//非法的命名
+			/*var 123;
+			var 123a;
+			var 12_a;
+			var asd@1231;
+			var var;
+			var class;
+			var ￥*/
+			/*var a=100;
+			var b=200;
+			var c;
+			
+			a=b;
+			console.log(a);//200
+			console.log(b)//200
+			console.log(c);//undefined*/
+			aaa=111;
+			console.log(aaa);//111;
+/*			var a=10;
+			var b=20;
+			var c=30;*/
+			/*var a=10,b=20,c=30;
+			console.log(a);
+			console.log(b);
+			console.log(c);*/
+//			变量声明的提升
+
+			a=100;
+			var a;//这行定义会被自动的提升
+			console.log(a);//100
+			console.log(ad);//undefined 提升只能提升定义，不能提上赋初值，
+			var ad=200;//提升定义，不能提升赋值
+		</script>
+	</body>
+</html>

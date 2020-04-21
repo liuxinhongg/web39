@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 80px;
+				height: 80px;
+				background-color: red;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="" value="开始" />
+		<input type="button" name="" id="" value="暂停" />
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById("box");
+			var startBtn=document.getElementsByTagName("input")[0];
+			var pauseBtn=document.getElementsByTagName("input")[1];
+			var nowleft=100;
+			var timer;
+			//设表先停
+			startBtn.onclick=function(){
+				clearInterval(timer);
+				timer=setInterval(function(){
+					nowleft+=2;
+					oDiv.style.left=nowleft+"px";
+				},20)
+			}
+			pauseBtn.onclick=function(){
+				clearInterval(timer);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/shuzi/0.png"/>
+		<img src="img/shuzi/1.png"/>
+		<img src="img/shuzi/2.png"/>
+		<img src="img/shuzi/3.png"/>
+		<img src="img/shuzi/4.png"/>
+		<img src="img/shuzi/5.png"/>
+		<img src="img/shuzi/pangzi.png"/>
+		<script type="text/javascript">
+			var imgs=document.getElementsByTagName("img");
+			//判断所有图片加载完毕，相当与一个计数器，一个图片加载完毕后，就记一下数 ++
+			//计数器和总数相同，图片加载完毕
+			var count=0;
+			for (var i=0;i<imgs.length;i++) {
+				imgs[i].onload=function(){
+					count++;
+					if (count==imgs.length) {
+						alert("所有的图片加载完毕")
+					} 
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/02.jpg" id="tup"/>
+		<div zhouwu="123" id="box" >
+			
+		</div>
+		<script type="text/javascript">
+			var otup=document.getElementById("tup");
+			var obox=document.getElementById("box");
+			otup.setAttribute("src","img/04.jpg");
+//			otup.src="img/04.jpg"
+			alert(obox.zhouwu)//undefined
+			alert(obox.getAttribute('zhouwu'))
+		</script>
+	</body>
+</html>

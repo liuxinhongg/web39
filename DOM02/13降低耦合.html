@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			img{
+				border: none;
+			}
+			.rolling{
+				width: 800px;
+				height: 130px;
+				border: 10px solid #ccc;
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			.m_nuit{
+				width: 5000px;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+			.m_nuit ul{
+				list-style: none;
+			}
+			.m_nuit ul li{
+				float: left;
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="rolling" id="rolling">
+			<div class="m_nuit" id="m_nuit">
+				<ul>
+					<li><a href=""> <img src="img/shuzi/0.png"/></a></li>
+					<li><a href=""> <img src="img/shuzi/1.png"/></a></li>
+					<li><a href=""> <img src="img/shuzi/pangzi.png"/></a></li>
+					<li><a href=""> <img src="img/shuzi/pangzi.png"/></a></li>
+					<li><a href=""> <img src="img/shuzi/pangzi.png"/></a></li>
+					<li><a href=""> <img src="img/shuzi/2.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var rolling=document.getElementById("rolling");
+			var m_nuit=document.getElementById("m_nuit");
+			var listul=document.getElementsByTagName("ul")[0];
+			var imgs=listul.getElementsByTagName("img");
+			var zhefandian;//原来图片的数量
+			//复制一倍li
+			listul.innerHTML+=listul.innerHTML;
+			//得到所有的li，包括新的li
+			var lis=listul.getElementsByTagName("li");
+			var lislength=lis.length;
+			for (var i=0,count=0;i<imgs.length;i++) {
+				imgs[i].onload=function(){
+					count++;
+					if (count==imgs.length) {
+						zhefandian=lis[lislength / 2].offsetLeft;
+						//开始运动
+						move()
+					}
+				}
+			}
+			//信号量
+			var nowleft=0;
+			var timer;
+			rolling.onmouseover=function(){
+				clearInterval(timer)
+			}
+			rolling.onmouseout=function(){
+				move()
+			}
+			function move(){
+				clearInterval(timer);
+				//运动
+				timer=setInterval(function(){
+					nowleft-=5;
+					if (nowleft<-zhefandian) {
+						nowleft=0;
+					}
+					m_nuit.style.left=nowleft+"px";
+				},20)
+			}
+		</script>
+	</body>
+</html>

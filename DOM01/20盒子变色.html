@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var box=document.getElementById("box");
+			//信号量
+			var state="blue";//0蓝色 1红色
+			box.onclick=function(){
+				if(state=='blue'){
+					state="red";
+				}else{
+					state="blue";
+				}
+				this.style.backgroundColor=state;
+			}
+		</script>
+	</body>
+</html>

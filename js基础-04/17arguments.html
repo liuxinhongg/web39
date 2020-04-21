@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*function aa(a,b,c){
+				alert("哈哈");
+			}
+			function aa(a,b){
+				alert("你好");
+			}
+			aa(1,2,4);//你好*/
+//			arguments参数,是每一个函数天生就有的,调用的时候回填充里面的参数值
+//			数组的下标是从0开始的,arguments.length来查看参数个数
+			/*function bb(a,b){
+				alert(arguments[3]);
+			}
+			bb(12,34,545,657,11);*/
+			/*function sum(a,b){
+				switch (arguments.length){
+					case 1:
+						return ++a;
+						break;
+					case 2:
+						return a+b;
+						break;
+				}
+			}
+			console.log(sum(18));//19
+			console.log(sum(18,28));//46*/
+//			无线参数的函数
+			/*function limit(){
+				var sum=0;
+				for (var i=0;i<arguments.length;i++) {
+					sum+=arguments[i];
+				}
+				return sum;
+			}
+			console.log(limit(1,2,4,6,8,6));
+			console.log(limit(1,2));*/
+			//检查参数:如果是一个参数,判断他的奇偶性;如果是两个参数,判断奇偶性是否相同
+			console.log(pd(17)); 
+			console.log(pd(17,19)); 
+			function pd(){
+				switch (arguments.length){
+					case 1:
+						return arguments[0]%2==0?true:false;
+						break;
+					case 2:
+						return (arguments[0]+arguments[1])%2==0?true:false;
+						break;
+					default:
+//						throw new Error("如果错误，参数只能是一个或者两个");
+						return '如果错误，参数只能是一个或者两个';
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>前后端分离</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#send").click(function() {
+
+                $.ajax({
+                    type: "post",
+                    url: "/nginx/",
+                    data: {
+                        // type: "top",
+                        key: "c14887fe64c3c92f7cd9507b34e01257"
+                    },
+
+                    success: function(data) {
+                        console.log(data);
+                    },
+                    error: function() {
+                        alert("error");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="sendEmail" id="send">
+        <div id="name" style="color:#00FF00">
+
+        </div>
+    </form>
+</body>
+
+</html>

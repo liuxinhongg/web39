@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//水仙花数是一种特殊的三位数，它的特点就是，每个数位的立方和，等于它本身。
+			for (var i=100;i<1000;i++) {
+				var gewei=parseInt(i%10);
+				var shiwei=parseInt(i/10)%10;
+				var baiwei=parseInt(i/100);
+				if(Math.pow(gewei,3)+Math.pow(shiwei,3)+Math.pow(baiwei,3)==i){
+					console.log(i);
+				}
+			}
+		</script>
+	</body>
+</html>

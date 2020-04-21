@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 80px;
+				height: 80px;
+				background-color: gold;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById("box");
+			var nowleft=100;
+			var timer;
+			timer=setInterval(function(){
+				nowleft+=10;
+				if (nowleft>800) {
+					nowleft=800;
+					clearInterval(timer);
+				}
+				oDiv.style.left=nowleft+"px";
+			},20)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				/*background-color: yellowgreen;*/
+				padding: 10px 20px 30px;
+				border: 10px solid red;
+				background: yellowgreen url(img/cat.jpg) no-repeat 10px 10px;
+				background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<div>
+		你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+		你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+		你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+	</div>
+	<script type="text/javascript">
+		var oDiv=document.getElementsByTagName("div")[0];
+		//getPropertyValue 用于检索特定样式属性的计算样式，  接收css属性的名称,getPropertyValue可以用["css属性名(不是驼峰命名)"]代替
+		//alert(window.getComputedStyle(oDiv).getPropertyValue("width"));//200px
+		//alert(window.getComputedStyle(oDiv)["width"]);//200px
+		//alert(getComputedStyle(oDiv).getPropertyValue("width"));//200px
+		//alert(getComputedStyle(oDiv).getPropertyValue("padding-left"));//20px
+		//以上在IE6,7,8视为错误 css样式是驼峰命名
+		alert(oDiv.currentStyle.width);
+		alert(oDiv.currentStyle.paddingLeft);
+		
+	</script>
+</html>

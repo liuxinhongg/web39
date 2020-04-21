@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: skyblue;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementsByTagName("div")[0];
+			var nowleft=100;
+			//100---700   3000毫秒
+			//3000 定时时间为20毫秒   150次(帧)
+			//150变化量是600   每帧变化4
+			//方法一
+			/*var t=new Date();
+			var timer=setInterval(function(){
+				nowleft+=4;
+				if (nowleft>700) {
+					nowleft=700;
+					clearInterval(timer);
+				}
+				oDiv.style.left=nowleft+"px";
+			},20)*/
+			//方法二 利用帧编号   帧frame  帧编号 frameNumber
+			var target=1000;//要移动的位置
+			var time=10000;//动画总时间
+			var interval=20;//间隔时间
+			//总帧数
+			var maxFrame=time/interval;
+			//步长
+			var step=(target-nowleft)/maxFrame;
+			var frameNumber=0;
+			var timer=setInterval(function(){
+				nowleft+=step;
+				frameNumber++;
+				if (frameNumber==maxFrame) {
+					clearInterval(timer);
+				}
+				oDiv.style.left=nowleft+"px";
+			},interval)
+		</script>
+	</body>
+</html>

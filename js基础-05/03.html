@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var inner;//全局变量
+			function outer(){
+				var a=123;
+				var b=456;
+//				inner-->函数
+//				这个函数此刻立即回生成一个闭包,记住此刻的环境,
+				inner=function(){
+					alert(a);
+					alert(b);
+				}
+			}
+			outer()
+			var a=111;
+			var b=222;
+			inner()
+		</script>
+	</body>
+</html>

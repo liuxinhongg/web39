@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			 3 5 7 11 13
+//		质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。 
+//		48的约数的个数
+		/*var count=0;
+		for (var i=1;i<49;i++) {
+			if(48%i==0){
+				count++;
+//				console.log(i);
+			}
+		}
+		console.log(count);//10*/
+		
+		for (var i=2;i<100;i++) {
+			var count=0;
+//			i=6:1 2 3 4 5 6
+			for(var j=1;j<=i;j++){
+				if(i%j==0){
+					count++;
+				}
+			}
+			
+			if(count==2){
+				console.log(i);
+			}
+		}
+		</script>
+	</body>
+</html>

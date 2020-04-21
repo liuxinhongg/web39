@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//考拉数:三位数各个位数的阶乘之和等于本身
+			function jiecheng(a){
+				var s=1;
+				for (var i=1;i<=a;i++) {
+					s*=i;
+				}
+				return s;
+			}
+			for (var i=100;i<1000;i++) {
+				var gewei=i%10;
+				var shiwei=parseInt(i/10)%10;
+				var baiwei=parseInt(i/100);
+				if(jiecheng(gewei)+jiecheng(shiwei)+jiecheng(baiwei)==i){
+					console.log(i);
+				}
+			}
+		</script>
+	</body>
+</html>

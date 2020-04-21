@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*用户输入一个年份，判断这个年是否是闰年。
+			判断闰年条件：
+			① 非整百年数除以4，无余为闰，有余不闰；
+			② 整百年数除以400，无余为闰，有余不闰。*/
+			var year=parseInt(prompt("请输入年份"));
+			//判断
+			//方法一
+			/*if (year%100==0) {
+				if(year%400==0){
+					alert("闰年");
+				}else{
+					alert("不是闰年");
+				}
+			}else{
+				if(year%4==0){
+					alert("闰年");
+				}else{
+					alert("不是闰年");
+				}
+			}*/
+			//方法二
+			//if(是100整数倍且能被400整除 ||不是100整数倍且能够被4整数)
+			/*if(year%100==0&&year%400==0||year%100!=0&&year%4==0){
+				alert("是闰年")
+			}else{
+				alert("不是闰年");
+			}*/
+			//布尔运算公式
+//			(a&&b)||(a&&c) 等价于 a&&(b||c)
+			if(year%4==0&&(year!=100||year%400==0)){
+				alert("是闰年");
+			}else{
+				alert("不是闰年");
+			}
+		</script>
+	</body>
+</html>

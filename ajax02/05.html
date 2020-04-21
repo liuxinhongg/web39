@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/*$.ajax({
+				type:"get",
+				url:"http://127.0.0.1/w/website/bannerList",
+				success:function(res){
+					console.log(res);
+				}
+			});*/
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1/w/website/bannerList",
+				async:true,
+				success:function(res){
+					console.log(res);
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p{
+				width: 60px;
+				height: 60px;
+				float: left;
+				margin-right: 20px;
+				background-color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<script>
+			var ps=document.getElementsByTagName("p");
+			//第一种:IIFE
+			/*for (var i=0;i<ps.length;i++) {
+				(function(m){
+					ps[m].onclick=function(){
+						alert("我是老"+m);
+					}
+				})(i)
+			}*/
+			/*for (let i=0;i<ps.length;i++) {
+					ps[i].onclick=function(){
+						alert("我是老"+i);
+					}
+			}*/
+			//第二种 
+			for (var i=0;i<ps.length;i++) {
+				ps[i].index=i;//先编号    index 实际上什么都可以
+				ps[i].onclick=function(){
+					alert("我是老"+this.index);
+				}
+			}
+		</script>
+	</body>
+</html>

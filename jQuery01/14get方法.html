@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>0000</p>
+		<p>1111</p>
+		<p>2222</p>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//js-->innerhtml  jq-->html  
+			$("p").eq(2).html("two-two-two-two");
+			//get()得到的元素,帮你转换为js对象
+			//$("p").get(1).innerHTML="哈哈哈哈哈哈哈";
+			//等价于
+			$("p").eq(1)[0].innerHTML="xiixixixixi"
+		</script>
+	</body>
+</html>

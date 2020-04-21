@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			.container {
+				width: 90%;
+				height: 100%;
+				position: relative;
+				background: #fff;
+			}
+			
+			.top {
+				height: 33px;
+				background: #f5f5f5;
+				border-bottom: 1px solid #F0F0F0;
+			}
+			
+			.top .right {
+				width: 380px;
+				height: 32.8px;
+				/*border: 1px solid black;*/
+				float: right;
+				color: #999;
+			}
+			
+			.right img {
+				width: 15px;
+				height: 15px;
+				margin-right: -2px;
+				background-repeat: no-repeat;
+				margin-top: -5px;
+			}
+			
+			.right span {
+				font-size: 15px;
+				line-height: 32.8px;
+			}
+			
+			.right a {
+				text-decoration: none;
+			}
+			
+			.shangcheng::before {
+				content: "|";
+				margin: 0 20px;
+				font-weight: 300;
+			}
+			
+			.denglu::before {
+				content: "|";
+				margin: 0 20px;
+				font-weight: 300;
+			}
+			
+			.dingdan::before {
+				content: "|";
+				margin: 0 20px;
+				font-weight: 300;
+			}
+			
+			.container .tu {
+				width: 130px;
+				height: 100px;
+				float: left;
+			}
+			
+			.tu1 {
+				width: 130px;
+				height: 100px;
+				float: left;
+			}
+			
+			.normal-search-content {
+				width: 522px;
+				height: 50px;
+				border: 1px solid deeppink;
+				float: left;
+				margin: 20px 40px;
+			}
+			
+			.top_nav_form {
+				border-radius: 6px;
+				background: #F7F7F7;
+				width: 100%
+			}
+			
+			.ts_txt {
+				float: left;
+				width: 462px;
+				height: 48px;
+				line-height: 48px;
+				border: none;
+				font-size: 14px;
+				background: #f7f7f7;
+				color: #666;
+				padding: 0 15px;
+				outline: none;
+			}
+			
+			.ts_btn {
+				float: right;
+				width: 58px;
+				height: 48px;
+				border: none;
+				cursor: pointer;
+				border-radius: 0 5px 5px 0;
+				background-image: url(img/jkl.png);
+				background-repeat: no-repeat;
+				background-size: 89%;
+				outline: none;
+				background-color: white;
+			}
+			
+			.row {
+				width: 310px;
+				height: 50px;
+				/*border: 1px solid black;*/
+				float: right;
+				margin-top: 20px;
+			}
+			
+			.row .col-md-1 {
+				width: 100px;
+				height: 50px;
+				/*border: 1px solid black;*/
+				line-height: 50px;
+			}
+			
+			.row .col-md-1 img {
+				width: 24px;
+				height: 24px;
+			}
+			
+			.row .col-md-1 a {
+				text-decoration: none;
+			}
+			
+			.yincang {
+				width: 50px;
+				height: 100px;
+			}
+			
+			.shangpin {
+				width: 100px;
+				height: 50px;
+				/*border: 1px solid black;*/
+				background-color: deeppink;
+				margin-right: 20px;
+			}
+			
+			.shangpin a {
+				color: white;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			.aaa {
+				color: black;
+			}
+			
+			.carousel-inner {
+				width: 1300px;
+				height: 500px;
+			}
+			
+			.item img {
+				width: 1300px;
+				height: 500px;
+			}
+			
+			.qq {
+				width: 1170px;
+				height: 70px;
+				margin: 20px auto;
+			}
+			
+			.op {
+				width: 100%;
+				height: 400px;
+				border: 1px solid deeppink;
+			}
+			
+			.thumbnail {
+				width: 112px;
+				height: 112px;
+				border: none;
+				/*background-color: none;*/
+			}
+			
+			.oo {
+				width: 100%;
+				height: 120px;
+				/*border: 1px solid black;*/
+				margin: 280px auto;
+			}
+			
+			.oo .z1 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				color: rgb(241, 8, 8);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z2 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z3 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z4 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z5 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo a {
+				text-decoration: none;
+			}
+			
+			.oo .z6 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				margin-top: 20px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z7 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				margin-top: 20px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z8 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				margin-top: 20px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z9 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				margin-top: 20px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			.oo .z10 {
+				font-size: 18px;
+				width: 150px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				float: left;
+				border-radius: 22px;
+				margin-left: 50px;
+				margin-top: 20px;
+				color: rgb(51, 51, 51);
+				background-color: rgb(245, 245, 245);
+			}
+			
+			#asd {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100px;
+				height: 300px;
+				background: deeppink;
+			}
+			/*	/*	/*	/*
+			body {
+				height: 5000px;
+			}*/
+			
+			#left_layer {
+				width: 100px;
+				height: 50px;
+			}
+			
+			#left_layer img {
+				width: 18 0px;
+				height: 300px;
+			}
+			
+			.tuijian {
+				width: 100%;
+				height: 100px;
+				/*border: 1px solid black;*/
+			}
+			
+			.tuijian .tuijian4 {
+				width: 300px;
+				height: 100px;
+				/*border: 1px solid black;*/
+				margin: auto;
+			}
+			
+			.tuijian .tuijian1 {
+				margin: auto;
+			}
+			
+			.tuijian .tuijian2 {
+				margin: auto;
+			}
+			
+			.tuijian .tuijian3 {
+				margin: auto;
+			}
+			
+			.boxContent {
+				width: 100%;
+				height: 1200px;
+				border: 1px solid black;
+			}
+			
+			.items {
+				position: relative;
+				width: 90%;
+				height: 260px;
+				border-radius: 5px;
+				box-shadow: 0px 0px 5px #ccc;
+				margin: 20px;
+			}
+			
+			.items img {
+				width: 100%;
+				height: 220px;
+			}
+			
+			.items span {
+				line-height: 45px;
+				display: block;
+				font-size: 18px;
+				color: red;
+				font-weight: bold;
+				padding: 0 15px;
+			}
+			
+			.mask {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.5);
+				display: none;
+				text-align: center;
+			}
+			
+			.items:hover .mask {
+				display: block;
+			}
+			
+			.mask a {
+				color: yellow;
+				font-style: italic;
+				line-height: 200px;
+				text-decoration: none;
+				font-size: 32px;
+				cursor: pointer;
+			}
+			
+			.gengduo {
+				width: 100%;
+				height: 200px;
+				border: 1px solid black;
+			}
+			
+			.gengduo1 {
+				width: 300px;
+				height: 60px;
+				border: 1px solid #f10180;
+				;
+				margin: 50px auto;
+				background-color: deeppink;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+			
+			.gengduo1 a {
+				text-decoration: none;
+				line-height: 60px;
+				text-align: center;
+				color: white;
+				/*vertical-align: top;*/
+				cursor: pointer;
+				padding: 0 80px;
+				font-size: 20px;
+			}
+			
+			.best {
+				width: 100%;
+				height: 442px;
+				border: 1px solid black;
+				background-color: #f5f5f5;
+			}
+			
+			.footer-inner {
+				width: 960px;
+				height: 442px;
+				border: 1px solid black;
+				margin: auto;
+				background-color: #f5f5f5;
+			}
+			
+			.footer-vip li {
+				list-style: none;
+			}
+			
+			.footer-list {
+				width: 960px;
+				height: 146px;
+				border: 1px solid black;
+				margin: 37px 0 25px;
+				line-height: 20px;
+			}
+			
+			.link-anim {
+				float: left;
+				width: 145px;
+				height: 146px;
+				padding-left: 16px;
+				border-right: 1px solid #e0e0e0;
+			}
+			
+			.footer a {
+				color: #4d4d4d;
+				text-decoration: none;
+				cursor: pointer;
+				font: 12px/1.5 tahoma, arial, Hiragino Sans GB, WenQuanYi Micro Hei, \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, sans-serif;
+			}
+			
+			.footer-infor {
+				width: 960px;
+				height: 117.2px;
+				border: 1px solid black;
+				text-align: center;
+				color: #fff;
+				margin-bottom: 0;
+			}
+			
+			.footer-infor-link {
+				width: 960px;
+				height: 29.6px;
+				/*border: 1px solid black;*/
+				background-color: #d7237e;
+				line-height: 30px;
+			}
+			
+			.footer-infor-link a {
+				text-decoration: none;
+				color: #FFFFFF;
+			}
+			
+			.footer-infor-txt {
+				width: 960px;
+				height: 73.6px;
+				color: #999;
+				margin: 14px 0;
+				line-height: 19px;
+			}
+			
+			.footer-ft {
+				width: 100%;
+				height: 48px;
+				border: 1px solid black;
+				padding: 4px 0 4px;
+				background-color: #fff;
+			}
+			
+			.footer-pic {
+				margin: 0 auto;
+				width: 960px;
+				height: 40px;
+				text-align: center;
+				overflow: hidden;
+			}
+			
+			.footer-pic-ico01 {
+				width: 105px;
+				background-position: 0 0;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(img/footer-hash-3de6f1ae.png);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico04 {
+				width: 99px;
+				background-position: 0 -150px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico05 {
+				width: 66px;
+				background-position: 0 -200px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico06 {
+				width: 70px;
+				background-position: 0 -250px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico07 {
+				width: 75px;
+				background-position: 0 -300px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico09 {
+				width: 76px;
+				background-position: 0 -400px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.footer-pic-ico10 {
+				width: 76px;
+				background-position: 0 -450px;
+				display: inline-block;
+				margin-right: 9px;
+				height: 40px;
+				background-image: url(//shop.vipstatic.com/img/common/footer-hash-3de6f1ae.png?939748fb);
+				background-repeat: no-repeat;
+			}
+			
+			.oldlist img {
+				width: 1173.54px;
+				height: 500px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<!--顶部开始-->
+			<div class="top">
+				<div class="right">
+					<a href="">
+						<i><img src="img/首页.png"/></i>
+						<span id="">
+							首页
+						</span>
+					</a>
+					<a href="" class="shangcheng">
+						<i><img src="img/商城.png"/></i>
+						<span id="">
+							商城
+						</span>
+					</a>
+					<a href="" class="denglu">
+						<i><img src="img/登录.png"/></i>
+						<span id="">
+							登录
+						</span>
+					</a>
+					<a href="" class="dingdan">
+						<span id="">
+							我的订单
+						</span>
+					</a>
+				</div>
+			</div>
+
+			<!--蘑菇街-->
+			<div class="container">
+				<img src="img/190102_088f4i166l4gkl08k297h5kk8690i_260x200.png" class="tu" />
+				<img src="img/5c05314cNf894bdef.jpg" class="tu1" />
+				<!--搜索框-->
+				<div class="normal-search-content">
+					<form action="" method="get" class="top_nav_form">
+						<input type="text" name="" id="" value="短袖" class="ts_txt" />
+						<input type="submit" value="" class="ts_btn" />
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-md-1">
+						<a href=""><img src="img/消息.png" />消息</a>
+					</div>
+					<div class="col-md-1">
+						<a href=""><img src="img/收藏.png" />收藏</a>
+					</div>
+					<div class="col-md-1">
+						<a href=""><img src="img/购物车.png" />购物车</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="container">
+				<ul class="nav nav-tabs">
+					<li class="shangpin">
+						<a href="">商品分类</a>
+					</li>
+					<li role="presentation" class="active">
+						<a href="#">首页</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">暖春行动</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">最后疯抢</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">女装</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">母婴</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">家电</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">国际</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">美妆</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">鞋包</a>
+					</li>
+					<li role="presentation" class=>
+						<a href="#">预告</a>
+					</li>
+					<li role="presentation" class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							更多<span class="caret">
+								
+							</span>
+						</a>
+						<ul class="dropdown-menu">
+							<div class="yincang">
+								<a href="">男装</a>
+								<a href="">运动</a>
+								<a href="">家具</a>
+								<a href="">生活</a>
+								<a href="">配饰</a>
+								<a href="">扶贫</a>
+							</div>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="container">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="5"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner oldlist" role="listbox">
+						<!--<div class="item active">
+							<img src="..." alt="...">
+							<div class="carousel-caption">
+								...
+							</div>
+						</div>-->
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+			<div class="container">
+				<img src="img/15344789862278.jpg" class="qq" />
+			</div>
+			<div class="container">
+				<div class="op">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/78.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/79.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/80.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/81.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail" class="f1">
+								<a href=""><img src="img/82.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/83.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/84.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail">
+								<a href=""><img src="img/85.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail" class="">
+								<a href=""><img src="img/86.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail" class="">
+								<a href=""><img src="img/88.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail" class="">
+								<a href=""><img src="img/89.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<div class="thumbnail" class="">
+								<a href=""><img src="img/74.png" alt="..."></a>
+								<div class="caption">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="oo">
+						<a href="" title="时尚女装" class="z1">时尚女装</a>
+						<a href="" title="百搭T恤" class="z2">百搭T恤</a>
+						<a href="" title="短款外套" class="z3">短款外套</a>
+						<a href="" title="百搭卫衣" class="z4">百搭卫衣</a>
+						<a href="" title="小个子搭配" class="z5">小个子搭配</a>
+						<a href="" title="牛仔裤" class="z6">牛仔裤</a>
+						<a href="" title="连衣裙" class="z7">连衣裙</a>
+						<a href="" title="荷叶边雪纺衫" class="z8">荷叶边雪纺衫</a>
+						<a href="" title="半身裙" class="z9">半身裙</a>
+						<a href="" title="运动鞋" class="z10">运动鞋</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<div class="tuijian">
+					<div class="tuijian4">
+
+						<img src="img/sprite1.png" class="tuijian2" />
+						<img src="img/title.png" class="tuijian1" />
+
+						<img src="img/sprite.png" class="tuijian3" />
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row boxContent">
+					<!--<div class="col-md-3">
+						<div class="items">
+							<img src="img/11.jpg" />
+							<span>title</span>
+							<div class="mask">
+								<h3 onclick="jump(a)">price：111￥</h3>
+								<p class="desc">
+									数据库的符号看电视剧凤凰科技的首付款 数据库的符号看电视剧凤凰科技的首付款 数据库的符号看电视剧凤凰科技的首付款
+								</p>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</div>
+			<div class="container">
+				<div class="gengduo">
+					<div class="gengduo1">
+						<a href="">查看更多商品</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<footer id="footer" class="footer">
+					<div class="best">
+
+						<div class="footer-inner">
+							<ul class="footer-vip">
+								<li><img src="img/50.png" /></li>
+							</ul>
+							<div class="footer-list">
+								<dl class="link-anim">
+									<dt>服务保障</dt>
+									<dd>
+										<a href="">正品保证</a>
+									</dd>
+									<dd>
+										<a href="">7天无理由放心退</a>
+									</dd>
+									<dd>
+										<a href="">7*15小时客户服务</a>
+									</dd>
+									<dd>
+										<a href="">7天无理由随心换</a>
+									</dd>
+									<dd>
+										<a href=""></a>
+									</dd>
+								</dl>
+								<dl class="link-anim">
+									<dt>购物指南</dt>
+									<dd>
+										<a href="">导购演示</a>
+									</dd>
+									<dd>
+										<a href="">订单操作</a>
+									</dd>
+									<dd>
+										<a href="">会员注册</a>
+									</dd>
+									<dd>
+										<a href="">账户管理</a>
+									</dd>
+									<dd>
+										<a href="">收货样品</a>
+									</dd>
+									<dd>
+										<a href="">会员等级</a>
+									</dd>
+								</dl>
+								<dl class="link-anim">
+									<dt>支付方式</dt>
+									<dd>
+										<a href="">23家主流网银支付</a>
+									</dd>
+									<dd>
+										<a href="">支付宝.银联等支付</a>
+									</dd>
+									<dd>
+										<a href="">信用卡支付</a>
+									</dd>
+									<dd>
+										<a href="">零钱支付</a>
+									</dd>
+								</dl>
+								<dl class="link-anim">
+									<dt>配送方式</dt>
+									<dd>
+										<a href="">配送范及运费围</a>
+									</dd>
+									<dd>
+										<a href="">验货与签收</a>
+									</dd>
+								</dl>
+								<dl class="link-anim">
+									<dt>售后服务</dt>
+									<dd>
+										<a href="">退货政策</a>
+									</dd>
+									<dd>
+										<a href="">退货流程</a>
+									</dd>
+									<dd>
+										<a href="">退货方式和失效</a>
+									</dd>
+									<dd>
+										<a href="">验货服务</a>
+									</dd>
+								</dl>
+								<dl class="tc-list">
+									<dt>APP二维码</dt>
+									<dd><img src="img/二.png" / class="lazy" src="" width="100" height="100" alt="APP二维码"></dd>
+									<dd>下载移动APP</dd>
+								</dl>
+							</div>
+							<div class="footer-infor">
+								<p class="footer-infor-link">
+									<a href="">关于我们</a>|
+									<a href="">About us</a>|
+									<a href="">Investor Relations</a>|
+									<a href="">媒体报道</a>|
+									<a href="">品牌招商</a>|
+									<a href="">隐私条款</a>|
+									<a href="">唯品诚聘</a>|
+									<a href="">唯品卡</a>|
+									<a href="">联系我们</a>
+								</p>
+								<p class="footer-infor-txt">
+									Copyright © 2008-2020 vip.com，All Rights Reserved 使用本网站即表示接受
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+									<a href=""></a>
+								</p>
+							</div>
+						</div>
+						<div class="footer-ft">
+							<p class="footer-pic">
+								<a href=""> <i class="footer-pic-ico01"></i>
+								</a>.
+								<a href="">
+									<i class="footer-pic-ico04"></i>
+								</a>
+								<a href="">
+									<i class="footer-pic-ico05"></i>
+								</a>
+								<a href="">
+									<i class="footer-pic-ico06"></i>
+								</a>
+								<a href="">
+									<i class="footer-pic-ico07"></i>
+								</a>
+								<a href="">
+									<i class="footer-pic-ico09"></i>
+								</a>
+								<a href="">
+									<i class="footer-pic-ico10"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+			<div id="left_layer" style="position:fixed; top:40px; left:0px;">
+				<img src="img/7f3d835b-e367-4a20-bb70-096fdcc957ae_420_531_340x434_90.jpg"><br>
+				<a href="javascript:;" onclick="javascript:document.getElementById('left_layer').style.display='none';">关闭</a>
+			</div>
+
+			<body>
+				<script type="text/javascript">
+					$(function() {
+						$.ajax({
+							type: "get",
+							url: "http://127.0.0.1/w/website/bannerList",
+							async: true,
+							success: function(res) {
+								console.log(res);
+								var jkl = res.data;
+								if(jkl != "" || jkl != null || jkl != undefined) {
+									for(var i = 0; i < jkl.length; i++) {
+										if(i == 0) {
+											$(".oldlist").append(
+												`<div class="item active">
+													<img src="${jkl[i].img}" >
+													<div class="carousel-caption">
+													</div>
+												</div>`
+											)
+										} else {
+											$(".oldlist").append(
+												`<div class="item ">
+												<img src="${jkl[i].img}" >
+												<div class="carousel-caption">
+												</div>
+											</div>`
+											)
+										}
+									}
+								} else {
+									console.log("数据请求错误")
+								}
+
+							}
+						});
+					}())
+					$(function() {
+						$.ajax({
+							type: "get",
+							url: "http://127.0.0.1/w/website/findGoodsTypeList",
+							async: true,
+							success: function(response) {
+								var obj = response.data;
+								console.log(obj);
+								for(var i = 0; i < obj.length; i++) {
+									$(".boxContent").append(
+										`<div class="col-md-3">
+								<div class="items">
+									<img src="${obj[i].icon}"/>
+									<span></span>
+									<div class="mask">
+										<a href="sort.html?name=${obj[i].name}">${obj[i].name}</a>
+									</div>
+								</div>
+							</div>`
+									)
+								}
+
+							}
+						});
+					})
+				</script>
+			</body>
+
+</html>

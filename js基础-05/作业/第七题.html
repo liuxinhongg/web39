@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*有10个学生的成绩存在数组中，请统计大于等于平均成绩的人数。
+			成绩直接以数组形式写在程序中，不需要用户输入。*/
+			var arr=[78,66,90,89,45,67,99,84,65,77];
+			var pjs=0;
+			var sum=0;
+			for (var i=0;i<arr.length;i++) {
+				sum+=arr[i];
+			}
+			pjs=sum/arr.length;
+			console.log(pjs);//76
+			var count=0;
+			for (var i=0;i<arr.length;i++) {
+				if (arr[i]>=pjs) {
+					count++;
+				}
+			}
+			console.log(count);//6
+		</script>
+	</body>
+</html>

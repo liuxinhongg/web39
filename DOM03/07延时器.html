@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 40px;
+				background-color: yellow;
+			}
+			.tip{
+				width: 600px;
+				height: 300px;
+				background-color: #ccc;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="box"></div>
+		<div id="tip" class="tip"></div>
+		<script type="text/javascript">
+			/*setTimeout(function(){
+				console.log("你哈")
+			},3000)*/
+			var box=document.getElementById("box");
+			var tip=document.getElementById("tip");
+			box.onmouseover=function(){
+				tip.style.display="block";
+			}
+			box.onmouseout=function(){
+				setTimeout(function(){
+					tip.style.display="none"
+				},600)
+			}
+		</script>
+	</body>
+</html>

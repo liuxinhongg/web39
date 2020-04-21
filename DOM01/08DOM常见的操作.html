@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button onclick="btnClickedHandler()">移除h1</button>
+		<script type="text/javascript">
+			(function(){
+				var div,h1;
+				function init(){
+					div=document.getElementById("box");
+					h1=document.createElement("h1");
+					h1.innerHTML="标题";
+					//appendChild() 方法可向节点的子节点列表的末尾添加新的子节点。
+					div.appendChild(h1);
+					h1.onclick=function(){
+						console.log("我是h1，我被点击了");
+					}
+				}
+				init();
+				window.btnClickedHandler=function(){
+					if(h1){
+						//removeChild(h1)节点的移除
+						div.removeChild(h1);
+						h1=null;
+					}
+				}
+			}())
+		</script>
+	</body>
+</html>

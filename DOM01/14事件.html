@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<input type="text" name="" id="sr" value="123" />
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			//onclick 点击事件
+			oBox.onclick=function(){
+				alert("别点我，烦着呢~");
+			}
+			//onmouseover 鼠标进入
+			oBox.onmouseover=function(){
+				//我（oBox）自己的样式改变，用this表示
+				this.style.backgroundColor="red";
+			}
+			//onmouseout 鼠标离开
+			oBox.onmouseout=function(){
+				this.style.backgroundColor="yellow"
+			}
+			//id是唯一的，可以不用获取，但是不推荐
+			//onfocus	得到焦点
+			/*sr.onfocus=function(){
+				alert("我得到了焦点");
+			}*/
+			sr.onblur=function(){
+				var val=this.value;
+				if (val==''||val==undefined||val==null) {
+				  alert("输入框的值不能为空");
+				} else{
+					alert("输入正确");
+				}
+			}
+		</script>
+	</body>
+</html>

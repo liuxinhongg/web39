@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			p{
+				float:left;
+				width: 60px;
+				height: 60px;
+				background-color: #ccc;
+				margin-right: 10px;
+			}
+			#box{clear: both;}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				position: absolute;
+				top: 110px;
+				left: 110px;
+			}
+			.circles ul{
+				list-style: none;
+			}
+			.circles ul li{
+				float: left;
+				width: 20px;
+				height: 20px;
+				background-color: orange;
+				margin-right: 10px;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<p></p>
+		<p></p>
+		<p></p>
+		<p></p>
+		<div id="box">
+			<ul>
+				<li><span>欢迎：星期三</span></li>
+				<li class="haha"><span>哈哈</span></li>
+				<li class="haha"><span>哈哈</span></li>
+				<li class="haha"><span>哈哈</span></li>
+				<li><span>欢迎：星期三</span></li>
+			</ul>
+		</div>
+		<div class="box"></div>
+		<div class="circles">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!--<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>-->
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			/*var op=document.getElementsByTagName("p");
+			op[1].style.backgroundColor="red";*/
+			$("p").css("background-color","red");
+			$("#box ul  li.haha span").css("background-color","red");
+			//alert($(".box").css("width"));//200px
+			/*$(".box").css({
+				"width":700,
+				"height":300,
+				"opacity":0.4
+			})*/
+			$(".box").animate({"left":900,"width":100},4000,function(){
+				console.log("运动结束");
+			});
+			
+			
+			//批量添加监听,以及节点关系的能力
+			$(".circles ul li").mouseenter(function(){
+				$(this).css("background-color","yellow").siblings().css("background-color","orange")
+			})
+		</script>
+	</body>
+</html>

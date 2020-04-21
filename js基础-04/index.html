@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*for(var i=1;i<100;i++){
+				console.log(i);
+				if(i==5){
+					break;
+				}
+			}*/
+//			只终止内层循环
+			/*for (var i=1;i<=10;i++) {
+				for (var j=1;j<=10;j++) {
+					console.log(i,j);
+					if (j==5) {
+						break;
+					}
+				}
+			}*/
+			//终止外层循环
+			//给外层循环加label
+			waiceng: for (var i=1;i<=10;i++) {
+				for (var j=1;j<=10;j++) {
+					console.log(i,j);
+					if (j==5) {
+						break waiceng;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

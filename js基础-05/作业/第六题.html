@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*编写函数maxr(char) 返回字符串char中最长的连续重复字母
+			比如maxr("mmmiijjjjkkkkkkssptr") 返回"kkkkkk"*/
+			//双指针法
+			function maxr(char){
+				var a=0;
+				var b=1;
+				var maxLength=0;//找重复数最大的
+				var maxLetter="";
+				while(a!=char.length-1){
+					//判断 a b指向的字母是否一样
+					if (char.charAt(b)==char.charAt(a)) {
+						b++;
+//						maxLetter+=char.charAt(a-1);//去掉，不需要再这里统计
+					} else{
+						if(b-a>=maxLength){
+							maxLength=b-a;
+							maxLetter=char.charAt(a);
+						}
+						a++;
+						b=a+1;
+					}
+				}
+				console.log(maxLength)
+				console.log(maxLetter)
+				//上面的循环可以统计到最大长度和最多的字母
+				//下面将统计的字母拼接输出
+				var str='';
+				for (var i=0;i<maxLength;i++) {
+					str+=maxLetter;
+				}
+				return str;
+			}
+			console.log(maxr("aaabbbsssddddd"))
+		</script>
+	</body>
+</html>

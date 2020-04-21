@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			隐式转换:在我们没有写parseint和parsefloat()自己帮你进行转换格式
+			console.log('48'/'2');//24
+			console.log('36'%13);//10
+			console.log(5*null);//0 null-->0
+			console.log(5*false);//0 false-->0
+			console.log(5*true);//0 true-->1
+			console.log(5*undefined);//NaN  undefined不能进行隐式转换
+			console.log(6*"5天");//NaN  数学运算中，不纯的字符串没有办法进行隐式转换
+			
+			
+			console.log(3+"8");//38
+			console.log(8+undefined);//NaN
+			console.log(8+null);//8
+			console.log(8+false);//8
+			console.log(8+true);//9
+			
+			
+			console.log(Infinity+10);//Infinity
+			console.log(Infinity-10);//Infinity
+			console.log(Infinity+Infinity);//Infinity
+			console.log(Infinity-Infinity);//NaN
+			console.log(Infinity/Infinity);//NaN
+			console.log(Infinity*Infinity);//Infinity
+//			1/10000000000000=0.0000000000001-->0
+			console.log(0/0);//NaN
+			console.log(2/0);//Infinity
+			console.log(NaN/4);//NaN
+		</script>
+	</body>
+</html>

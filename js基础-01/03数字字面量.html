@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			8进制：如果以0开头、或者以0o开头、或者以0O开头的都是八进制，八进制只能用0~7来表示
+//				以0开头
+				console.log(0123);
+				console.log(044);//36
+				console.log(010);//8
+				console.log(036);//30
+				console.log(022);//18
+				console.log(08);//8
+//				以0o开头、或者以0O开头
+				console.log(0o123)//83
+				console.log(0O23)//19
+				console.log(0o33)//27
+//				console.log(0o88)//报错
+//				16进制：如果以0x开头的都是十六进制。0-9 a-f
+				console.log(0x2b);//11+32=43
+				console.log(0xff);//255
+//				console.log(0x3m);//
+//				15
+				console.log(15);
+				console.log(017);
+				console.log(0o17);
+				console.log(0O17);
+				console.log(0xf);
+//				浮点数(小数)
+				console.log(3.1415926);
+				console.log(0.1232434);
+				console.log(.1232434);
+				console.log(5e6);
+				console.log(5.123e6);
+				console.log(3e-2);
+				console.log(-8e123243243);//-Infinity
+				console.log(8e123243243);//-Infinity
+				console.log(0/0)//NaN
+		</script>
+	</body>
+</html>

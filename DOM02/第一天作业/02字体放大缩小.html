@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.text{
+				font-size: 18px;
+				line-height: 200%;
+			}
+			.active{
+				border: none;
+				background-color: red;
+				outline: none;
+				cursor: pointer;
+			}
+			.disable{
+				border: none;
+				background-color: #666;
+				cursor: no-drop;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="textbig" value="字体增大" class="active"/>
+		<input type="button" id="textsmall" value="字体减小" class="active"/>
+		<div id="box" class="text">
+			<p>哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多</p>
+			<p>哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多</p>
+			<p>哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多</p>
+			<p>哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多哒哒哒哒哒哒多多多多</p>
+		</div>
+		<script type="text/javascript">
+			var oBox=document.getElementById("box");
+			var textbig=document.getElementById("textbig");
+			var textsmall=document.getElementById("textsmall");
+			var fs=18;//字体信号量
+			textbig.onclick=function(){
+				fs+=2;
+				if(fs>=30){
+					fs=30;
+					this.className="disable";
+				}
+				textsmall.className="active"
+				oBox.style.fontSize=fs+"px";
+			}
+			textsmall.onclick=function(){
+				fs-=2;
+				if (fs<=10) {
+					fs=10;
+					this.className="disable"
+				}
+				textbig.className="active";
+				oBox.style.fontSize=fs+"px";
+			}
+		</script>
+	</body>
+</html>

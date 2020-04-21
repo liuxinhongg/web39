@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				list-style: none;
+				width: 700px;
+				height: 40px;
+				margin: auto;
+			}
+			ul li{
+				width: 100px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				border: 1px solid #000000;
+				background-color: green;
+				color: white;
+				float: left;
+				cursor: pointer;
+			}
+			.box{
+				width: 700px;
+				height: 500px;
+				border: 1px solid gainsboro;
+				margin: auto;
+			}
+			.item{
+				width: 700px;
+				height: 500px;
+				display: none;
+			}
+			.item:nth-child(1){background-color: yellow;display: block;}
+			.item:nth-child(2){background-color: darkcyan;}
+			.item:nth-child(3){background-color: aqua;}
+			.item:nth-child(4){background-color: blue;}
+			.item:nth-child(5){background-color: palegreen;}
+			.item:nth-child(6){background-color: yellowgreen;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>选项一</li>
+			<li>选项二</li>
+			<li>选项三</li>
+			<li>选项四</li>
+			<li>选项五</li>
+			<li>选项六</li>
+		</ul>
+		<div class="box">
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+			<div class="item">5</div>
+			<div class="item">6</div>
+		</div>
+		<script src="js/jquery-1.12.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			$(".item").hide();
+//			$(".item:eq(0)").show();
+			$("ul li").eq(0).css("background-color","red");
+			$("ul li").click(function(){
+				var x=$(this).index();//js中编号
+				$(this).css("background-color","red").siblings().css("background-color","green");
+				$(".item").eq(x).show().siblings().hide();
+			})
+		</script>
+	</body>
+</html>

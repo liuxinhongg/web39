@@ -1,0 +1,150 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header {
+	position: relative;
+	height: 105px;
+	width: 1200px;
+	/*background-color: red;*/
+	margin: auto;
+}
+.header .logo {
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 175px;
+	height: 56px;
+	/*background-color: aquamarine;*/
+}
+.header .logo a {
+	display: block;
+	width: 175px;
+	height: 56px;
+	background: url(../img/logo.png) no-repeat;
+}
+.registerarea {
+    height: 580px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.registerarea h3 {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    padding: 0 10px;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 18px;
+    color: #666;
+}
+.registerarea h3 em {
+    float: right;
+    font-size: 14px;
+    font-style: normal;
+    color: #666;
+}
+.registerarea a{
+	text-decoration: none;
+	color: #C71523;
+}
+.reg_form {
+    width: 600px;
+    height: 400px;
+    margin: 40px auto 0;
+}
+.reg_form ul {
+    list-style: none;
+}
+.reg_form ul li {
+    margin-bottom: 15px;
+}
+.reg_form label {
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    text-indent: 12px;
+}
+.inp {
+    width: 238px;
+    height: 34px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    outline: none;
+}
+.error {
+    color: #df3033;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.success {
+    color: #40b83f;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.safe {
+    padding-left: 187px;
+    color: #b2b2b2;
+    font-size: 12px;
+}
+.safe em {
+    padding: 0 12px;
+    color: #fff;
+    font-style: normal;
+}
+.ruo {
+    background-color: #de1111;
+}
+.zhong {
+    background-color: #40b83f;
+}
+.qiang {
+    background-color: #f79100;
+}
+.agree {
+    padding-top: 20px;
+    padding-left: 100px;
+    font-size: 14px;
+}
+.agree input {
+    vertical-align: middle;
+    margin-right: 5px;
+    outline: none;
+}
+.agree a {
+    color: #1ba1e6;
+    font-size: 12px;
+}
+.over {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    margin: 30px 0 0 130px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.over:hover{
+	background-color: #F24349;
+}
+.footer {
+    height: 120px;
+    text-align: center;
+}
+.links {
+    margin-top: 20px;
+    height: 30px;
+    font-size: 12px;
+    color: #666;
+}
+.copyright {
+    line-height: 20px;
+    font-size: 12px;
+    color: #666;
+}

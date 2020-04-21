@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 500px;
+				overflow: auto;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../img/01.jpg" id="picture" width="500" height="400"/>
+			<input type="button" id="leftbtn" value="上一张" />
+			<input type="button" id="rightbtn" value="下一张" />
+			<p>
+				<input type="text" name="" id="numpic" value="1" />
+				<input type="button" value="search" id="search"/>
+			</p>
+		</div>
+		
+		<script type="text/javascript">
+			var tu=document.getElementById("picture");
+			var leftbtn=document.getElementById("leftbtn");
+			var rightbtn=document.getElementById("rightbtn");
+			var numpic=document.getElementById("numpic");
+			var search=document.getElementById("search");
+			var index=1;
+			function autoImg(){
+				index++;
+				if(index>=6){
+					index=1;
+				}
+				tu.src="../img/0"+index+".jpg";
+			}
+			rightbtn.onclick=autoImg;
+			leftbtn.onclick=function(){
+				index--;
+				if(index<1){
+					index=5;
+				}
+				tu.src="../img/0"+index+".jpg";
+			}
+			search.onclick=function(){
+				index=numpic.value;
+				if(!/^\d+$/.test(index)||!(index<=5&&index>=1)){
+					alert("请输入合法的数值");
+					return;
+				}
+				tu.src="../img/0"+index+".jpg";
+				
+			}
+			setInterval(autoImg,1000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<title>某猫moumao购物</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.tianmao{
+				width: 100%;
+				height: 30px;
+				background-color: rgba(242,242,242);
+				border: 1px solid #ccc;
+				
+			}
+			.tianmao .a0{
+				line-height: 30px;
+				color: #C0C0C0;
+				text-indent: 50px;
+				font-size: 12px;
+				float: left;
+			}
+			@media (max-width:500px) {
+				 .tianmao .a0{
+					line-height: 30px;
+					color: #C0C0C0;
+					text-indent: 50px;
+					font-size: 0px;
+					float: left;
+				}
+			}
+			.tianmao .a1{
+				line-height: 30px;
+				color: #C0C0C0;
+				text-indent: 30px;
+				font-size: 12px;
+				float: left;
+			}
+			.tianmao .a1:hover{
+				color: red;
+				cursor: pointer;
+			}
+			.tianmao .b{
+				line-height: 30px;
+				color: #C0C0C0;
+				text-indent: 30px;
+				font-size: 12px;
+				float: right;
+			}
+			.collapse .b:hover{
+				color: red;
+				cursor: pointer;
+			}
+			.bb{
+				line-height: 28px;
+				color: #C0C0C0;
+				text-indent: 30px;
+				font-size: 12px;
+				float: right;
+				border: 0px;
+				text-align: center;
+				outline: none;
+			}
+			.tou{
+				width: 100%;
+				margin: auto;
+			}
+			.tou .touloog{
+				
+			}
+			.tou .tousousuo{
+				width: 60%;
+				height: 40px;
+				border: 2px solid rgb(255,0,54);
+				margin:auto;
+				position: relative;
+			}
+			.input_1{
+				width: 60%;
+				height: 36px;
+				outline: none;
+				border: 0px solid rgb(255,0,54);
+				text-indent: 5px;
+				font-size: 16px;
+				color: #222222;
+				line-height: 36px;
+				float: left;
+			}
+			.button_1{
+				width: 40%;
+				height: 36px;
+				background-color: rgb(255,0,54);
+				font-size: 16px;
+				outline: none;
+				border: 0px;
+				font-size: 19px;
+				color: white;
+			}
+			.tou0{
+				background-color: white;
+				border: 0px;
+			}
+			.tou1{
+				height: 90px;
+			}
+			.daohang{
+				width: 100%;
+				height: 50px;
+			}
+			
+			
+			.daohang ul{
+				line-height: 50px;
+				list-style: none;
+				margin: auto;
+			}
+			.daohang ul .c{
+				float: left;
+				padding-left: 30px;
+				margin: auto;
+				font-size: 16px;
+				color: #101010;
+			}
+			.daohang ul .c1{
+				padding-left: 0px;
+				text-align: center;
+				font-size: 19px;
+				font-weight: 800;
+				color: white;
+				cursor: pointer;
+				background-color: red;
+				width: 95px;
+				border-radius: 5px;
+			}
+			.container{
+				width: 90%;
+			}
+			.container .cc:hover{
+				cursor: pointer;
+				color: red;
+			}
+			
+			@media (max-width:1112px) {
+				 .container .c11{
+					display: none;
+				}
+			}
+			@media (max-width:1005px) {
+				 .container .c10{
+					display: none;
+				}
+			}
+			@media (max-width:902px) {
+				 .container .c9{
+					display: none;
+				}
+			}
+			@media (max-width:815px) {
+				 .container .c8{
+					display: none;
+				}
+			}
+			@media (max-width:729px) {
+				 .container .c7{
+					display: none;
+				}
+			}
+			@media (max-width:643px) {
+				 .container .c6{
+					display: none;
+				}
+			}
+			@media (max-width:555px) {
+				 .container .c5{
+					display: none;
+				}
+			}
+		    
+		    .d{
+		    	width: 100%;
+		    	border-top: 1px solid red;
+		    	margin-bottom: 50px;
+		    }
+		    .carousel{
+				width: 100%;
+				height: 530px;
+				position: relative;
+				overflow: hidden;
+				
+			}
+			.carousel ul{
+				width: 1300px;
+				list-style: none;
+				margin: auto;
+			}
+			.carousel ul li{
+				display:none;
+				margin: auto;
+			}
+			.carousel ul li img{
+				width: 100%;
+				height: 530px;
+				margin-left: 5px;
+			}
+			.carousel ul li.current{
+				display:block;
+			}
+			.carousel span{
+				width: 150px;
+				height: 530px;
+				position: absolute;
+				top: 0px;
+				cursor: pointer;
+				background-color: #ccc;
+				opacity: 0.1;
+			}
+			.leftBtn{
+				left: 0px;
+			}
+			.rightBtn{
+				right:0px;
+			}
+			.circles{
+				position: absolute;
+				bottom: 10px;
+				width: 200px;
+				height: 20px;
+				left: 50%;
+				margin-left: -50px;
+			}
+			.circles ol{
+				list-style: none;
+			}
+			.circles ol li{
+				width: 20px;
+				height: 20px;
+				background-color: #ccc;
+				opacity: 0.5;
+				border-radius: 50%;
+				cursor: pointer;
+				margin-right: 10px;
+				float: left;
+			}
+			.circles ol li.current{
+				background-color: #8C8C8C;
+			}
+			
+			.item{
+				position: relative;
+				width: 90%;
+				height: 260px;
+				border-radius: 5px;
+				box-shadow: 0px 0px 5px #ccc;
+				margin-left: 20px;
+			}
+			.item img{
+				width: 100%;
+				height: 220px;
+			}
+			.item span{
+				line-height: 45px;
+				display: block;
+				font-size: 18px;
+				color: white;
+				font-weight: bold;
+				padding: 0 15px;
+			}
+			.mask{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.9);
+				display: none;
+				text-align: center;
+				border-radius: 5px;
+				
+			}
+			.item:hover .mask{
+				display: block;
+			}
+			.mask a{
+				color:white;
+				margin-top: 50px;
+				font-style: italic;
+				line-height: 50px;
+				text-decoration: none;
+				font-size: 32px;
+				cursor: pointer;
+				display: block;
+			}
+		    .mask div{
+				color:red;
+				font-style: italic;
+				font-size: 32px;
+				cursor: pointer;
+			}
+		    .ccc{
+		    	width: 300px;
+		    	height: 555px;
+		    	position: absolute;
+		    	top: 46px;
+		    	left: 30px;
+		    	border-top: 25px solid red;
+		    	background-color: rgba(0,0,0,0.5);
+		    	z-index:1;
+		    	border-radius: 5px 5px 0px 0px;
+		    	display: none;
+		    }
+		    .ccc ul{
+		    	list-style: none;
+		    }
+		    .ccc ul li{
+		    	width: 300px;
+		    	height: 50px;
+		    	margin-top: 7px;
+		    	line-height: 50px;
+		    	text-indent: 50px;
+		    	color: white;
+		    	font-size: 19px;
+		    	cursor: pointer;
+		    	
+		    }
+		    .ccc ul li:hover{
+		    	color: rgb(229,64,119);
+		    	background-color: white;
+		    }
+		    .ccc1{
+		    	width: 800px;
+		    	height: 530px;
+		    	position: absolute;
+		    	top: 71px;
+		    	left: 330px;
+		    	background-color: white;
+		    	z-index:1;
+		    	display: none;
+		    	/*opacity: 0.9;*/
+		    }
+		    .ccc11{
+		    	width: 636px;
+		    	height: 530px;
+		    }
+		    .ccc11 img{
+		    	width: 360px;
+		    	height: 300px;
+		    	margin-left: 350px;
+		    	margin-top: 50px;
+		    }
+		    .ccc111{
+		    	width: 800px;
+		    	height: 100px;
+		    	border: 1px solid red;
+		    	text-align: center;
+		    	line-height: 98px;
+		    	font-size: 40px;
+		    	color: rgb(229,64,119);
+		    	cursor: pointer;
+		    }
+		    .ccc112{
+		    	width: 800px;
+		    	border: 2px solid rgb(229,64,119);
+		    }
+		    .ccc111 p{
+		    	width: 300px;
+		    	height: 98px;
+		    	line-height: 100px;
+		    	color: red;
+		    	float: right;
+		    	cursor: pointer;
+		    }
+		    .ccc113{
+		    	width: 140px;
+		    	height: 430px;
+		    	border: 0px solid red;
+		    	text-align: center;
+		    	line-height: 98px;
+		    	font-size: 70px;
+		    	color: rgb(229,64,119);
+		    	position: absolute;
+		    	top: 100px;
+		    	left: 100px;
+		    	border-left: 5px solid rgb(229,64,119);
+		    	border-right: 5px solid rgb(229,64,119);
+		    	cursor: pointer;
+		    }
+		    .ccc111 a{
+		    	text-decoration: none;
+		    	color: rgb(229,64,119);
+		    }
+		    .ccc111 a:hover{
+		    	color: red;
+		    }
+		    
+		    .f{
+		    	width: 100%;
+		    	height: 300px;
+		    	position: relative;
+		    	/*border: #000000 solid 1px;*/
+		    }
+		    .f1{
+		    	width: 100%;
+		    	height: 50px;
+		    	/*border: #000000 solid 1px;*/
+		    	line-height: 50px;
+		    	color: red;
+		    	font-size: 30px;
+		    	text-indent: 25px;
+		    }
+		    .wb{
+		    	width: 100%;
+		    	height: 190px;
+		    }
+		    .wb_1{
+		    	width: 100%;
+		    	height: 190px;
+		    }
+		    @media (max-width:350px) {
+		    	.wb{
+		    		position: absolute;
+		    		top: 800px;
+		    		left: 0px;
+		    	}
+				.wb_1{
+			    	width: 100%;
+			    	height: 47px;
+		        } 
+		        .wb_1 img{
+		        	width: 340px;
+		        	height: 47px;
+		        }
+		        .container .c2{
+		        	display: none;
+		        }
+		        .container .c3{
+		        	display: none;
+		        }
+		        .container .c4{
+		        	display: none;
+		        }
+		        .navbar .d{
+		        	width: 100%;
+		        	height: 138px;
+		        }
+		        .carousel{
+		        	width: 100%;
+		        	height: 138px;
+		        }
+		        .carousel .imagesList{
+		        	width: 340px;
+		        	height: 138px;
+		        }
+		        .carousel .imagesList img{
+		        	width: 340px;
+		        	height: 138px;
+		        }
+		        .f .f1{
+		        	font-size: 10px;
+		        	margin-top: -50px
+		        }
+		        .ccc{
+		        	width: 80px;
+			    	height: 555px;
+			    	position: fixed;
+			    	/*top: 46px;
+			    	left: 30px;*/
+			    	border-top: 25px solid red;
+			    	background-color: rgba(0,0,0,0.5);
+			    	z-index:1;
+			    	border-radius: 5px 5px 0px 0px;
+			    	display: none;
+		        }
+		        .ccc ul li{
+			    	width: 80px;
+			    	height: 25px;
+			    	margin-top: 7px;
+			    	line-height: 20px;
+			    	text-indent: 0px;
+			    	color: white;
+			    	font-size: 10px;
+			    	cursor: pointer;
+			    }
+			    .ccc ul{
+		    	list-style: none;
+		    	}
+		    .ccc1{
+		    	width: 230px;
+		    	height: 300px;
+		    	position: fixed;
+		    	background-color: white;
+		    	display: none;
+		    	margin-left: -215px;
+		    	/*opacity: 0.9;*/
+		    }
+		    .ccc11{
+		    	width: 230px;
+		    	height: 300px;
+		    	position: fixed;
+		    }
+		    .ccc11 img{
+		    	width: 170px;
+		    	height: 140px;
+		    	position: absolute;
+		    	top: 30px;
+		    	left: -290px;
+		    	z-index: 2;
+		    	/*margin-left: 350px;
+		    	margin-top: 50px;*/
+		    }
+		    .ccc111{
+		    	width: 230px;
+		    	height: 30px;
+		    	/*background-color: gold;*/
+		    	border: 1px solid red;
+		    	
+		    	line-height: 20px;
+		    	font-size: 20px;
+		    	color: rgb(229,64,119);
+		    	cursor: pointer;
+		    }
+		    .ccc112{
+		    	width: 230px;
+		    	border: 1px solid rgb(229,64,119);
+		    }
+		    .ccc111 p{
+		    	width: 120px;
+		    	height: 30px;
+		    	line-height: 20px;
+		    	color: red;
+		    	float: right;
+		    	cursor: pointer;
+		    }
+		    .ccc113{
+		    	width: 40px;
+		    	height: 250px;
+		    	border: 1px solid red;
+		    	background-color: rgb(255,237,237);
+		    	/*text-align: center;*/
+		    	line-height: 50px;
+		    	font-size: 20px;
+		    	color: rgb(229,64,119);
+		    	position: absolute;
+		    	top: 40px;
+		    	left: 20px;
+		    	border-left: 1px solid rgb(229,64,119);
+		    	border-right: 1px solid rgb(229,64,119);
+		    	cursor: pointer;
+		    }
+		    .ccc111 a{
+		    	text-decoration: none;
+		    	color: rgb(229,64,119);
+		    }
+		    .ccc111 a:hover{
+		    	color: red;
+		    }
+		    .tou1{
+				height: 50px;
+			}
+			}
+			.gouwuce{
+				width: 500px;
+				height: 400px;
+				background-color: white;
+				position: absolute;
+				top: 40px;
+				left: 800px;
+				z-index: 1;
+				display: none;
+			}
+			.gouwuce img{
+				width: 100px;
+				height: 100px;
+				border:  #000000 solid red;
+				margin-top: 10px;
+				margin-left: 10px;
+				float: left;
+			}
+			.gouwuce .gouwuce_1{
+				width: 300px;
+				height: 100px;
+				border:  #000000 solid white;
+				margin-top: 10px;
+				margin-left: 10px;
+				float: left;
+			}
+			.gouwuce .gouwuce_1 p{
+				width: 300px;
+				height: 30px;
+				line-height: 30px;
+			}
+			.but{
+				width: 80px;
+				height: 40px;
+				border: rgb(255,0,54) solid 1px;
+				float: left;
+				background-color: rgb(255,237,237);
+			    color: rgb(255,0,54);
+			    margin-top: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default tou0" role="navigation">
+			<div class="tianmao">
+				<div class="huanyin a0">欢迎来到某猫</div>
+				<div class="denglu a1">请登录</div>
+				<div class="zhuce a1">免费注册</div>
+				<div class="collapse navbar-collapse" id="example-navbar-collapse">
+					<div class="b0 b">
+						<button type="button" class="bb" title="" data-container="body" data-toggle="popover" data-placement="bottom" 
+							data-content="'已卖出的宝贝'+</br>+'已买到的宝贝'">
+							我的淘宝网
+						</button>
+					</div>
+					<div class="b1 b">
+						<button type="button" class="bb" >
+							购物车
+						</button>
+					</div>
+					<div class="b2 b">
+					    <button type="button" class="bb" >
+							收藏夹
+						</button>
+					</div>
+					<div class="b3 b">
+						<button type="button" class="bb" title="Popover title" data-container="body" data-toggle="popover" data-placement="bottom" 
+							data-content="底部的 Popover 中的一些内容">
+							手机版
+						</button>
+					</div>
+					<div class="b4 b">
+						<button type="button" class="bb" title="Popover title" data-container="body" data-toggle="popover" data-placement="bottom" 
+							data-content="底部的 Popover 中的一些内容">
+							淘宝网
+						</button>
+					</div>
+					<div class="b5 b">
+						<button type="button" class="bb" title="Popover title" data-container="body" data-toggle="popover" data-placement="bottom" 
+							data-content="底部的 Popover 中的一些内容">
+							商家支持
+						</button>
+					</div>
+					<div class="b6 b">
+						<button type="button" class="bb" title="Popover title" data-container="body" data-toggle="popover" data-placement="bottom" 
+							data-content="底部的 Popover 中的一些内容">
+							网站导航
+						</button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="gouwuce">
+				
+				<!--<img src="" />
+				<div class="gouwuce_1">
+					<p>产地 广州</p>
+					<p>产品 美容美体仪</p>
+					<p>单价 40</p>
+				</div>
+				<input class="but but1" type="button" id="" value="立即支付" />-->
+			</div>
+	    </nav>
+	    <script type="text/javascript">
+	    	var _json=JSON.parse(localStorage.getItem("shangping"));
+	    	var img1=_json.pict_url;
+	    	var cand1=_json.provcity;
+	    	var canp1=_json.cat_name;
+	    	var danj1=_json.zk_final_price;
+	    	var oobj = {"shangping":[]};
+	    	oobj.shangping.push({"img":img1,"cand":cand1,"canp":canp1,"danj":danj1});
+	    	
+	    	//oobj.shangping.push({"img":"img1","cand":"cand1","canp":"danp1","danj":"danj1"});
+	    	console.log(oobj.shangping[0].danj);
+	    	var oobj1=oobj.shangping[0];
+	    	$(".b1 .bb").click(function(){
+	    		$(".gouwuce").stop(true).show(500);
+	    		$(".gouwuce").append(
+			    		`<img src="${oobj1.img}" />
+						<div class="gouwuce_1">
+							<p>产地 ${oobj1.cand}</p>
+							<p>产品 ${oobj1.canp}</p>
+							<p>单价 ${oobj1.danj}</p>
+						</div>
+						<input class="but but1" type="button" id="" value="立即支付" />
+			    		`
+			    	)
+	    		
+	    	})
+	    	$(".gouwuce").click(function(){
+	    		$(this).hide(500);
+	    		
+	    	})
+	    	
+	    </script>
+		<script>
+			$(function () { 
+				$("[data-toggle='popover']").popover();
+			});
+		</script>
+		<nav class="navbar navbar-default tou0 tou1" role="navigation">
+			<div class="tou">
+				<div class="tousousuo">
+					<input type="text" id="" class="input_1" value="" />
+					<button type="submit" class="button_1" value="搜索">搜&nbsp;&nbsp;索</button>
+				</div>
+			</div>
+		</nav>
+		<nav class="navbar navbar-default tou0 " role="navigation">
+			<div class="daohang">
+				<ul class="container">
+					<li class="c1 c">商品分类</li>
+					<li class="c2 c">某猫超市</li>
+					<li class="c3 c">某猫国际</li>
+					<li class="c4 c cc">某猫会员</li>
+					<li class="c5 c cc">电商城</li>
+					<li class="c6 c cc">喵鲜生</li>
+					<li class="c7 c cc">医药馆</li>
+					<li class="c8 c cc">营业厅</li>
+					<li class="c9 c cc">魅力惠</li>
+					<li class="c10 c cc">飞猪旅行</li>
+					<li class="c11 c cc">苏宁易购</li>
+				</ul>
+			</div>
+			<div class="ccc">
+				<ul>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;配饰</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;内衣</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;电器</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;数码</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;美食</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;文体</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;家纺</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;家居</li>
+					<li class="glyphicon glyphicon-pushpin">&nbsp;&nbsp;美妆</li>
+				</ul>
+			</div>
+			<div class="ccc1">
+				<!--<div class="ccc11">
+						<div class="ccc111">
+							配饰
+							<p style="" class="glyphicon glyphicon-send">
+								进入分类
+							</p>
+						</div>
+						<div class="ccc112"></div>
+						<img src="" />
+						<div class="ccc113">
+							限时抢购
+						</div>
+				</div>
+				<div class="ccc12"></div>-->
+			</div>
+		</nav>
+		
+		<script type="text/javascript">
+			$(".c1").mouseover(function(){
+				$(".ccc").slideDown(500);
+			})
+			/*$(".ccc,ul").mouseout(function(){
+				$(".ccc").slideUp(500);		
+			})*/
+			itme=setInterval(function(){
+				
+				$(".ccc").stop(true).slideUp(500);
+				
+			},20000)
+			
+			$(".ccc li").mouseover(function(){
+				$(".ccc1").stop(true).show(500);
+			})
+			$(".ccc li").mouseout(function(){
+				$(".ccc1").stop(true).hide(500);
+			})
+			
+			$(".ccc1").mouseover(function(){
+				$(".ccc1").stop(true).show(500);
+			})
+			$(".ccc1").mouseout(function(){
+				$(".ccc1").stop(true).hide(500);
+			})
+		</script>
+		<!--轮播-->
+        <nav class="navbar navbar-default tou0 " role="navigation">
+			<div class="d">
+			    <div class="carousel">
+					<div id="imagesList" class="imagesList">
+							
+					</div>
+					<div class="btns">
+						<span class="leftBtn e" id="carousel_leftBtn"></span>
+						<span class="rightBtn e" id="carousel_rightBtn"></span>
+					</div>
+					<div id="circles" class="circles">
+						<ol>
+							<li class="current"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<script type="text/javascript">
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1//w/website/bannerList",
+				async:true,
+				success:function(response){
+					var obj=response.data;
+					console.log(obj);
+					for (var img_idx=0;img_idx<obj.length;img_idx++) {
+						//var imgchange=obj[img_idx].img.replace(obj[img_idx].img.substr(0,5),"http");
+						$(".imagesList").append(
+							`<ul>
+								<li class="current">
+									<a href="">
+									    <img src="${obj[img_idx].img}"/>
+									</a>
+								</li>
+								
+							</ul>
+					        `
+						)
+					}
+					
+				}
+			});
+			//得到所有的元素，左右按钮 每个小圆点  每个图片里面的li
+			var carousel_leftBtn=document.getElementById("carousel_leftBtn");
+			var carousel_rightBtn=document.getElementById("carousel_rightBtn");
+			var circlesLis=document.getElementById("circles").getElementsByTagName("li");
+			var imagesList=document.getElementById("imagesList").getElementsByTagName("li");
+			//信号量 0 1 2 3 4
+			var img_idx=0;
+			//右按钮监听
+			carousel_rightBtn.onclick=function(){
+				img_idx++;
+				if (img_idx>5) {
+					img_idx=0;
+				}
+				changePic();
+			}
+			//左按钮监听
+			carousel_leftBtn.onclick=function(){
+				img_idx--;
+				if (img_idx<0) {
+					img_idx=5;
+				}
+				changePic();
+			}
+			
+			//定时器
+			imter=setInterval(function(){
+				//console.log(img_idx)
+				 img_idx++;
+	            if(img_idx == 5){
+	                img_idx = 0;     
+	            }
+	            //"${obj[i].img}"
+	            $(".current img").src="obj["+img_idx+"].img";
+	            //console.log(1)
+			},2000)
+			//小圆点监听，要批量添加
+			for(var i=0;i<circlesLis.length;i++){
+				(function(m){
+					circlesLis[m].onmouseover=function(){
+						img_idx=m;
+						changePic();
+					}
+				})(i)
+				
+			}
+			//业务函数 根据当前信号量的值，来切换图片
+			function changePic(){
+				//去掉所有图片li的current类名
+				for (var i=0;i<imagesList.length;i++) {
+					imagesList[i].className="";
+				}
+				//把当前信号量的图片li加上current类名
+				imagesList[img_idx].className="current";
+				//去掉所有小圆点li的current类名
+				for(var i=0;i<circlesLis.length;i++){
+					circlesLis[i].className="";
+				}
+				//把当前信号量的小圆点li加上current类名
+				circlesLis[img_idx].className="current";
+			}
+		</script>
+	    <!--你可能喜欢-->
+		<nav class="navbar navbar-default tou0 " role="navigation">
+			<div class="f">
+				<div class="f1">你可能喜欢：</div>
+				<div class="f2 container">
+					<div class="row boxContent">
+				
+					</div>
+				</div>
+			</div>
+		</nav>
+		<script type="text/javascript">
+			$(function(){
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1/w/website/findGoodsTypeList",
+				async:true,
+				success:function(response){
+					var obj=response.data;
+					console.log(obj);
+					for (var i=10;i<obj.length;i++) {
+						//var imgchange=obj[i].icon.replace(obj[i].icon.substr(0,5),"http");
+						$(".boxContent").append(
+							`<div class="col-md-3">
+								<div class="item">
+									<img src="${obj[i].icon}"/>
+									<div class="mask">
+										<a href="sort.html?name=${obj[i].name}">
+										${obj[i].name}
+										</a>
+										<a href="sort.html?name=${obj[i].name}">先到先得 !</a>
+									</div>
+								</div>
+							</div>`
+						)
+					}
+					
+				}
+			});
+			})
+		</script>
+		<script type="text/javascript">
+			$(function(){
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1/w/website/findGoodsTypeList",
+				async:true,
+				success:function(response){
+					var obj=response.data;
+					console.log(obj);
+					 $(".ccc ul li").mouseover(function(){
+					 	var erji=[$(this).index()];
+					 	//var imgchange=obj[erji].icon.replace(obj[erji].icon.substr(0,5),"http");
+					 	//console.log(erji);
+				    	$(".ccc1").append(
+				    		`<div class="ccc11">
+								<div class="ccc111">
+									${obj[erji].name}
+									<p style="" class="glyphicon glyphicon-send">
+										进入分类
+									</p>
+								</div>
+								<div class="ccc112"></div>
+								<img src="${obj[erji].icon}"/>
+								<div class="ccc113">限时抢购</div>
+							</div>
+							<div class="ccc12"></div>`
+				    	)
+				    	$(".ccc ul li").mouseout(function(){
+				    		$(".ccc11").remove();
+				    	})
+				    	console.log(typeof erji);
+				    	
+				    		$(".ccc1").mouseover(function(){
+				    			var erjis=erji.pop();
+				    			console.log(erjis);
+				    				if (erjis) {
+				    					$(".ccc1").append(
+								    		`<div class="ccc11">
+												<div class="ccc111">
+													${obj[erjis].name}
+													<p style="" class="glyphicon glyphicon-send">
+													<a href="sort.html?name=${obj[erjis].name}">进入分类</a>
+														
+													</p>
+												</div>
+												<div class="ccc112"></div>
+												<img src="${obj[erjis].icon}"/>
+												<div class="ccc113">限时抢购</div>
+											</div>
+											<div class="ccc12"></div>`
+								    	)
+				    					erjis=null;
+				    				}
+				    			if (erjis==0) {
+				    				$(".ccc1").append(
+							    		`<div class="ccc11">
+											<div class="ccc111">
+												${obj[0].name}
+												<p style="" class="glyphicon glyphicon-send">
+												<a href="sort.html?name=${obj[0].name}">进入分类</a>
+													
+												</p>
+											</div>
+											<div class="ccc112"></div>
+											<img src="${obj[0].icon}"/>
+											<div class="ccc113">限时抢购</div>
+										</div>
+										<div class="ccc12"></div>`
+							    	)
+				    			}
+				    			erjis=null;
+
+				    			//}
+					    	})
+				    		/*$(".ccc1").mouseout(function(){
+					    		$(".ccc11").remove();
+					    	})*/
+				    						    	//})
+				    	
+			        })
+					 
+				}
+			});
+			})
+			
+		</script>
+	    
+	 <!--   尾巴-->
+	    <nav class="navbar navbar-default tou0 " role="navigation">
+	    	<div class="wb">
+	    		<div class="wb_1">
+	    			<img src="img/6(RX$M98EZTYFOFA39E6114.png" />
+	    		</div>
+	    	</div>
+	    </nav>
+	</body>
+</html>

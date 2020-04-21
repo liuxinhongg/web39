@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>为你推荐</title>
+		<link rel="icon" href="//www.jd.com/favicon.ico"  type="image/x-icon"/>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background-color: #eee;
+			}
+			.J_chinnal{
+				width: 990px;
+				margin: auto;
+			}  
+			.chinnal_two{
+				width: 100%;
+				margin-bottom: 20px;
+    			overflow: hidden;
+			} 
+			.floorhd{
+				height: 65px;
+			}   
+			.floor_inner{
+				width: 990px;
+				margin: 0 auto;
+			}
+			.floor_tit{
+				position: relative;
+			    width: 210px;
+			    height: 45px;
+			    font-size: 28px;
+			    font-weight: 700;
+			    text-align: center;
+			    line-height: 45px;
+			    padding: 0 30px;
+			    margin: 0 auto 20px;
+			    overflow: hidden;
+			    color: #333;
+			}
+			.floor_tit::before{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: 0 0;
+			    width: 25px;
+			    height: 20px;
+			    left: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}
+			.floor_tit::after{
+				background-image: url(img/A/pindao.png);
+				background-size: 50px 20px;
+				background-position: -25px 0;
+			    width: 25px;
+			    height: 20px;
+			    right: 0;
+			    content: "";
+			    position: absolute;
+			    top: 50%;
+			    margin-top: -10px;
+			}  
+			.floor{
+				margin: 0 auto;
+				width: 990px;
+			}
+			.floorhd_top{
+				background-color: #fff;
+				margin-bottom: 10px;
+			}
+			.feed_tab{
+				margin: 0 auto 10px;
+    			width: 900px;    
+    			height: 60px;
+			}
+			.feed_item{
+				width: 150px;
+				position: relative;
+			    float: left;
+			    height: 60px;
+			    text-align: center;
+			    cursor: pointer;
+			}
+			li{
+				list-style: none;
+			}
+			.feed_title{
+				color: #333;
+			    margin-top: 7px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			    height: 27px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			}
+			.title_text{
+				background: #e1251b;
+			    color: #fff;
+			    width: 70px;
+			    height: 27px;
+			    display: inline-block;
+			    border-radius: 50px;
+			    padding: 0 5px;
+			}
+			.feed_desc{
+				color: #e1251b;
+				font-size: 14px;
+			}
+			.feed_gap{
+				position: absolute;
+			    right: 0;
+			    top: 0;
+			    height: 40px;
+			    margin: 10px 0;
+			    width: 1px;
+			    /*background: linear-gradient(180deg,white,#dfdfdf 51%,white);*/
+			}
+			.title_textone{
+				color: #333;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 27px;
+			}
+			.feed_descone{
+				color: #999;
+    			font-size: 14px;
+			}
+			.down_list{
+				margin: 0 -5px;
+			}
+			.list_item{
+				width: 190px;
+			    height: 266px;
+			    margin: 0 5px 8px;
+			    background: #fff;
+			    position: relative;
+    			float: left;
+			}
+			.down_dot{
+				position: absolute;
+			    bottom: 0;
+			    right: 20px;
+			    display: inline-block;
+			    width: 1px;
+			    height: 1px;
+			    background-color: #b1b1b1;
+			}
+			.down_lk{
+				display: inline-block;
+			    width: 100%;
+			    height: 100%;
+			}
+			a{
+				color: #666;
+    			text-decoration: none;
+			}
+			.down_img{
+				width: 120px;
+			    height: 120px;
+			    margin: 30px auto;
+			    display: block;
+			    transition: background .2s linear,opacity .2s linear!important;
+    			background: transparent;
+    			position: relative;
+    			overflow: hidden;
+			}
+			.lazing_img{
+				opacity: 1;
+				transition: opacity .2s linear;
+			}
+			.down_img>img{
+				display: block;
+			    width: auto;
+			    height: auto;
+			    max-width: 100%;
+			    max-height: 100%;
+			    margin: 0 auto;
+			}
+			img{
+				border: 0;
+    			vertical-align: middle;
+			}
+			.down_info{
+				line-height: 22px;   
+				padding: 0 10px;    
+				clear: both;
+				height: 65px;
+			}
+			.info_name{
+				font-size: 12px;
+			    line-height: 20px;
+			    height: 40px;
+			    text-align: left;
+    			color: #666;
+    			transition: color .2s ease;
+			    word-break: break-all;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			}
+			.info_self{
+				background-color: #e1251b;
+			    border-radius: 2px;
+			    color: #fff;
+			    padding: 0 5px;
+			    margin-right: 4px;
+			    line-height: 16px;
+			    height: 16px;
+			    font-size: 12px;
+			    display: inline-block;
+			}
+			i {
+    			font-style: normal;
+			}
+			.info_price{
+				margin-top: 10px;
+			}
+			.mod_price{
+				width: 62px;
+				float: left;
+				text-align: left;
+				display: inline-block;
+			    font-size: 16px;
+			    line-height: 18px;
+			    height: 18px;
+			    color: #e1251b;
+			}
+			.mod_price i {
+			    vertical-align: middle;
+			    font-size: 12px;
+			    font-weight: 700;
+			    /*font-family: MicrosoftYahei-regular,Arial,Helvetica,sans-serif;*/
+			    margin-right: 0px;
+			}
+			.price_text{
+				font-size: 16px;
+				font-weight: 700;
+    			font-family: arial,sans-serif;
+			}
+			.info_plus{
+				width: 102px;
+    			margin-top: 1px;
+    			float: right;
+			    margin-right: 1px;
+			    text-align: right;
+			}
+			.info_discount{
+				font-size: 12px;
+			    color: #e1251b;
+			    height: 14px;
+			    padding: 0 6px;
+			    border: 1px solid #e1251b;
+			    line-height: 14px;
+			    border-radius: 2px;
+			    text-align: center;
+			    display: inline-block;
+			    margin-left: 10px;
+			    vertical-align: 1px;
+			}
+			.list_item:hover .info_delete {
+			    display: block;
+			}
+			.info_delete{
+				background-image: url(img/info/下载.png);
+			}
+			.info_delete{
+				position: absolute;
+			    top: 10px;
+			    right: 10px;
+			    width: 16px;
+			    height: 16px;
+			    opacity: 0;
+			    background: url(img/info/下载.png) no-repeat;
+			    background-size: 16px;
+			    background-position: 50%;
+			    cursor: pointer;
+			}
+			.list_item:hover .info_enable{
+			    display: block;
+			}
+			.info_hd{
+			    height: 54px;
+			    position: absolute;
+			    bottom: 8px;
+			    left: 0;
+			    width: 100%;
+			    text-align: center;
+			    opacity: 0;
+    			background-color: #fff;
+    			background: linear-gradient(180deg,rgba(255,255,255,.8) 0,white 35%,white);
+			}
+			.info_hd .info_enable{
+    			width: 99px;
+    			margin-top: 14px;
+    			height: 28px;
+			    display: inline-block;
+			    font-size: 12px;
+			    border: 1px solid #353131;
+			    border-radius: 15px;
+			    line-height: 28px;
+			    text-align: center;
+			    cursor: pointer;
+			}
+			.info_enable{
+				background-color: #333;
+    			color: #fff!important;
+			}
+			.info_hd .info_enable:first-child {
+			    margin-left: 0;
+			}
+			.info_enable .info_icon{
+				margin-top: -1px;
+				background-image: url(img/info/eye.png);
+				width: 16px;
+			    height: 16px;
+			    line-height: 16px;
+			    background-size: 16px 16px;
+			    margin-right: 4px;
+			}
+			.info_hd .info_icon{
+				transition: all .4s ease;
+			    vertical-align: middle;
+			    display: inline-block;
+			    background-repeat: no-repeat;
+			}
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="J_chinnal">
+			<div class="chinnal_two">
+				<div class="floorhd">
+					<div class="floor_inner">
+						<h3 class="floor_tit">为你推荐</h3>
+					</div>
+				</div>
+				<div class="floor floorhd_top">
+					<ul class="feed_tab">
+						<li class="feed_item feed_active">
+							<div class="feed_title">
+								<span class="title_text">精选</span>
+							</div>
+							<div class="feed_desc">猜你喜欢</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">智能先锋/span>
+							</div>
+							<div class="feed_descone">大电器城</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">居家优品</span>
+							</div>
+							<div class="feed_descone">品质生活</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">超市百货</span>
+							</div>
+							<div class="feed_descone">百货生鲜</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">时尚达人</span>
+							</div>
+							<div class="feed_descone">美妆穿搭</div>
+							<div class="feed_gap"></div>
+						</li>
+						<li class="feed_item">
+							<div class="feed_title">
+								<span class="title_textone">进口好物</span>
+							</div>
+							<div class="feed_descone">京东国际</div>
+						</li>
+					</ul>
+				</div>
+				<div class="floor floorhd_down">
+					<div>
+						<ul class="down_list">
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/01.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/02.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">234.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/03.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/04.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">327.4</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/05.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">49.60</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/06.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">98.50</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/07.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/08.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">543.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/09.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">121.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/10.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">65.95</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/11.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">213.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/12.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.45</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/13.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">53.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/14.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">75.20</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/15.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/16.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">34.70</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/17.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">90.7</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/18.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">876.5</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/19.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">56.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/20.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">43.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/21.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">98.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/22.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.50</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/23.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">59.70</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/24.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">342.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/25.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">79.9</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/26.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">450.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/27.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">56.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/28.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">66.90</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/29.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">540.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							<li class="list_item down_item hover-on">
+								<span class="down_dot"></span>
+								<a href="" class="down_lk">
+									<div class="down_img">
+										<img src="img/info/30.webp" class="lazing_img"/>
+									</div>
+									<div class="down_info">
+										<p class="info_name">
+											<i class="info_self">自营</i>
+										"薇婷Veet丝滑沁香脱毛膏 温和护肤型200g 敏感肌适用（脱毛男女士去毛除毛腋毛腿毛"	
+										</p>
+										<div class="info_price">
+											<div class="mod_price">
+												<i>￥</i>
+												<span class="price_text">179.0</span>
+											</div>
+											<div class="info_plus">
+												<div class="info_discount">券</div>
+											</div>
+										</div>
+									</div>
+									<div class="info_hover">
+										<div class="info_delete"></div>
+										<div class="info_hd">
+											<div class="info_enable">
+												<i class="info_icon"></i>
+												<span>找相似</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</body>
+</html>

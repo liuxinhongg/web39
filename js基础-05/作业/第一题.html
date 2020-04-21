@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			编写函数repeat(char,n) 实现重复char字符串n次
+//			比如repeat("★",6) 返回"★★★★★★"
+			function repeat(char,n){
+				var str='';
+				for (var i=1;i<=n;i++) {
+					str+=char;
+				}
+				return str;
+			}
+		   console.log(repeat("★",8));
+		   	/*function maxr(char){
+				var a=0;
+				var b=1;
+				var maxLength=0;//找重复数最大的
+				var maxLetter="";
+				while(a!=char.length-1){
+					//判断 a b指向的字母是否一样
+					if (char.charAt(b)==char.charAt(a)) {
+						b++;
+//						maxLetter+=char.charAt(a-1);
+					} else{
+						if(b-a>=maxLength){
+							maxLength=b-a;
+							maxLetter=char.charAt(a);
+						}
+						a++;
+						b=a+1;
+					}
+				}
+				var strone='';
+				for (var i=0;i<maxLength;i++) {
+					strone+=maxLetter;
+				}
+				return strone;
+			}
+			console.log(maxr("mmmiijjjjkkkkkkssptr"))*/
+		</script>
+	</body>
+</html>

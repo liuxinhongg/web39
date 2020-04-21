@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*编写函数rev(char) 实现将字符串char倒置
+			比如rev("spring") 返回"gnirps"*/
+			/*方法一:
+			function rev(char){
+				var str='';
+				for (var i=char.length-1;i>=0;i--) {
+					str+=char.charAt(i);
+				}
+				return str;
+			}
+			console.log(rev('spring'));*/	
+			function rev(char){
+				//字符串转换为数组
+				var arr=char.split('');
+				arr.reverse();
+				//数组-->字符串
+				console.log(arr.join('')) ;
+			}
+			rev('spring')
+		</script>
+	</body>
+</html>

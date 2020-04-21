@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery-1.12.3.min.js"></script>
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<title>至佳品优品，天天特价</title>
+		<link rel="icon" type="imge/x-icon" href="img/首页/favicon.ico"/>
+		<link rel="stylesheet" href="css/注册.css" />
+	</head>
+	<body>
+		<form action="1.php" id="form">
+		<div class="iconsta">
+			<a href="首页.html"><img src="img/首页/01.png"/></a>
+		</div>
+		<div class="registervc">
+			<div class="registervc1">
+                                   会员通行证
+			</div>
+				
+			<div class="registervc2">
+				<div class="registervc3">
+					<p class="tervc">使用合作网站账号登录</p>
+					<div class="screityss">
+						<p >QQ登录</p>
+					</div>
+					<div class="screityss1">
+						<p >新浪微博登录</p>
+					</div>
+					<div class="screityss40">
+						已有账号，<a href="登录.html">立即登录</a>
+					</div>
+				</div>
+			
+			<div class="registervc4">
+				<!--<p class="tervc1">还没有账号，<a href="#">立即注册</a></p>-->
+				<div class="registervc5">
+					<p>登录至佳品网</p>
+					<div class="registervc6">
+						
+						<div class="registervc7">
+						<div class="filletood">	
+						<div class="filletood50">	
+						</div>
+						</div>
+						<input maxlength="11" id="haoma" class="filletood10" type="text" placeholder="QQ号码" name="username" maxlength="50">
+					</div>
+						
+						
+						
+						<div class="registervc7">
+						<div class="filletood">
+							
+						<div class="filletood1">
+							
+						</div>
+						</div>
+						<input maxlength="16" id="youxiang" class="filletood10" type="text" placeholder="邮箱" name="username" maxlength="50">
+					</div>
+					
+					<div class="registervc8">
+						<div class="filletood">
+						<div class="filletood9">
+							
+						</div>
+						</div>
+						<input maxlength="16"  id="yonghuming" class="filletood10" type="text" placeholder="用户名" name="username" maxlength="50">
+					</div>
+					
+					<div class="registervc8">
+						<div class="filletood">
+						<div class="filletood51">
+						</div>
+						</div>
+						<input maxlength="16"  id="mima" class="filletood10" type="text" placeholder="请输入密码" name="username" maxlength="50">
+					</div>
+					
+					</div>
+					
+					<!--<div class="ckle">
+						
+					
+					<input class="ck" name="remember" type="checkbox" checked="checked" value="1">
+					<span class="ckk">两周内免登录</span>
+					<a href="#">忘记密码?</a>
+					
+					</div>-->
+					<div class="registervc52">
+						<div class="filletood">
+						<div class="filletood51">
+						</div>
+						</div>
+						<input maxlength="16"  id="mima2" class="filletood10" type="text" placeholder="请再次输入密码" name="username" maxlength="50">
+					</div>
+					
+					
+					
+					<div class="registervc20">
+						<div class="filletood">
+						<div class="filletood22">
+							
+						</div>
+						</div> 
+						<input maxlength="4" id="yanzhengma" class="filletood21" type="text" placeholder="验证码" name="username" maxlength="50">
+					</div>
+					
+					
+					
+					<div class="registervc30">
+						<img src="img/登录/QQ图片09.png"/>
+					</div>
+					
+					<div class="ckle">	
+					<input class="ck" name="remember" type="checkbox" checked="checked" value="1">
+					<span class="ckk">我已看过并同意《至佳品网网络服务使用协议》</span>
+					</div>
+					
+					<div class="rocoredd" >
+						<input type="submit" name="" id="tjj" value="提 交 注 册" />
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			</div>	
+			
+			<div class="zuih">
+				<p>Copyright © 2014-2015 zhijiapin.com all Rights Reserved 至佳品网</p>
+			    <div class="zuih1">
+			    	<img src="img/登录/pic.gif"/>
+			    </div>
+			</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+		</form>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				var form=document.getElementById("form");
+				var haomaxx=document.getElementById("haoma");
+				var youxiangxx=document.getElementById("youxiang");
+				var mimaxx=document.getElementById("mima2");
+				var yanzhengmaxx=document.getElementById("yanzhengma");
+				form.onsubmit=function(){
+					var haoma=haomaxx.value;
+					var youxiang=youxiangxx.value;
+					var mima2=mimaxx.value;
+					var yanzhengma=yanzhengmaxx.value;
+					if (!/^1[\d]{10}$/.test(haoma)){
+						alert("请输入账号");
+						return false;
+					}
+					if (!/^1[\d]{16}$/.test(youxiang)){
+						alert("请输入的正确的邮箱");
+						return false;
+					}
+					if (!/^1[\d]{5,11}$/.test(mima2)){
+						alert("两次输入密码不一致");
+						return false;
+					}
+					if (!/^1[\d]{4}$/.test(yanzhengma)){
+						alert("请输入正确的验证码");
+						return false;
+					}
+					alert("登录成功")
+					return true;
+				}
+			}
+		</script>
+	</body>
+</html>

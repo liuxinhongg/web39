@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*编写函数rightchange(char,n) 实现字符串char循环右移n位。
+			比如rightchange("abcdefg",2) 返回"fgabcde"*/
+			//字符串-->数组-->数组右移-->字符串
+			/*function rightchange(char,n){
+				var arr=char.split('');
+				n=n%char.length;//实际移动几位
+				for(var i=0;i<n;i++){
+					//unshift()向数组的开头添加一个或更多元素，并返回新的长度。
+					//pop()删除并返回数组的最后一个元素
+					arr.unshift(arr.pop());
+				}
+				return arr.join('');
+			}
+			console.log(rightchange("abcdefg",2));*/
+			function rightchange(char,n){
+				n=n%char.length;
+				if(n==0) return char;
+				//substr substring
+				//substr(a,b)截取子串 从下标a开始，截取b位
+			   //substring(a,b);//从下标a开始，到下标b结束，但是不包含下标b
+			   return char.substr(-n)+char.substring(0,char.length-n);
+			}
+			console.log(rightchange("abcdefg",2))
+		</script>
+	</body>
+</html>

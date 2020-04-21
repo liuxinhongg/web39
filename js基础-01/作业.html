@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			如果今天是星期二，那么1000天后是星期几？用户输入一个天数，计算这个天数后是星期几。
+			//第一步  让用户输入
+			/*var days=parseInt(prompt("hello！今天是星期二，请输入几天后"));
+//			第二步  计算
+			var xingqi=(2+days%7)%7;
+			alert("哈哈！我已经计算出来了"+days+'天后是星期'+xingqi);*/
+//			用户输入一个三位数，弹出各个数位的和。
+            var shu=parseInt(prompt("请输入一个三位数"));
+            var gewei=parseInt(shu%10);
+            var shiwei=parseInt(shu/10)%10;
+            var baiwei=parseInt(shu/100);
+            var sum=gewei+shiwei+baiwei;
+            alert("三维数的各个位数之和是"+sum);
+		</script>
+	</body>
+</html>

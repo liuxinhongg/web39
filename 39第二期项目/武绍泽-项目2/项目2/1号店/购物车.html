@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+                      <!-- 图标-->
+        <!--<link rel="icon" href="../img/logo_new@2x/.png" type="imge/x-icon">-->
+        	<link rel="icon" type="imge/x-icon" href="../img/logo/logo_new@2x.png">
+        
+        <link  href="../bootstrap-3.3.7-dist/css/bootstrap.min.css"  rel="stylesheet">
+        <script src="../js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<title>我的购物车-1号店，只为更好的生活</title>
+		<link rel="stylesheet" type="text/css" href="../css/购物车.css">
+		<style type="text/css">
+						#pp{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 34px;
+				height: 72px;
+				background-color: black;
+				opacity: 0.5;
+				    z-index: 55555;
+			}
+			.pp-1{
+				width: 34px;
+				height: 34px;
+				/*background-color: thistle;*/
+				color: white;
+				line-height: 34px;
+				text-align: center;
+				
+				
+				
+			}
+			.pp-1:hover{
+				cursor: pointer;
+				background-color:orangered;
+				transform: translate3d(140px,0,0);
+				transition: all 3s ease;
+			}
+			
+			.ie{
+				height: 34px;
+				text-align: center;
+				line-height: 34px;
+				width:100px ;
+				color: white;
+				background-color:orangered;
+				display: inline-block;
+				position: absolute;
+				margin-left: -106px;
+				display: none;
+				    margin-top: -34px;
+				   /* transition: all 3s ease;*/
+				/* transition: transform .4s ease,-webkit-transform .4s ease, -moz-transform .4s ease,-o-transform .4s ease;*/
+			}
+			.ie:hover{
+				display: block;
+			}
+			.pp-1:hover .ie{
+				display: block;
+				transform: translate3d(140px,0,0);
+				/*transition: all 3s ease;*/
+				transition: transform .4s ease,-webkit-transform .4s ease, -moz-transform .4s ease,-o-transform .4s ease;
+			}
+			
+            .pp-2{
+				width: 34px;
+				height: 34px;
+				/*background-color:rosybrown;*/
+				margin-top: 4px;
+				line-height: 34px;
+				color: white;
+
+			}
+			
+			.pp-2:hover{
+				cursor: pointer;
+				background-color:orangered;
+				transform: translate3d(140px,0,0);
+				transition: all 3s ease;
+			}
+			
+			.ie-2{
+				height: 34px;
+				text-align: center;
+				line-height: 34px;
+				width:100px ;
+				color: white;
+				background-color:orangered;
+				display: inline-block;
+				position: absolute;
+				margin-left: -106px;
+				display: none;
+				    margin-top: -34px;
+				   /* transition: all 3s ease;*/
+				/* transition: transform .4s ease,-webkit-transform .4s ease, -moz-transform .4s ease,-o-transform .4s ease;*/
+			}
+			.ie-2:hover{
+				display: block;
+				text-decoration: none;
+				color: white;
+			}
+			.pp-2:hover .ie-2{
+				display: block;
+				transform: translate3d(140px,0,0);
+				/*transition: all 3s ease;*/
+				transition: transform .4s ease,-webkit-transform .4s ease, -moz-transform .4s ease,-o-transform .4s ease;
+					text-decoration: none;
+			}
+			
+			   
+		</style>
+	</head>
+	<body>
+		
+			
+			<div id="pp">
+			  <div class="pp-1">
+			  	<span>删除</span>
+			  	<div class="ie">最近删除</div>
+			  </div>
+			  
+			 <div class="pp-2">
+			  		<span>上拉</span>
+			  	   <a class="ie-2" href="#">返回顶部</a>
+			  </div>
+		    </div>
+		
+			
+			
+			
+		<!--	导航-->
+			
+			
+			
+			
+			
+		<div class="box">
+	
+		 <div class="tab">
+		  <div class="box1">
+		  	<div class="box2">
+		  	  <a class="tabar">
+		  	  	<span>送货地址：</span>
+		  	  	<em>上海</em>
+		  	  </a>
+		  	</div>
+		  	
+		     <div class="hhh">
+		     	<ul>
+		     		<li>
+		     			<div id="bul">
+		     				<span>Hi,请</span>
+		     				<a href="登录.html" id="ii">登录</a>
+		     				<a href="注册.html" id="ccc">注册</a>
+		     			</div>
+		     			
+		     		</li>
+		     		
+		     		<li>
+		     			<div class="ax">
+		     				<span>我的订单</span>
+		     			</div>
+		     			
+		     		</li>
+		     		
+		     		<li>
+		     			<div class="zaq">
+		     				客户服务
+		     			</div>
+		     		</li>
+		     		
+		     		
+		     		<li>
+		     			<div class="zt">APP下载</div>
+		     			
+		     		</li>
+		     		
+		     		
+		     		
+		     	</ul>
+		     	
+		     </div>
+		  	
+		  	
+		  
+		  </div>	
+		</div>
+		
+		
+	</div>	
+			
+			
+			
+			<!--背景图-->
+			<div class="uzi" >
+				
+			  <div class="eee">
+			  	<div class="eee-1">
+				<div class="mo">
+					 <h1>
+					 	<a href="首页.html"></a>
+					 	<a href=""></a>
+					 	
+					 </h1>
+					 
+					 <div class="out">
+					 	<span>配送至：</span>
+					 	<div class="azz">
+					 		<span>
+					 			上海
+					 			<i>|</i>
+					 			 静安区
+					 			 <i>|</i>
+					 			 城区
+					 			
+					 		</span>
+					 		
+					 	</div>
+					 </div>
+					 
+					<div class="minw">
+						<input type="text" placeholder="请输入关键词" id="pwl">
+						<a id="mer">搜索</a>
+					</div> 
+					 
+					 
+					 
+				</div>
+				
+				<div class="ynner">
+					<span id="int">
+						<input type="checkbox" id="chek">
+						  <ol>全选</ol>
+						
+					</span>
+					
+					<span id="piner">商品信息</span>
+					
+					<span id="piner-1">单价(元)</span>
+					<span id="piner-2">数量</span>
+					<span id="piner-3">小计</span>
+					<span id="piner-4">操作</span>
+				</div>
+				
+				
+				
+				<div class="evvv">
+					<div class="rt">
+						<input type="checkbox" id="chek-1">
+						<a href="" id="sxs">自营</a>
+					</div>
+					
+					
+					<div class="oer">
+					   <li id="eac">
+					   	<div class="sxs">
+					   	<input type="checkbox" id="chek-2">
+					   	</div>
+					   	
+					   	<div class="inger">
+					   		<span id="vc">换购</span>
+					   		<span id="vc-1">指定商品购买1件可优惠换购热销商品</span>
+	
+					   	</div>
+					   </li>
+					
+					<li id="ije">
+						<div class="xsw">
+							
+						<em></em>
+						<input type="checkbox" id="chek-3">
+						<a id="vfr">
+							<img src="../img/购物车/0ff4cf1689257da4.jpg">
+						</a>
+						
+						<a id="bgt">沙宣修护水养 针对干枯发质洗500ml*2+护发素400ml送洗200ml补充装 蓬松百变 洗发水套装</a>
+						<div class="ujn">
+							<p>119.00</p>
+							
+							
+						</div>
+						
+						<div class="ijm">
+							<div class="mue">
+								<a id="xdc">-</a>
+								<input type="text" value="1"  id="thy" clstag="pageclick|keycount|cart_201709267|15">
+								<a id="ikl">+</a>
+							</div>
+						</div>
+						
+						
+						<div class="kok">
+							<div class="moo">119.00</div>
+							<div class="moo1">2.08kg</div>
+						</div>
+						
+						<div class="erit">
+							<span title="收藏">收藏</span>
+							&nbsp;
+							<span title="删除">删除</span>
+						</div>
+						
+						<div class="thuj">
+							<div class="thuj-1">7</div>
+							<div class="nec">支持7天无理由退货</div>
+							<div class="rvt">修护水养洗护套装1.6L</div>
+						</div>
+						
+						</div>
+					</li>
+				
+		            <li id="evt">
+		            	<div class="yhr">
+		            		商品总价
+		            		<span>
+		            		 <em>￥</em>
+		            		 119
+		            		</span>
+		            	</div>
+		            	
+		        <div class="moer">
+			  		<p>原价：119.00</p>	
+			  		<p>优惠：0.00</p>	
+			  		<p>运费：不含，以结算页为准</p>
+			    </div>
+		            	
+		            </li>
+				
+				
+					</div>
+				</div>
+				
+				
+				
+				<div class="tbxs">
+			  	<div class="xfr">
+			  		<span>
+			  			<input type="checkbox" id="pop">
+			  			<label id="nmm">
+			  				全选（共
+			  				<b>1</b>
+			  				件）
+			  			</label>
+			  			
+			  		</span>
+			  		
+			  		<span>
+			  			<a>批量删除</a>
+			  			
+			  		</span>
+			  		
+			  	</div>
+			  	
+			  	
+			  	<div class="ier">
+			  		<a>去结算</a>
+			  		<div class="vf">
+			  			合计：
+			  			<span>
+			  				￥:199.00
+			  				
+			  			</span>
+			  		
+			  		</div>
+			  		
+			  		<div class="ierx">
+			  			<span>
+			  				已选商品
+			  				<b>1</b>
+			  				件
+			  				<b id="kkj">预览</b>
+			  				
+			  			</span>
+			  		</div>
+			  		
+			  	</div>
+			  	
+			  	
+			  	
+			   </div>
+
+
+
+
+
+
+
+			  </div>
+			</div>	
+			</div>
+			
+			
+			<!--结尾
+			-->
+			<div class="lunzi-fonially">
+			<div class="fonially">
+				
+				<div class="fonially-con">
+					<img src="../img/keji/CgQI0lWskgmADBnsAAAPZvcSh3E68900.jpg" class="mo-img">
+					<span class="png"> 正品保障</span>
+					<b class="pin">正品行货  放心选货  </b>
+				</div>
+				
+				
+				<div class="fonially-con-c">
+					<img src="../img/keji/ChEbulWsk4iADa_aAAAM544hHN818600.jpg" class="mo-img-c">
+					<span class="png-c"> 满99包邮</span>
+					<b class="pin-c">满99元  免运费  </b>
+				</div>
+				
+				
+				
+				<div class="fonially-con-b">
+					<img src="../img/keji/CgQIz1WslI-Adao3AAAN5b_ut2I80100.jpg" class="mo-img-b">
+					<span class="png-b"> 售后7天无忧</span>
+					<b class="pin-b">7天无理由退货  </b>
+				</div>
+				
+				
+				<div class="fonially-con-e">
+					<img src="../img/ChEi11WsyiyALBbiAAAN9lEEK5M33200.jpg" class="mo-img-e">
+					<span class="png-e"> 准时送达</span>
+					<b class="pin-e">收货时间由你做主 </b>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+			<!--二维码-->
+			<div class="hei">
+					<div class="erwei">
+   		
+   		<div class="yn">
+   			
+   			 <ul>
+   			 	服务保障
+   			 	<li>正品保证</li>
+   			 	<li>7天无理由放心退</li>
+   			 	<li>退货返10元唯品币</li>
+   			 	<li>7x15小时客户服务</li>
+   			 	<li>7天无理由随心换</li>
+   			 	
+   			 </ul>
+   		</div>
+   	
+
+
+
+   		<div class="z1">
+   			  <ul>
+   			 	购物指南
+   			 	<li>导购演示</li>
+   			 	<li>订单操作</li>
+   			 	<li>会员注册</li>
+   			 	<li>账户管理</li>
+   			 	<li>收货样品</li>
+   			 	<li>会员等级</li>
+   			 </ul>
+   		</div>
+   		
+   		
+
+
+   		
+   	    <div class="z2">
+   			 
+   			 <ul>
+   			 	支付方式
+   			 	<li>快捷支付</li>
+   			 	<li>23家主流网银支付</li>
+   			 	<li>支付宝、银联等支付</li>
+   			 	<li>信用卡支付</li>
+   			 	<li>零钱支付</li>
+   			 </ul>
+   			 
+   		</div>
+
+   	    <div class="z3">
+   			 
+   			 <ul>
+   			 	配送方式
+   			 	<li>配送范围及运费</li>
+   			 	<li>验货与签收</li>
+   			 	
+   			 </ul>
+   			 
+   		</div>
+   		
+
+   	    <div class="z4">
+   			 
+   			  <ul>
+   			 	售后服务
+   			 	<li>退货政策</li>
+   			 	<li>退货流程</li>
+   			 	<li>退款方式和时效</li>
+   			 	<li>换货服务</li>
+   			 </ul>
+   			 
+   		</div>
+   		
+   		<div class="z5">
+   			<dt>1号店APP二维码</dt>
+   			<dt></dt>
+   			<dt>下载1号店移动APP</dt>
+   		</div>
+    </div>
+				
+				
+			</div>
+			
+			
+			
+			
+		<!--版权-->	
+	<div class="ban">
+   	<div class="ban1">
+   	    
+   		 Copyright © 2008-2020 vip.com，All Rights Reserved  使用本网站即表示接受 
+   		<a> 1号店用户协议</a>
+   		版权所有
+   		<a>
+   			广州唯品会电子商务有限公司
+   		</a>
+   	</div>
+   	
+   	<div class="u">
+   
+   	<a class="u8">粤公网安备 44010302111111号 </a>
+   		<a class="u9">
+   		  粤ICP备08114786号 
+     	</a>
+     	<a class="u10">
+     		 增值业务经营许可证：粤B2-20170777
+     	</a>
+   	    <a class="u11">
+   	    	网络文化经营许可证：粤网文〔2018〕5030-1743号
+   	    </a>
+   	</div>
+   
+   <div class="rf">
+   	<a>自营主体经营证照</a>
+   	<a>风险监测信息</a>
+   	<a>  互联网药品信息服务资格证书：（粤）-经营性-2018-0271</a>
+   	<a> 网络食品交易第三方平台备案凭证：粤B2-20170777</a>
+   </div>
+    
+    <div class="rf1">
+    	<a>医疗器械网络交易服务第三方平台</a>
+    	<a>备案凭证：（粤）网械平台备字[2019]第00001号</a>
+    </div>
+    
+    
+   
+      </div>		
+			
+			<div class="pl">
+			<div class="px">
+				<div class="pl-1">
+					<div class="red"></div>
+					<div class="red-1"></div>
+					<div class="red-2"></div>
+					<div class="red-3"></div>
+					<div class="red-4"></div>
+					<div class="red-5"></div>
+					<div class="red-6"></div>
+				</div>
+				
+		    </div>
+			</div>
+			
+			
+			
+			
+			
+		</div>
+			
+			
+			
+			
+		
+		
+		
+		
+		
+		
+		<script src="../js/animate-2.0.1.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var pp=document.getElementById("pp");
+			var A=pp.offsetHeight;
+			move();
+			//页面卷动的时候触发
+			window.onscroll=move;
+			//当我们页面尺寸更改的时候触发
+			window.onresize=move;
+			function move(){
+				var B=document.documentElement.clientHeight;//窗口高度
+				var C=document.body.scrollTop||document.documentElement.scrollTop;
+				var target=C+(B-A)/2;
+				animate(pp,{"top":target},600);
+				
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 80px;
+				height: 80px;
+				background-color: red;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById("box");
+			//信号量
+			var nowleft=100;
+			var nowtop=100;
+			var nowwidth=80;
+			setInterval(function(){
+				nowleft+=10;
+				nowtop+=2;
+				nowwidth+=10;
+				oDiv.style.left=nowleft+"px";
+				oDiv.style.top=nowtop+"px";
+				oDiv.style.width=nowwidth+"px";
+			},200)
+		</script>
+	</body>
+</html>

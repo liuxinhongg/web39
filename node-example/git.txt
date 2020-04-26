@@ -1,0 +1,40 @@
+git 提交代码
+1、git init 初始化
+2、git add .提交所有的代码
+3、git status 检查一下提交的代码文件
+4、git commit -m “说明”
+5、git remote add origin https://github.com/liuxinhongg/as.git
+6、git push -u origin master
+以上是将代码推送到git上面去
+
+
+下面是更改了代码后提交
+1、git add .
+2、git commit -m "备注"
+3、git pull origin master 第一次推送代码需要写
+4、git push -u origin master
+
+
+
+常见出错
+
+　fatal: remote origin already exists. (致命错误信息: 远程仓库信息已经存在.)
+
+解决办法：
+
+ 删除Git仓库中的origin信息
+
+>>> git remote rm origin
+
+重新添加Git仓库中的origin信息
+
+>>> git remote add origin git地址
+
+此时问题就解决啦,直接使用提交命令就可以提交到GitHub上了
+
+>>> git push -u origin master
+
+如果还报错：
+需要配置config文件
+访问下面的网址：
+https://www.cnblogs.com/iocool/p/6634317.html

@@ -1,9 +1,12 @@
 let http = require("http");
+var mysql = require('mysql');
 http.createServer((req, res) => {
     res.writeHead(200, {
-        'Content-Type': 'text/html;charset=utf-8'
+        'Content-Type': 'application/json; charset=utf-8',
+        'Access-Control-Allow-Credentials': true,
+        'Access-Control-Allow-Origin': '*'
     })
-    var mysql = require('mysql');
+
     var connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',

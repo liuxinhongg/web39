@@ -15,8 +15,8 @@
             margin: 0;
         }
         
-        .boxContent {
-            /* width: 90%; */
+        .boxContent ul {
+            width: 1200px;
             overflow: hidden;
         }
         
@@ -28,9 +28,10 @@
             border-radius: 5px;
             margin: 10px;
             background: green;
+            float: left;
         }
         
-        .boxContent ul li a {
+        .boxContent ul li {
             display: block;
             color: #fff;
         }
@@ -40,6 +41,7 @@
 <body>
     <div class="container">
         <div class="row boxContent">
+            <ul></ul>
         </div>
     </div>
     <script type="text/javascript">
@@ -51,23 +53,25 @@
                 success: function(response) {
                     var obj = response.data;
                     for (var i = 0; i < obj.length; i++) {
-                        var imgchange = obj[i].icon.replace(obj[i].icon.substr(0, 5), "http");
-                        $(".boxContent").append(
-                            `<ul>
-								<li>${obj[i].name}</li>
-							</ul>`
-                        )
-
+                        $(".boxContent ul").append(`<li>${obj[i].name}</li>`)
                     }
-                    // console.log($(".boxContent ul li").html());
+                    $(".boxContent ul li").click(function() {
+                        var nameone = $(this).text();
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://127.0.0.1/w/website/findGoodsList',
+                            data: {
+                                "platId": "d0a500ecf8ab41aa9ffe8e18ac6419e1",
+                                "info": nameone,
+                                "pageNo": 1
+                            },
+                            success: function(res) {
+                                console.log(res);
+                            }
+                        })
+                    })
                 }
             });
-            $(".boxContent ul li").click(function() {
-                console.log(11);
-                var index = $(this).index();
-                console.log($(this).eq(index).html());
-            })
-
         })
     </script>
 </body>

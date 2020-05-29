@@ -1,0 +1,57 @@
+<!--pages/content/content.wxml-->
+<progress percent="100" active="true"  border-radius="10" stroke-width="4" acti veColor="green" duration="50" />
+<!-- 搜索 -->
+<view class="tou stickyClass">
+<input type="text" confirm-type="serach" placeholder="请搜索关键词" bindconfirm="sss" class="sou"></input>
+<!-- <button size="mini" type="warn">搜索</button> -->
+<view class="mini" hover-class="s">搜索</view>
+</view>
+<!-- 轮播 -->
+<swiper indicator-dots="ture" autoplay="ture" interval="3000" circular="ture" >
+    <swiper-item wx:for="{{banners}}" wx:for-item="img">
+      <image src="{{img.img}}" class="lunbo"></image>
+    </swiper-item>
+</swiper>
+<view class="gun">
+    <view class="prize">
+      <image src="/img/zhongjiang.jpg"></image>
+    </view>
+    <view class="yu">
+    <swiper autoplay="ture" interval="3000" circular="ture" vertical="ture" class="shu">
+    <swiper-item>
+        <text>恭喜：1882175****获得500元优惠卷</text>
+    </swiper-item>
+    <swiper-item>
+        <text>恭喜：1569862****获得500元优惠卷</text>
+    </swiper-item>
+    <swiper-item>
+        <text>恭喜：1779249****获得500元优惠卷</text>      
+    </swiper-item>
+    <swiper-item>
+        <text>恭喜：1870258****获得500元优惠卷 </text>      
+    </swiper-item>
+</swiper>
+    </view>
+</view> 
+<!-- 主体 -->
+
+<view class="jinri" style="text-align: center;">-今日推荐-</view>
+<view class="res">
+  <view class="day" wx:for="{{subject}}" wx:for-item="rng" >
+    <view class="Recommend" bindtap="dianji" data-id="{{rng.item_id}}" data-juan="{{juan[index]}}" data-lianjie="{{rng.coupon_share_url}}">
+      <image src="{{rng.pict_url}}"></image>
+    </view>
+    <view class="yrf" bindtap="dianji" data-id="{{rng.item_id}}">{{rng.short_title}}</view>
+    <view class="juanhou">券后：<text style="color:red">￥{{xianjia[index]}}</text></view>
+    <view class="box">
+    <view class="zuo">券</view>
+    <view class="you" ><text style="colr:red">￥{{juan[index]}}</text></view>
+    </view>
+    <view class="ling" bindtap="fuzhi" hover-class="hong" data-juan="{{rng.coupon_share_url}}" data-titles="{{rng.title}}" data-tu="{{rng.pict_url}}">领取优惠券</view>
+    <!-- <button size="mini" type="warn" class="qu">领取优惠券</button> -->
+  </view>
+  
+  
+</view>
+
+

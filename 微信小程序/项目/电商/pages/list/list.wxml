@@ -1,0 +1,11 @@
+<!--pages/list/list.wxml-->
+<view class="maxbox">
+<view wx:for="{{img}}" wx:for-item="rng" class="box"  bindtap="dianji" data-name="{{rng.name}}">
+    <view class="imgs">
+      <image src="{{rng.icon}}"></image>
+    </view>
+    <view class="zi">
+       {{rng.name}}
+    </view>
+</view>
+</view> 

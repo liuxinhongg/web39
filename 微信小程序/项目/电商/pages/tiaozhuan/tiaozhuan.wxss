@@ -1,0 +1,77 @@
+/* pages/tiaozhuan/tiaozhuan.wxss */
+.maxbox{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%; 
+  margin: 20rpx 10rpx;
+  padding: 10rpx;
+  position: relative;
+}
+.img{
+  width: 30%;
+  height: 200rpx;
+}
+.img image{
+  width: 100%;
+  height: 100%;
+}
+.yuan{
+  text-decoration: line-through;
+  margin: 10rpx 0;
+}
+.title{
+  font-size:14px;
+  width: 66%;
+  margin: 0 10rpx 10rpx 10rpx;
+}
+.juanhou{
+  margin: 10rpx 0;
+}
+.money{
+  color: red;
+  font-weight: bold;
+}
+.box{
+    position: absolute;
+    left: 32%;
+    bottom:20rpx;
+}
+.zuo{
+  width: 60rpx;
+  height: 36rpx;
+  border: 1px solid red;
+  border-right: 1px dashed red;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius:8rpx;
+  float: left; 
+  font-size: 12px;
+}
+.you{
+  width: 120rpx;
+  height: 36rpx;
+  border: 1px solid red;
+  border-left:none;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius:8rpx;
+  float: left; 
+  font-size: 12px;
+}
+.lingqu{
+  width:150rpx;
+  height: 60rpx;
+  border-radius:30rpx;
+  background-color: rgb(255, 32, 32);
+  padding: 0 20rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right:60rpx;
+}
+.s{
+  background-color: rgb(255, 10, 10)
+}
+.youhui{
+  font-size:14px;
+  color: white;
+} 

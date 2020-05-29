@@ -1,0 +1,30 @@
+/* pages/list/list.wxss */
+.maxbox{
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.box{
+  width: 20%;
+  height: 150rpx;
+  margin: 30rpx 10rpx;
+  /* border: 1px solid red; */
+  /* float: left;
+  /* background-color: #efefef; */
+}
+.imgs{
+  width: 100%;
+  height: 80%;
+  
+}
+.box image{
+  width: 100%;
+  height: 100%;
+  border-radius:50%; 
+}
+.zi{
+  text-align: center;
+  font-size:14px;
+
+}

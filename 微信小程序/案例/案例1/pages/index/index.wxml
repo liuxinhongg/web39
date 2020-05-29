@@ -1,0 +1,16 @@
+ <swiper indicator-dots="true" autoplay="true" interval="1000" duration="500">
+  <block wx:for="{{bannerlist}}" wx:for-index="index" wx:for-item="banner">
+    <swiper-item>
+      <image src="{{banner.img}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="shopSort">
+  <text>-商品分类-</text>
+</view>
+<view class="sortbox">
+  <view class="shop_item" wx:for="{{goodsList}}" wx:for-item="goods" data-name="{{goods.name}}" bindtap="jump">
+    <image src="{{goods.icon}}" class="goods_img"></image>
+    <view class="title">{{goods.name}}</view>
+  </view>
+</view>

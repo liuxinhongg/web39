@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名器</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        	background-color: pink;
+        }
+        #outer{
+            margin:0 50px;
+            padding:20px 40px;
+            width: 600px;
+            border-radius: 20px;
+            background-image: url(img/img_flwr.gif), url(img/paper.gif);
+		    background-position: right bottom, left top;
+		    background-repeat: no-repeat, repeat;
+        }
+        #box{
+            margin-top: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            border:15px solid transparent;
+			width:200px;
+			height: 60px;
+			line-height: 60px;
+			border-image:url(img/border.png) 30 30 round;
+        }
+        #bt{
+            width: 80px;
+            margin-top:25px;
+            padding: 10px;
+            background-color: green;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+    		<h1 style="line-height: 65px;">
+        		<font color="red">稳住！莫慌，给你们表演的机会来了~</font>
+        	</h1>
+        	<h2>
+        		<font color="yellowgreen">没有选上的不要难过，下一个幸运儿将是你~</font>
+        	</h2>
+        	<img src="img/bq.jpg" style="margin: 20px;"/>
+        <div id="outer">
+            <div id="box"></div>
+            <button type="button" id="bt">start</button>
+        </div>
+    </center>
+    <input type="button" name="" id="" value="点击" onclick="alert(this)"/>
+    <script type="text/javascript">
+        var namelist=["白倩","杜芳媛","范佳丽","金岩宏","李娟","梁勇","刘亿鑫","马海洋","马鲁源",
+        "全媛媛","冉军良","史欢","王超","王丹","武绍泽","王婷","王玉卓","张明明"]
+        var flag=0;
+        var bt=document.getElementById("bt");
+        bt.onclick=function(){
+            if(flag==0){
+                flag=1;
+                bt.innerHTML="stop";
+                bt.style.backgroundColor="red";
+                show();
+            }
+            else{
+                bt.innerHTML="start";
+                bt.style.backgroundColor="green";
+                clearTimeout(flag);
+                flag=0;
+            }
+
+        }
+        function show(){
+            var num=Math.floor(Math.random()*1000)%namelist.length;
+            box.innerHTML=namelist[num];
+            flag=setTimeout("show()",100);
+        }
+        
+    </script>
+</body>
+</html>

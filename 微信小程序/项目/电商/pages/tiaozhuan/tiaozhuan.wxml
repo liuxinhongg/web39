@@ -1,0 +1,23 @@
+<!--pages/tiaozhuan/tiaozhuan.wxml-->
+<view class="maxbox" wx:for="{{rng}}" wx:for-item="edg">
+ 
+<view class="img" bindtap="dianji" data-id="{{edg.item_id}}" data-juan="{{juan[index]}}" data-lianjie="{{edg.coupon_share_url}}" >
+<image src="{{edg.pict_url}}"></image>
+</view>
+<view class="title" bindtap="dianji" data-id="{{edg.item_id}}">
+<view><text>{{edg.short_title}}</text></view>
+<view> 
+<text class="yuan">原价：{{edg.zk_final_price}}</text>
+</view> 
+<view class="juanhou">
+券后：<text class="money">￥{{xianjia[index]}}</text>
+</view>
+</view>
+<view class="box">
+    <view class="zuo">券</view>
+    <view class="you"><text style="color:red;font-weight: bold;">￥{{juan[index]}}</text></view>
+</view>
+<view class="lingqu" hover-class="s">
+<text class="youhui" bindtap="fuzhi"  data-juan="{{edg.coupon_share_url}}" data-titles="{{edg.title}}" data-tu="{{edg.pict_url}}">领取优惠券</text>
+</view>
+</view>

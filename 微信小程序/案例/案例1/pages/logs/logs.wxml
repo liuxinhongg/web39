@@ -1,0 +1,41 @@
+<!--logs.wxml-->
+<view class="container log-list">
+<!-- {{message}}
+  <view wx:for="{{datalist}}">{{item.aa}}</view>
+  <view wx:for="{{datalist}}" wx:for-index="idx" wx:for-item="img">
+  {{idx}}:{{img.aa}}
+  </view> -->
+</view>
+<view class="searchlist">
+  <!-- <view class="sort_item" wx:for="searchlist" wx:for-item="sort" data-id="data">
+    <image src="{{sort.pict_url}}"></image>
+    <view class="sort-item-right">
+      <view class="title"> <text>{{sort.level_one_category_name}}</text> </view>
+      <view class="name"> <text>{{sort.category_name}}</text> </view>
+      <view class="price"> <text>{{sort.zk_final_price}}</text> </view>
+      <button size="mini" type="warn" bindtap="getcoupon" hover-class="hong" data-juan="{{sort.coupon_share_url}}" data-titles="{{sort.title}}" data-tu="{{sort.pict_url}}">优惠卷</button>
+    </view>
+  </view> -->
+
+</view>
+<view class='toast-box' hidden='{{!ifName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title' bindtap="xgxm">
+                <text>修改姓名</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input placeholder='请输入姓名' bindinput='setValue' data-name='stuEidtName'></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='cancel'>取消</button>
+                </view>
+                <view class='button2'>
+                    <button catchtap='confirm'>确定</button>
+                </view>
+            </view>
+        </view>
+    </view>

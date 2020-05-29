@@ -1,0 +1,110 @@
+/* pages/xiangqingye/xiangqingye.wxss */
+swiper-item image{
+  width: 100%;
+}
+.title{
+  margin: 10rpx;
+  padding: 10rpx;
+  font-size: 16px;
+}
+.yuan{
+  margin: 5rpx 10rpx;
+  padding: 10rpx;
+  font-size: 16px;
+  position: relative;
+}
+.jia{
+  text-decoration: line-through;
+  color: rgb(255, 10, 10);
+  font-weight: bold;
+}
+swiper{
+  height: 700rpx;
+}
+swiper image{
+  width: 100%;
+  height: 100%
+}
+.shouye{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  background-color:rgb(242, 32, 32);
+}
+.dui{
+  width: 38rpx;
+  height: 38rpx;
+  line-height: 38rpx
+}
+.qitian{
+  margin-left: 10rpx
+}
+.taobao{
+  margin: 10prx;
+  font-size:16px;
+  padding: 10rpx
+}
+.taobao1{
+  margin-top: 10rpx
+}
+.xxbox{
+  position: relative;
+  height: 100rpx;
+  margin-top:30rpx 
+}
+.zuo{
+  width: 20%;
+  height: 100rpx;
+  /* border: 1px solid red; */
+  /* border-right: 1px dashed red; */
+  background-color: rgb(255, 10, 10);
+  line-height: 100rpx;
+  text-align: center;
+  border-radius:20rpx;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 10%;
+  top: 0
+}
+.you{
+  width: 60%;
+  height: 100rpx;
+  /* border: 1px solid red; */
+  background-color: rgb(255, 10, 10);
+  border-left:white 1px dashed;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius:20rpx;
+  font-size: 20px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  left: 30%;
+  top: 0
+}
+.kongbai{
+  height: 130rpx;
+  background-color: white
+}
+.chu{
+  text-decoration: underline;
+  color: rgb(255, 10, 10);
+  text-decoration-color: rgb(255, 10, 10)
+}
+.da{
+  /* font-weight: bold; */
+  background-color: rgb(255, 10, 10);
+}
+.xiaoliang{
+  position: absolute;
+  left: 50%;
+  top: 10rpx;
+  color: rgb(255, 10, 10);
+}

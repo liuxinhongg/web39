@@ -1,0 +1,43 @@
+<!--pages/xiangqingye/xiangqingye.wxml-->
+<view wx:for="{{rng}}" wx:for-item="ym">
+      <swiper indicator-dots="true" autoplay="true"  interval="3000" circular="true">
+      <swiper-item wx:for="{{img}}">
+      <image src="{{item}}"></image>
+      </swiper-item>
+      </swiper>
+<view class="title" hover-class="chu">
+      <text >{{ym.title}}</text>
+</view>
+<view class="yuan">
+    原价： 
+    <text class="jia" >￥{{ym.zk_final_price}}</text> 
+    <view class="xiaoliang">销量：
+    {{ym.volume}}
+    </view>
+</view>
+
+<view class="taobao taobao1">
+      <image src="/img/dui.png" class="dui"></image>
+      <text class="qitian">7天无理由退货</text>
+</view>
+<view class="taobao">
+      <image src="/img/dui.png" class="dui"></image>
+      <text class="qitian">退货运费险</text>
+</view>
+<view class="taobao">
+      <image src="/img/dui.png" class="dui"></image>
+      <text class="qitian">公益宝贝</text>
+</view>
+<view class="taobao">
+      <image src="/img/dui.png" class="dui"></image>
+      <text class="qitian">假一赔十</text>
+</view>
+<view class="xxbox">
+    <view class="zuo">券</view>
+    <view class="you">￥{{juan}}</view>
+</view>
+<view class="kongbai"></view>
+<view class="shouye"  bindtap="fuzhi" hover-class="da" data-juan="{{ym.coupon_share_url}}" data-titles="{{ym.title}}" data-tu="{{ym.pict_url}}">领取优惠卷</view>
+
+
+</view>

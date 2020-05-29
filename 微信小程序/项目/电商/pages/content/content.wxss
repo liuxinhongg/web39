@@ -1,0 +1,174 @@
+.sou{
+  border: 1px solid red;
+  margin: 3rpx 30rpx;
+  height: 68rpx;
+  width: 60%;
+  border-radius: 40rpx;
+  padding: 0px 35rpx;
+
+}
+.tou{
+  position: relative;
+  height: 76rpx;
+}
+.mini{
+  position: absolute;
+  right: 70rpx;
+  top: 3rpx;
+  width: 120rpx;
+  height: 68rpx;
+  background-color: rgb(255, 32, 32);
+  border-radius: 40rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 68rpx;
+  color: white;
+} 
+.s{
+  background-color: rgb(255, 10 , 10)
+}
+.tou1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: orange;
+}
+swiper image{
+  width: 100%
+}
+.lunbo{
+  width: 100%;
+  height: 100%;
+}
+.gun{
+  /* margin-top: 2px; */
+  display: flex;
+}
+.prize{
+  width: 20%;
+  height: 60rpx;
+  /* background-color: red/ */
+}
+.prize image{
+  width: 100%;
+  height: 100%
+}
+.shu{
+  height: 60rpx;
+  text-align: center;
+  margin-left: 2px;
+  background-color: rgba(255, 0, 212, 0.2);
+  color: black;
+}
+.shu text{
+    font-size: 12px;
+    line-height: 60rpx;
+}
+.yu{
+width: 80%;
+/* background-color: yellow */
+}
+
+.jinri{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* text-align: center; */
+  color: red;
+  font-weight:bold; 
+  font-size: 22px;
+  /* background-color: yellow; */
+  margin-top: 10rpx
+}
+.day{
+  border: 1px solid #efefef;
+  width: 48%;
+  height: 450rpx;
+  position: relative;
+  float: left;
+  margin: 10rpx 5rpx;
+}
+.Recommend{
+  margin: auto;
+  width: 90%;
+  height: 300rpx;
+  /* text-align: center;  */
+  padding: 0;
+}
+.Recommend image{
+  width: 100%;
+  /* height: 100rpx */
+  height:100%
+  
+}
+.yrf{
+  font-size: 12px;
+  color:#333333;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0px 10rpx;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.juanhou{
+  font-size: 12px;
+  margin: 5rpx 10rpx;
+}
+.ling{
+  width:120rpx;
+  height: 40rpx;
+  background-color: rgb(255, 40, 40);
+  border-radius: 30rpx;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  line-height: 40rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 10rpx;
+  padding:5rpx 15rpx;
+}
+.qu{
+  position: absolute;
+  bottom: 10rpx;
+  right: 5rpx;
+  border-radius:20px; 
+}
+.box{
+    position: absolute;
+    left: 10rpx;
+    bottom:20rpx;
+}
+.zuo{
+  width: 40rpx;
+  height: 36rpx;
+  border: 1px solid red;
+  border-right: 1px dashed red;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius:8rpx;
+  float: left; 
+  font-size: 12px;
+}
+.you{
+  width: 80rpx;
+  height: 36rpx;
+  border: 1px solid red;
+  border-left:none;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius:8rpx;
+  float: left; 
+  font-size: 12px;
+}
+.hong{
+  background-color: rgb(255, 10, 10)
+}
+.stickyClass{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}

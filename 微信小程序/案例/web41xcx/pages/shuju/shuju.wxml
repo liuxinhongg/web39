@@ -1,0 +1,7 @@
+
+<view>数据展示</view>
+
+<view class="goods" wx:for="{{goodsType}}">
+   <view class="title">{{item.name}}</view>
+   <image class="img" src="{{item.icon}}"></image>
+</view>

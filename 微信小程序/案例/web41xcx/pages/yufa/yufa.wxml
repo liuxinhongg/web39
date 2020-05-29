@@ -1,0 +1,32 @@
+
+<view id="item{{id}}">
+  {{title}}
+</view>
+
+<view wx:if="{{t}}">
+    你好
+</view>
+
+<view hidden="{{t}}">
+  我不好
+</view>
+
+<checkbox checked="{{t}}">篮球</checkbox>
+
+<view>
+    姓名：{{student.name}}
+    ------
+    年龄：{{student.age}}
+</view>
+<view>
+  姓名：{{arr[1].name}}
+</view>
+<view wx:for="{{arr}}">
+  {{a+1}}  姓名：{{item.name}}
+</view>
+
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}:  {{item}} </view>
+</block>
+
+

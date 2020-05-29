@@ -1,0 +1,4 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+<import src="../header/header.wxml"/>
+<template is="msgItem" data="{{...item}}"/>

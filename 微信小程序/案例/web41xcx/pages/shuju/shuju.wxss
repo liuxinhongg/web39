@@ -1,0 +1,13 @@
+/* pages/shuju/shuju.wxss */
+.goods{
+  width: 30%;
+  height: 200rpx;
+  background-color: yellowgreen;
+  float: left;
+  margin: 1.5%;
+  text-align: center;
+}
+.goods .img{
+  width: 120rpx;
+  height: 120rpx;
+}

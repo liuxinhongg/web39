@@ -1,0 +1,31 @@
+page{
+  background-color: #ccc;
+}
+swiper-item image{
+  width: 100%;
+}
+.huodong{
+  margin: 50rpx 0;
+}
+.huodong image{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx 0;
+}
+.huodong{
+  display: flex;
+  width: 100%;
+  /* background-color: yellowgreen; */
+  justify-content: space-around;
+  text-align: center;
+}
+.huodong text{
+  font-size: 40rpx;
+  font-weight: bolder;
+}
+.content{
+  width: 90%;
+  background-color: green;
+  height: 1000rpx;
+  margin: 30rpx auto;
+}

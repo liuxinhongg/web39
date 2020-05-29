@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/goodsList/goosList",
+    "pages/yufa/yufa",
+    "pages/shuju/shuju",
+    "pages/detail/detail",
+    "pages/my/my",
+    "pages/header/header",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "笑话大全",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./img/si1.png",
+        "selectedIconPath": "./img/si2.png"
+      },
+      {
+        "pagePath": "pages/goodsList/goosList",
+        "text": "商品",
+        "iconPath": "./img/si1.png",
+        "selectedIconPath": "./img/si2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./img/si1.png",
+        "selectedIconPath": "./img/si2.png"
+      }
+    ],
+    "color": "#f00",
+    "selectedColor": "#000",
+    "backgroundColor": "#0ff"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

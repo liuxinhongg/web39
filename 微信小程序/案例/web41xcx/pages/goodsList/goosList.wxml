@@ -1,0 +1,32 @@
+<swiper circular autoplay indicator-dots="true" indicator-color="rgba(0,0,0,.7)">	
+	<swiper-item wx:for="{{lunbo}}">
+		<image src="{{item.img}}"></image>
+	</swiper-item>
+</swiper>
+<view class="huodong">
+	<view class="hd_item">
+		<image src="/img/hd.png"></image>
+		<text>
+            参与活动
+        </text>
+	</view>
+	<view class="hd_item">
+		<image src="/img/hd.png"></image>
+		<text>
+            活动招募
+        </text>
+	</view>
+	<view class="hd_item">
+		<image src="/img/hd.png"></image>
+		<text>
+            政策法规
+        </text>
+	</view>
+</view>
+
+<view class="content">
+    <view class="zhaomu">
+        <navigator   url="../detail/detail?title=小明&age=10">进入详情页</navigator>
+				<button bindtap="bb">进入详情页</button>
+	  </view>
+</view>

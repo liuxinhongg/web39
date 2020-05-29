@@ -1,0 +1,17 @@
+<template name="msgItem">
+  <view>
+    <text>
+     {{index}}: {{msg}}
+    </text>
+    <text>
+     Time: {{time}} 
+    </text>
+  </view>
+</template>
+
+<template name="haha">
+    <view>
+          哈哈你好{{title}}
+    </view> 
+</template>
+
